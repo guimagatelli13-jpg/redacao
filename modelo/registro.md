@@ -63,6 +63,7 @@ Legenda de status das hipóteses:
 | H-A6 | A = diversidade de dimensões | H | **enfraquecida** | — |
 | H-A7 | A em níveis discretos | H | ativa | novas avaliações (A é sempre inteiro?) |
 | H-A8 | A instável | H | ativa | X0 |
+| A-corr | a plataforma é mais exigente que a régua do ENEM na Abrangência (original: régua 6, observado 3,0): deslocamento de −3 ou razão de 0,5 | H | ativa | X8, X9 |
 
 ### Nota Final
 
@@ -100,3 +101,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 |---|---|---|
 | v0.1 | 2026-10-16 | modelo inicial a partir da avaliação 001; rubrica parcial em `relatorios/001-analise-inicial.md`, §9 |
 | v0.2 | 2026-10-16 | limite de 2.000 caracteres incorporado: H-A4 enfraquecida, P-MAX acrescentada, X3–X5 e X8 refeitos dentro do limite |
+| v0.3 | 2026-10-16 | rubrica híbrida com os critérios do ENEM (`modelo/rubrica-hibrida-enem.md`); hipótese A-corr; X9 escrito para a rubrica híbrida |

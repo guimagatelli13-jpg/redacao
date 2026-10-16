@@ -29,7 +29,8 @@ novas.
      pública;
    - a reprodução do Aedes aegypti em água parada;
    - o acidente com o césio-137 em Goiânia, em 1987;
-   - a limpeza das escolas pelos próprios alunos no Japão.
+   - a limpeza das escolas pelos próprios alunos no Japão;
+   - a associação entre educação e conscientização na obra de Paulo Freire (X9).
 6. **Limite de 2.000 caracteres.** Todas as variantes cabem nele contando espaços e quebras de parágrafo;
    `ferramentas/gerar_variantes.py` recusa gerar qualquer variante que passe do limite.
 
@@ -247,6 +248,47 @@ Aviso de circularidade: a avaliação acima foi feita por quem escreveu o texto 
 | Variante | Nota Final | G | A | T | E | Nota online | Status/obs. |
 |---|---|---|---|---|---|---|---|
 | X8 | | | | | | | |
+
+## X9 — Versão otimizada para a rubrica híbrida ENEM × plataforma (várias variáveis)
+
+| | |
+|---|---|
+| Hipótese | os descritores do ENEM, adaptados em `modelo/rubrica-hibrida-enem.md`, apontam o que a plataforma premia |
+| Variável | várias; pela rubrica híbrida, a única diferença em relação ao X8 é o projeto de texto explícito (H3b ≈ C3): a introdução anuncia dois eixos e cada desenvolvimento tem tópico frasal, explicação, evidência e fecho |
+| Texto | `experimentos/textos/X9-hibrida-enem.txt` |
+| Notas que podem mudar | todas |
+
+Medidas do texto:
+- 1.981 caracteres com espaços (1.984 contando as quebras) e 1.668 sem espaços;
+- 317 palavras, 4 parágrafos, 14 frases;
+- recorte na primeira frase (2% do texto) e em 11 das 14 frases (80% dos caracteres);
+- repertórios: Paulo Freire, Abrelpe (4%), Aedes aegypti, Goiânia (1987) e escolas japonesas;
+- proposta de intervenção com os 5 elementos do ENEM.
+
+Previsões registradas antes de qualquer resultado:
+
+| Critério | Previsão | Fundamento |
+|---|---|---|
+| Gramática | 10,0 (faixa 9,9–10,0) | H1 = 10 |
+| Tangenciamento | 9–10 | H2 = 10 |
+| Abrangência | 5–10 | régua híbrida 10; 7 com correção por deslocamento; 5 com correção por razão |
+| Nota online | 8,0–10,0 | trunc₀,₁((10 + A + T)/3) |
+| Nota ENEM equivalente | 1000 | estimativa do autor da rubrica |
+
+O que cada resultado significaria:
+- **Comparação com o X8** (submeta os dois na mesma sessão, na mesma proposta):
+  - A(X9) > A(X8) acima do ruído de X0: apoio a H-A2 (a Abrangência mede organização e desenvolvimento, como a C3);
+  - A(X9) ≈ A(X8): o projeto de texto explícito não pesa na Abrangência.
+- **Calibração da correção da Abrangência:** o valor observado de A, comparado com a régua 10, escolhe entre
+  deslocamento (≈ 7), razão (≈ 5) e nenhuma correção (≈ 10).
+- **Portão:** a nota online prevista fica em 8,0 ou mais em todos os cenários, então P-N7 prevê Nota Final diferente
+  de zero.
+
+Mesmo aviso de circularidade do X8: rubrica, texto e avaliação são do mesmo autor.
+
+| Variante | Nota Final | G | A | T | E | Nota online | Status/obs. |
+|---|---|---|---|---|---|---|---|
+| X9 | | | | | | | |
 
 ---
 

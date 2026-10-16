@@ -191,6 +191,50 @@ Previsões:
 |---|---|---|---|---|---|---|---|
 | X7 | | | | | | | |
 
+## X8 — Versão otimizada para a rubrica v0.1 (controle positivo, várias variáveis)
+
+| | |
+|---|---|
+| Hipótese | a rubrica v0.1 aponta corretamente o que eleva as notas: recorte na tese e em todos os parágrafos (T), fatos com fonte, mecanismo e exemplo (A), ausência das construções propensas a falso positivo (G) |
+| Variável | **várias ao mesmo tempo**: texto reescrito. Um ganho não identifica qual mudança o causou; o objetivo é testar a rubrica como um todo e o portão da Nota Final |
+| Texto | `experimentos/textos/X8-otimizada.txt` (escrito a partir da rubrica, não gerado pelo script de variantes) |
+| Notas que podem mudar | todas |
+
+Medidas do texto, comparadas com a base:
+
+| Indicador | Base (001) | X8 |
+|---|---|---|
+| Caracteres com espaços / sem espaços | 1.841 / 1.564 | 2.997 / 2.526 (3.000 contando as quebras) |
+| Palavras / parágrafos / frases | 281 / 4 / 14 | 477 / 4 / 19 |
+| Primeira menção ao recorte | 57% do texto | 5,5% |
+| Frases sobre o recorte | 4/14 (34% dos caracteres) | 10/19 (57%) |
+| Parágrafos que retomam o recorte | 2 de 4 | 4 de 4 |
+| Parágrafo do núcleo (importância da educação) | 2 frases | 5 frases, com mecanismo e exemplo |
+| Fatos verificáveis | 1 | 8 (CF art. 225; Abrelpe, 4%; Panorama 2024, > 40%; PNRS 2010; Aedes aegypti; Goiânia 1987; escolas japonesas; Lei 9.795/1999), 2 com fonte nomeada |
+| Construções propensas a falso positivo | 5 | 0 |
+
+Avaliação pela rubrica v0.1, feita antes de qualquer resultado real:
+
+| Critério | Nota pela rubrica | Fundamento | Confiança |
+|---|---|---|---|
+| Gramática | 10,0 (faixa 9,9–10,0) | nenhum desvio inequívoco encontrado; E previsto de 0 a 2. Possíveis apontamentos de estilo: "recicla … reciclagem", "Aedes aegypti" sem itálico (impossível em texto puro) | média |
+| Tangenciamento | 9–10 | cumpre o descritor ≥ 9: recorte nomeado na tese e retomado nos 4 parágrafos; o P2 trata do assunto amplo (28%), mas fecha ligando-o à falta de informação | baixa (só a âncora 7,1 foi observada) |
+| Abrangência | ≥ 7, sem valor pontual | não cumpre nenhuma condição da faixa baixa; cumpre a hipótese de trabalho da faixa alta em 3 dos 4 aspectos. A pergunta 4 (ações) não traz fato nem exemplo que sustente a eficácia das medidas. Pela H-A5, faltam tópicos possivelmente esperados: redução do consumo, logística reversa nomeada, aterro sanitário | baixa |
+| Nota online (M1) | 8,6 a 10,0 | trunc₀,₁((10 + ≥7 + 9 a 10)/3) | baixa |
+| Nota online se a Abrangência continuar 3,0 | 7,3 a 7,6 | trunc₀,₁((10 + 3 + 9 a 10)/3) | — |
+
+O que cada resultado significaria:
+- **A alta (≥ 7) e T ≥ 9:** a rubrica v0.1 aponta na direção certa, sem identificar qual componente pesou. Os experimentos X3 a X7 separam os componentes.
+- **A continuar baixa (< 5):** H-A2, H-A3 e H-A4 ficam enfraquecidas em conjunto; H-A5 (gabarito) ou H-A8 (ruído) ganham peso.
+- **T sem subir:** T-tese e T-prop ficam enfraquecidas.
+- **Portão:** em todos os cenários a nota online fica acima de 7, então P-N7 prevê Nota Final diferente de zero. Se A ficar abaixo de 5 e a Nota Final continuar 0,00, P-N7 fica refutada e P-A5 (ou P-OUT) ganha apoio; se a Nota Final passar a valer a nota online com A abaixo de 5, P-A5 fica refutada.
+
+Aviso de circularidade: a avaliação acima foi feita por quem escreveu o texto e a rubrica. Ela mostra que a rubrica é aplicável, mas não que é válida. Validação exige um avaliador que não conheça a intenção do texto: a plataforma real, ou uma sessão nova de um LLM que receba só a proposta, o texto e os nomes dos critérios.
+
+| Variante | Nota Final | G | A | T | E | Nota online | Status/obs. |
+|---|---|---|---|---|---|---|---|
+| X8 | | | | | | | |
+
 ---
 
 ## Matriz do portão da Nota Final

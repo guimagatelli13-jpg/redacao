@@ -1,0 +1,127 @@
+# Mudanças exatas de cada variante
+
+Gerado por `ferramentas/gerar_variantes.py`; não edite à mão. Caracteres contados sem as quebras de parágrafo.
+
+Base: 1841 caracteres com espaços, 1564 sem espaços, 281 palavras, 4 parágrafos.
+
+## X0-reteste
+
+1841 caracteres com espaços (+0.0%), 1564 sem espaços, 281 palavras, 4 parágrafos.
+
+Texto idêntico à base.
+
+## X1a-mais-4-erros
+
+1839 caracteres com espaços (-0.1%), 1562 sem espaços, 281 palavras, 4 parágrafos.
+
+1. Antes: «Cabe às prefeituras»
+   Depois: «Cabe as prefeituras»
+
+2. Antes: «contaminam o solo»
+   Depois: «contamina o solo»
+
+3. Antes: «As escolas devem incluir»
+   Depois: «As escolas deve incluir»
+
+4. Antes: «lençóis freáticos»
+   Depois: «lençois freáticos»
+
+## X1b-mais-12-erros
+
+1836 caracteres com espaços (-0.3%), 1559 sem espaços, 281 palavras, 4 parágrafos.
+
+1. Antes: «Cabe às prefeituras»
+   Depois: «Cabe as prefeituras»
+
+2. Antes: «contaminam o solo»
+   Depois: «contamina o solo»
+
+3. Antes: «As escolas devem incluir»
+   Depois: «As escolas deve incluir»
+
+4. Antes: «lençóis freáticos»
+   Depois: «lençois freáticos»
+
+5. Antes: «materiais recicláveis misturados»
+   Depois: «materiais recicláveis misturado»
+
+6. Antes: «proliferação»
+   Depois: «proliferassão»
+
+7. Antes: «sobrecarrega»
+   Depois: «sobrecarega»
+
+8. Antes: «desperdício»
+   Depois: «desperdicio»
+
+9. Antes: «ferramentas fundamentais»
+   Depois: «ferramentas fundamental»
+
+10. Antes: «Há ainda»
+   Depois: «A ainda»
+
+11. Antes: «futuras gerações»
+   Depois: «futuras geraçoes»
+
+12. Antes: «entrega voluntária»
+   Depois: «entrega voluntaria»
+
+## X2-sem-falsos-positivos
+
+1845 caracteres com espaços (+0.2%), 1567 sem espaços, 282 palavras, 4 parágrafos.
+
+1. Antes: «Apesar de a separação do lixo ser uma prática simples,»
+   Depois: «Ainda que a separação do lixo seja uma prática simples,»
+
+2. Antes: «além de entulho e embalagens abandonados em ruas, terrenos e rios.»
+   Depois: «além do abandono de entulho e embalagens em ruas, terrenos e rios.»
+
+3. Antes: «isoladamente, não conseguem.»
+   Depois: «isoladamente, não conseguem fazer.»
+
+4. Antes: «compreende que o seu descarte»
+   Depois: «compreende que seu descarte»
+
+5. Antes: «Ao cidadão, compete separar o lixo»
+   Depois: «Compete ao cidadão separar o lixo»
+
+## X3-fatos-em-P1-P2
+
+2182 caracteres com espaços (+18.5%), 1846 sem espaços, 340 palavras, 4 parágrafos.
+
+1. Antes: «não garante mudança de comportamento.»
+   Depois: «não garante mudança de comportamento. Prova disso é que o prazo legal para o fim dos lixões, 2014, foi descumprido e prorrogado pelo Marco Legal do Saneamento, em 2020.»
+
+2. Antes: «como o mosquito da dengue,»
+   Depois: «como o Aedes aegypti, que se reproduz na água parada de pneus e garrafas descartados,»
+
+3. Antes: «sobretudo para os catadores.»
+   Depois: «sobretudo para os catadores. O acidente com o césio-137 em Goiânia, em 1987, causado pelo abandono de um aparelho de radioterapia, mostra que o descarte indevido pode ser trágico.»
+
+## X4-aprofunda-recorte
+
+2205 caracteres com espaços (+19.8%), 1871 sem espaços, 338 palavras, 4 parágrafos.
+
+1. Antes: «por convicção, e não por imposição.»
+   Depois: «por convicção, e não por imposição. Isso ocorre porque o descarte correto depende de pequenas decisões diárias, como separar os recicláveis e levar pilhas e eletrônicos a pontos adequados, que nenhuma fiscalização consegue acompanhar em cada casa. Além disso, a educação tem efeito multiplicador: crianças que aprendem a separar o lixo na escola levam esse hábito para a família e para a comunidade.»
+
+## X5-so-extensao
+
+2178 caracteres com espaços (+18.3%), 1847 sem espaços, 335 palavras, 4 parágrafos.
+
+1. Antes: «por convicção, e não por imposição.»
+   Depois: «por convicção, e não por imposição. Em outras palavras, a educação e a conscientização transformam a maneira como as pessoas se relacionam com os resíduos que produzem, e essa transformação tende a permanecer ao longo do tempo. Trata-se, portanto, de uma mudança que nasce do entendimento das próprias pessoas, e não apenas da obrigação imposta a elas por regras externas.»
+
+## X6-tese-explicita
+
+1947 caracteres com espaços (+5.8%), 1652 sem espaços, 299 palavras, 4 parágrafos.
+
+1. Antes: «não garante mudança de comportamento.»
+   Depois: «não garante mudança de comportamento, o que torna a educação e a conscientização indispensáveis para que o descarte correto se torne um hábito.»
+
+## X7-troca-P2
+
+1809 caracteres com espaços (-1.7%), 1537 sem espaços, 276 palavras, 4 parágrafos.
+
+1. Antes: «As implicações do descarte indevido atingem o meio ambiente, a saúde e a economia. O lixo jogado nas ruas entope bueiros e agrava enchentes, enquanto os resíduos acumulados em lixões contaminam o solo e os lençóis freáticos. Além disso, o acúmulo de lixo favorece a proliferação de vetores de doenças, como o mosquito da dengue, o que sobrecarrega o sistema público de saúde. Há ainda um desperdício econômico, pois materiais que poderiam ser reaproveitados deixam de gerar renda, sobretudo para os catadores.»
+   Depois: «A educação ambiental também forma cidadãos capazes de compreender o ciclo dos resíduos, desde a produção até o destino final. Quando esse conhecimento é construído desde a infância, a separação do lixo deixa de ser vista como uma tarefa incômoda e passa a fazer parte da rotina. Do mesmo modo, a conscientização dos adultos, por meio do diálogo e do exemplo, fortalece o sentimento de pertencimento à comunidade e torna cada pessoa corresponsável pelos espaços que compartilha.»

@@ -103,3 +103,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.2 | 2026-10-16 | limite de 2.000 caracteres incorporado: H-A4 enfraquecida, P-MAX acrescentada, X3–X5 e X8 refeitos dentro do limite |
 | v0.3 | 2026-10-16 | rubrica híbrida com os critérios do ENEM (`modelo/rubrica-hibrida-enem.md`); hipótese A-corr; X9 escrito para a rubrica híbrida |
 | v0.4 | 2026-10-16 | série 002 (tema "Consumo e consumismo", simulado): texto C1 escrito para a rubrica híbrida e previsões em `experimentos/protocolo-002-consumo.md`; primeiro teste da rubrica fora do tema de origem |
+| v0.5 | 2026-10-16 | série 003 (tema "Mudanças climáticas", simulado): texto M1 e previsões em `experimentos/protocolo-003-clima.md`; testa se tratar causas e soluções como subordinadas ao recorte é lido como aderência ou como cobertura incompleta |

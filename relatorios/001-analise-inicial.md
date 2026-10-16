@@ -9,6 +9,11 @@ Legenda de classificação:
 - **[IF]** inferência forte;
 - **[H]** hipótese exploratória.
 
+> **Atualização posterior:** depois deste relatório foi informado o limite máximo de 2.000 caracteres. Isso
+> enfraquece a hipótese de extensão (H-A4), descarta o excesso de caracteres como causa do zero e obrigou a refazer
+> X3, X4, X5 e X8 (as extensões citadas na seção 8 são das versões antigas). O estado atual está em
+> `modelo/registro.md` e `experimentos/protocolo.md`.
+
 Quando cabe, o rótulo traz um grau de confiança (alta/média/baixa). Os números citados podem ser reproduzidos com `python3 ferramentas/testar_modelos.py` e `python3 ferramentas/gerar_variantes.py`.
 
 ---

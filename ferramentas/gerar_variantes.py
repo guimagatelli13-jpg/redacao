@@ -13,6 +13,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 BASE = RAIZ / "avaliacoes" / "001-descarte-lixo" / "redacao.txt"
 SAIDA = RAIZ / "experimentos" / "variantes"
+LIMITE_MAX = 2000  # caracteres, informado para a plataforma; contado com espaços e quebras de parágrafo
 
 P2 = ("As implicações do descarte indevido atingem o meio ambiente, a saúde e a economia. O lixo jogado nas ruas "
       "entope bueiros e agrava enchentes, enquanto os resíduos acumulados em lixões contaminam o solo e os lençóis "
@@ -50,29 +51,21 @@ VARIANTES = {
         ("compreende que o seu descarte", "compreende que seu descarte"),
         ("Ao cidadão, compete separar o lixo", "Compete ao cidadão separar o lixo"),
     ],
-    "X3-fatos-em-P1-P2": [
-        ("não garante mudança de comportamento.",
-         "não garante mudança de comportamento. Prova disso é que o prazo legal para o fim dos lixões, 2014, foi "
-         "descumprido e prorrogado pelo Marco Legal do Saneamento, em 2020."),
-        ("como o mosquito da dengue,",
-         "como o Aedes aegypti, que se reproduz na água parada de pneus e garrafas descartados,"),
-        ("sobretudo para os catadores.",
-         "sobretudo para os catadores. O acidente com o césio-137 em Goiânia, em 1987, causado pelo abandono de um "
-         "aparelho de radioterapia, mostra que o descarte indevido pode ser trágico."),
+    # X3, X4 e X5 acrescentam praticamente a mesma extensão (~90 caracteres), para caber no limite de 2.000.
+    "X3-fato-com-fonte": [
+        ("não descarta os resíduos de forma adequada.",
+         "não descarta os resíduos de forma adequada. Segundo a Abrelpe, o país recicla apenas cerca de 4% dos "
+         "materiais com potencial de reciclagem."),
     ],
     "X4-aprofunda-recorte": [
         ("por convicção, e não por imposição.",
-         "por convicção, e não por imposição. Isso ocorre porque o descarte correto depende de pequenas decisões "
-         "diárias, como separar os recicláveis e levar pilhas e eletrônicos a pontos adequados, que nenhuma "
-         "fiscalização consegue acompanhar em cada casa. Além disso, a educação tem efeito multiplicador: crianças "
-         "que aprendem a separar o lixo na escola levam esse hábito para a família e para a comunidade."),
+         "por convicção, e não por imposição. Além disso, crianças que aprendem a separar o lixo na escola levam "
+         "esse hábito para a família."),
     ],
     "X5-so-extensao": [
         ("por convicção, e não por imposição.",
-         "por convicção, e não por imposição. Em outras palavras, a educação e a conscientização transformam a "
-         "maneira como as pessoas se relacionam com os resíduos que produzem, e essa transformação tende a "
-         "permanecer ao longo do tempo. Trata-se, portanto, de uma mudança que nasce do entendimento das próprias "
-         "pessoas, e não apenas da obrigação imposta a elas por regras externas."),
+         "por convicção, e não por imposição. Em outras palavras, trata-se de uma mudança que nasce do "
+         "entendimento, e não da obrigação."),
     ],
     "X6-tese-explicita": [
         ("não garante mudança de comportamento.",
@@ -112,12 +105,15 @@ def main():
     c0, s0, w0, p0 = medidas(base)
     doc = ["# Mudanças exatas de cada variante", "",
            "Gerado por `ferramentas/gerar_variantes.py`; não edite à mão. Caracteres contados sem as quebras de "
-           "parágrafo.", "",
+           f"parágrafo; com elas, todas as variantes ficam dentro do limite de {LIMITE_MAX}.", "",
            f"Base: {c0} caracteres com espaços, {s0} sem espaços, {w0} palavras, {p0} parágrafos.", ""]
     print(f"{'variante':<26}{'chars c/esp':>12}{'Δ%':>7}{'chars s/esp':>12}{'palavras':>10}{'parágr.':>9}")
     print(f"{'base':<26}{c0:>12}{'':>7}{s0:>12}{w0:>10}{p0:>9}")
     for nome, subs in VARIANTES.items():
         texto = aplicar(base, subs, nome)
+        total = len(texto.rstrip("\n"))
+        if total > LIMITE_MAX:
+            raise SystemExit(f"{nome}: {total} caracteres com quebras, acima do limite de {LIMITE_MAX}")
         (SAIDA / f"{nome}.txt").write_text(texto, encoding="utf-8")
         c, s, w, p = medidas(texto)
         print(f"{nome:<26}{c:>12}{(c - c0) / c0:>+7.1%}{s:>12}{w:>10}{p:>9}")

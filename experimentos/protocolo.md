@@ -3,6 +3,10 @@
 Previsões registradas em 2026-10-16, **antes** de qualquer resultado. Não edite as previsões depois de ver os
 resultados: anote o resultado na tabela do experimento e a comparação no `modelo/registro.md`.
 
+Revisão 2 (2026-10-16, ainda antes de qualquer resultado): foi informado o limite máximo de 2.000 caracteres. As
+versões anteriores de X3, X4, X5 e X8 passavam do limite e foram refeitas; as previsões abaixo valem para as versões
+novas.
+
 - Textos prontos para submissão: `experimentos/variantes/*.txt`.
 - Mudanças exatas de cada variante: `experimentos/variantes/MUDANCAS.md` (gerado por `ferramentas/gerar_variantes.py`).
 
@@ -18,11 +22,16 @@ resultados: anote o resultado na tabela do experimento e a comparação no `mode
    Diferenças menores que a amplitude observada no X0 não contam como efeito.
 4. **Registre tudo**, cada vez: os seis campos, o status textual, comentários e marcações, a contagem de caracteres
    exibida, a data e hora e o número da tentativa.
-5. **Confira os fatos de X3 antes de submeter.** Se o avaliador punir erro factual, um fato errado confunde o teste.
-   Os três fatos usados foram escolhidos por serem amplamente documentados:
-   - o prazo de 2014 para a disposição final adequada (art. 54 da Lei 12.305/2010), prorrogado pela Lei 14.026/2020;
+5. **Confira os fatos de X3 e X8 antes de submeter.** Se o avaliador punir erro factual, um fato errado confunde o
+   teste. Os fatos usados foram escolhidos por serem amplamente documentados:
+   - Abrelpe (2022): cerca de 4% dos materiais com potencial de reciclagem são reciclados no Brasil;
+   - Constituição Federal, art. 225, § 1º, VI: o poder público deve promover a educação ambiental e a conscientização
+     pública;
    - a reprodução do Aedes aegypti em água parada;
-   - o acidente com o césio-137 em Goiânia, em 1987.
+   - o acidente com o césio-137 em Goiânia, em 1987;
+   - a limpeza das escolas pelos próprios alunos no Japão.
+6. **Limite de 2.000 caracteres.** Todas as variantes cabem nele contando espaços e quebras de parágrafo;
+   `ferramentas/gerar_variantes.py` recusa gerar qualquer variante que passe do limite.
 
 ## Modelos sob teste
 
@@ -115,14 +124,18 @@ Interpretação dos resultados: compare qual reescrita reduziu E. Se a plataform
 
 ## X3, X4, X5 — O que a Abrangência mede (fatos, profundidade, extensão)
 
-O trio funciona em conjunto. As três variantes acrescentam praticamente a mesma extensão (+18,3% a +19,8%). Assim,
-diferenças de A entre elas não se explicam pela extensão.
+O trio funciona em conjunto. As três variantes acrescentam praticamente a mesma extensão (+4,9% a +5,2%, cerca de
+90 caracteres). Assim, diferenças de A entre elas não se explicam pela extensão.
 
 | Variante | O que acrescenta | Onde | Δ extensão |
 |---|---|---|---|
-| X3 | 3 fatos verificáveis, sem raciocínio novo | P1 e P2 | +18,5% |
-| X4 | 2 frases de raciocínio novo (mecanismo e exemplo), sem fatos | P3 | +19,8% |
-| X5 | 2 frases redundantes, sem ideia nem fato novo (controle) | P3 | +18,3% |
+| X3 | 1 dado com fonte (Abrelpe, 4%), sem raciocínio novo | P1 | +5,2% |
+| X4 | 1 frase de raciocínio novo (efeito multiplicador da escola), sem fatos | P3 | +5,2% |
+| X5 | 1 frase redundante, sem ideia nem fato novo (controle) | P3 | +4,9% |
+
+Com o limite de 2.000 caracteres, a base só tinha 156 caracteres de folga. Por isso cada variante muda uma única
+frase. O efeito esperado é menor que nas versões anteriores, e a chance de ele ficar dentro do ruído é maior: repita
+cada variante se o X0 mostrar variação.
 
 Previsões de A, sem valores pontuais, apenas a ordem esperada:
 
@@ -137,9 +150,9 @@ Previsões de A, sem valores pontuais, apenas a ordem esperada:
 
 Previsões de T:
 - **X4:** sobe se T medir o desenvolvimento substantivo do recorte.
-- **X5:** sobe se T medir a proporção de menções ao recorte. Na contagem por palavras-chave, X5 tem *mais* menções
-  (44% dos caracteres) que X4 (35%).
-- **X3:** T tende a ficar igual ou a cair, porque a parte sobre o assunto amplo cresce.
+- **X5:** sobe se T medir a proporção de menções ao recorte. Na contagem por palavras-chave, X4 e X5 ficam iguais
+  (37% dos caracteres, contra 34% na base), então T-prop prevê X4 ≈ X5, e o desenvolvimento substantivo prevê X4 > X5.
+- **X3:** T tende a ficar igual ou a cair, porque a parte sobre o assunto amplo cresce (recorte em 32%).
 
 Portão da Nota Final:
 - Se alguma variante levar A a 5 ou mais, mantendo a nota online abaixo de 7, uma Nota Final diferente de zero apoia
@@ -204,13 +217,13 @@ Medidas do texto, comparadas com a base:
 
 | Indicador | Base (001) | X8 |
 |---|---|---|
-| Caracteres com espaços / sem espaços | 1.841 / 1.564 | 2.997 / 2.526 (3.000 contando as quebras) |
-| Palavras / parágrafos / frases | 281 / 4 / 14 | 477 / 4 / 19 |
-| Primeira menção ao recorte | 57% do texto | 5,5% |
-| Frases sobre o recorte | 4/14 (34% dos caracteres) | 10/19 (57%) |
+| Caracteres com espaços / sem espaços | 1.841 / 1.564 | 1.974 / 1.666 (1.977 contando as quebras) |
+| Palavras / parágrafos / frases | 281 / 4 / 14 | 312 / 4 / 13 |
+| Primeira menção ao recorte | 57% do texto | 4,0% |
+| Frases sobre o recorte | 4/14 (34% dos caracteres) | 8/13 (69%) |
 | Parágrafos que retomam o recorte | 2 de 4 | 4 de 4 |
-| Parágrafo do núcleo (importância da educação) | 2 frases | 5 frases, com mecanismo e exemplo |
-| Fatos verificáveis | 1 | 8 (CF art. 225; Abrelpe, 4%; Panorama 2024, > 40%; PNRS 2010; Aedes aegypti; Goiânia 1987; escolas japonesas; Lei 9.795/1999), 2 com fonte nomeada |
+| Parágrafo do núcleo (importância da educação) | 2 frases | 4 frases, com mecanismo e exemplo |
+| Fatos verificáveis | 1 | 5 (CF art. 225; Abrelpe, 4%; Aedes aegypti; Goiânia 1987; escolas japonesas), 1 com fonte nomeada além da própria Constituição |
 | Construções propensas a falso positivo | 5 | 0 |
 
 Avaliação pela rubrica v0.1, feita antes de qualquer resultado real:
@@ -219,7 +232,7 @@ Avaliação pela rubrica v0.1, feita antes de qualquer resultado real:
 |---|---|---|---|
 | Gramática | 10,0 (faixa 9,9–10,0) | nenhum desvio inequívoco encontrado; E previsto de 0 a 2. Possíveis apontamentos de estilo: "recicla … reciclagem", "Aedes aegypti" sem itálico (impossível em texto puro) | média |
 | Tangenciamento | 9–10 | cumpre o descritor ≥ 9: recorte nomeado na tese e retomado nos 4 parágrafos; o P2 trata do assunto amplo (28%), mas fecha ligando-o à falta de informação | baixa (só a âncora 7,1 foi observada) |
-| Abrangência | ≥ 7, sem valor pontual | não cumpre nenhuma condição da faixa baixa; cumpre a hipótese de trabalho da faixa alta em 3 dos 4 aspectos. A pergunta 4 (ações) não traz fato nem exemplo que sustente a eficácia das medidas. Pela H-A5, faltam tópicos possivelmente esperados: redução do consumo, logística reversa nomeada, aterro sanitário | baixa |
+| Abrangência | ≥ 7, sem valor pontual | não cumpre nenhuma condição da faixa baixa; cumpre a hipótese de trabalho da faixa alta em 3 dos 4 aspectos. A pergunta 4 (ações) não traz fato nem exemplo que sustente a eficácia das medidas. Pela H-A5, faltam tópicos possivelmente esperados: redução do consumo, logística reversa, aterro sanitário, a Política Nacional de Resíduos Sólidos e o papel dos catadores na reciclagem (o corte para 2.000 caracteres tirou os dois últimos) | baixa |
 | Nota online (M1) | 8,6 a 10,0 | trunc₀,₁((10 + ≥7 + 9 a 10)/3) | baixa |
 | Nota online se a Abrangência continuar 3,0 | 7,3 a 7,6 | trunc₀,₁((10 + 3 + 9 a 10)/3) | — |
 

@@ -17,7 +17,13 @@ Legenda de status das hipóteses:
 |---|---|---|---|---|---|---|---|---|---|
 | 001 | Descarte correto do lixo | 9,90 | 3,00 | 7,10 | 4,00 | 6,60 | 0,00 | linha de base | `relatorios/001-analise-inicial.md` |
 
-## 2. Hipóteses
+## 2. Dados de contexto informados depois da análise inicial
+
+| Data | Informação | Fonte | Efeito no modelo |
+|---|---|---|---|
+| 2026-10-16 | limite máximo de 2.000 caracteres | informado pelo usuário (sem documento) | H-A4 enfraquecida; P-MAX não explica o zero; X3, X4, X5 e X8 refeitos para caber no limite |
+
+## 3. Hipóteses
 
 ### Nota online (agregação)
 
@@ -52,7 +58,7 @@ Legenda de status das hipóteses:
 | H-A1' | A = contagem de perguntas (0–4) | H | **enfraquecida** | — |
 | H-A2 | A = profundidade de desenvolvimento | H | ativa | X4 vs. X5 |
 | H-A3 | A = fatos e repertório | H | ativa | X3 vs. X5 |
-| H-A4 | A = extensão | H | ativa, sem apoio | X3, X4, X5 vs. base; X7 |
+| H-A4 | A = extensão | H | **enfraquecida**: o texto usou 92% do máximo de 2.000 caracteres; se A fosse proporcional à fração usada, valeria ~9, e não 3 | X3, X4, X5 vs. base; X7 |
 | H-A5 | A = gabarito de tópicos do tema | H | ativa | novos temas |
 | H-A6 | A = diversidade de dimensões | H | **enfraquecida** | — |
 | H-A7 | A em níveis discretos | H | ativa | novas avaliações (A é sempre inteiro?) |
@@ -69,8 +75,9 @@ Legenda de status das hipóteses:
 | P-A5 | zera se A < 5 (ou algum critério < 5) | ativa |
 | P-OUT | causa externa às notas (status do processo, integridade, etapa pendente) | ativa |
 | P-EXT | zera por extensão abaixo do mínimo | muito improvável (1.564 a 1.844 caracteres) |
+| P-MAX | zera por exceder o máximo de 2.000 caracteres | **não explica**: 1.844 caracteres, contando as quebras |
 
-## 3. Previsões registradas e resultados
+## 4. Previsões registradas e resultados
 
 As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui cada comparação.
 
@@ -78,7 +85,7 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 |---|---|---|---|---|---|
 | | | | | | |
 
-## 4. Questões em aberto
+## 5. Questões em aberto
 
 1. O que a Abrangência mede, e se o 3,0 é estável.
 2. Por que a Nota Final é 0,00: regra de nota mínima, campo de outro nível ou causa externa.
@@ -87,8 +94,9 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 5. Se o avaliador é determinístico.
 6. Se o tema muda o comportamento de A (gabarito por tema).
 
-## 5. Histórico de alterações
+## 6. Histórico de alterações
 
 | Versão | Data | Mudança |
 |---|---|---|
 | v0.1 | 2026-10-16 | modelo inicial a partir da avaliação 001; rubrica parcial em `relatorios/001-analise-inicial.md`, §9 |
+| v0.2 | 2026-10-16 | limite de 2.000 caracteres incorporado: H-A4 enfraquecida, P-MAX acrescentada, X3–X5 e X8 refeitos dentro do limite |

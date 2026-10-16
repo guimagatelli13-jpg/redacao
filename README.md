@@ -38,7 +38,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 2. Acrescente uma linha a `dados/avaliacoes.csv`.
 3. Rode `python3 ferramentas/testar_modelos.py`. Modelos que deixarem de acertar todas as avaliações estão refutados
    ou precisam de revisão.
-4. Se for um experimento, compare com a previsão em `experimentos/protocolo.md` e registre o resultado na seção 3 de
+4. Se for um experimento, compare com a previsão em `experimentos/protocolo.md` e registre o resultado na seção 4 de
    `modelo/registro.md`.
 5. Atualize os status das hipóteses no registro. Uma hipótese só passa a "apoiada" quando acerta uma previsão feita
    antes do dado.

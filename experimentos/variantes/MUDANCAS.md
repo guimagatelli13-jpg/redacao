@@ -1,6 +1,6 @@
 # Mudanças exatas de cada variante
 
-Gerado por `ferramentas/gerar_variantes.py`; não edite à mão. Caracteres contados sem as quebras de parágrafo.
+Gerado por `ferramentas/gerar_variantes.py`; não edite à mão. Caracteres contados sem as quebras de parágrafo; com elas, todas as variantes ficam dentro do limite de 2000.
 
 Base: 1841 caracteres com espaços, 1564 sem espaços, 281 palavras, 4 parágrafos.
 
@@ -85,32 +85,26 @@ Texto idêntico à base.
 5. Antes: «Ao cidadão, compete separar o lixo»
    Depois: «Compete ao cidadão separar o lixo»
 
-## X3-fatos-em-P1-P2
+## X3-fato-com-fonte
 
-2182 caracteres com espaços (+18.5%), 1846 sem espaços, 340 palavras, 4 parágrafos.
+1937 caracteres com espaços (+5.2%), 1644 sem espaços, 297 palavras, 4 parágrafos.
 
-1. Antes: «não garante mudança de comportamento.»
-   Depois: «não garante mudança de comportamento. Prova disso é que o prazo legal para o fim dos lixões, 2014, foi descumprido e prorrogado pelo Marco Legal do Saneamento, em 2020.»
-
-2. Antes: «como o mosquito da dengue,»
-   Depois: «como o Aedes aegypti, que se reproduz na água parada de pneus e garrafas descartados,»
-
-3. Antes: «sobretudo para os catadores.»
-   Depois: «sobretudo para os catadores. O acidente com o césio-137 em Goiânia, em 1987, causado pelo abandono de um aparelho de radioterapia, mostra que o descarte indevido pode ser trágico.»
+1. Antes: «não descarta os resíduos de forma adequada.»
+   Depois: «não descarta os resíduos de forma adequada. Segundo a Abrelpe, o país recicla apenas cerca de 4% dos materiais com potencial de reciclagem.»
 
 ## X4-aprofunda-recorte
 
-2205 caracteres com espaços (+19.8%), 1871 sem espaços, 338 palavras, 4 parágrafos.
+1936 caracteres com espaços (+5.2%), 1642 sem espaços, 298 palavras, 4 parágrafos.
 
 1. Antes: «por convicção, e não por imposição.»
-   Depois: «por convicção, e não por imposição. Isso ocorre porque o descarte correto depende de pequenas decisões diárias, como separar os recicláveis e levar pilhas e eletrônicos a pontos adequados, que nenhuma fiscalização consegue acompanhar em cada casa. Além disso, a educação tem efeito multiplicador: crianças que aprendem a separar o lixo na escola levam esse hábito para a família e para a comunidade.»
+   Depois: «por convicção, e não por imposição. Além disso, crianças que aprendem a separar o lixo na escola levam esse hábito para a família.»
 
 ## X5-so-extensao
 
-2178 caracteres com espaços (+18.3%), 1847 sem espaços, 335 palavras, 4 parágrafos.
+1932 caracteres com espaços (+4.9%), 1640 sem espaços, 296 palavras, 4 parágrafos.
 
 1. Antes: «por convicção, e não por imposição.»
-   Depois: «por convicção, e não por imposição. Em outras palavras, a educação e a conscientização transformam a maneira como as pessoas se relacionam com os resíduos que produzem, e essa transformação tende a permanecer ao longo do tempo. Trata-se, portanto, de uma mudança que nasce do entendimento das próprias pessoas, e não apenas da obrigação imposta a elas por regras externas.»
+   Depois: «por convicção, e não por imposição. Em outras palavras, trata-se de uma mudança que nasce do entendimento, e não da obrigação.»
 
 ## X6-tese-explicita
 

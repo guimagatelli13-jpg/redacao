@@ -93,7 +93,7 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 3. Se o "Apontamento de erro gramatical" é uma contagem e se alimenta a Gramática.
 4. Truncamento ou arredondamento; precisão interna das notas.
 5. Se o avaliador é determinístico.
-6. Se o tema muda o comportamento de A (gabarito por tema).
+6. Se o tema muda o comportamento de A (gabarito por tema). A série 002 é o primeiro teste.
 
 ## 6. Histórico de alterações
 
@@ -102,3 +102,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.1 | 2026-10-16 | modelo inicial a partir da avaliação 001; rubrica parcial em `relatorios/001-analise-inicial.md`, §9 |
 | v0.2 | 2026-10-16 | limite de 2.000 caracteres incorporado: H-A4 enfraquecida, P-MAX acrescentada, X3–X5 e X8 refeitos dentro do limite |
 | v0.3 | 2026-10-16 | rubrica híbrida com os critérios do ENEM (`modelo/rubrica-hibrida-enem.md`); hipótese A-corr; X9 escrito para a rubrica híbrida |
+| v0.4 | 2026-10-16 | série 002 (tema "Consumo e consumismo", simulado): texto C1 escrito para a rubrica híbrida e previsões em `experimentos/protocolo-002-consumo.md`; primeiro teste da rubrica fora do tema de origem |

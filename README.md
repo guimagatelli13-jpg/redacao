@@ -20,10 +20,11 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 |---|---|
 | `dados/avaliacoes.csv` | base acumulada: uma linha por avaliação, com notas e medidas do texto |
 | `avaliacoes/NNN-tema/` | proposta, redação exatamente como submetida e notas exatamente como exibidas |
+| `propostas/` | propostas de tema ainda sem avaliação registrada |
 | `relatorios/` | análises; cada relatório é um retrato do momento em que foi escrito |
 | `modelo/registro.md` | registro vivo: hipóteses e seus status, previsões e resultados, questões em aberto |
 | `modelo/rubrica-hibrida-enem.md` | critérios do ENEM adaptados à plataforma: correspondências, descritores por nível e cálculo da nota prevista e da nota ENEM equivalente |
-| `experimentos/protocolo.md` | experimentos controlados, com previsões registradas antes dos resultados |
+| `experimentos/protocolo*.md` | experimentos controlados de cada série, com previsões registradas antes dos resultados |
 | `experimentos/variantes/` | textos prontos para submissão e `MUDANCAS.md`, com o diff exato de cada um |
 | `experimentos/textos/` | textos escritos do zero para experimentos (não gerados por substituição), como o X8 |
 | `ferramentas/testar_modelos.py` | testa fórmulas, regras de arredondamento, faixas de pesos e regras da Nota Final contra todas as avaliações |

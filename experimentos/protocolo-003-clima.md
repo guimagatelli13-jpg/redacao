@@ -120,7 +120,7 @@ As duas causas do P3 viram as duas ações da proposta 2.
 | Caracteres com espaços / sem espaços | 1.985 / 1.673 (1.988 contando as quebras) |
 | Palavras / parágrafos / frases | 317 / 4 / 14 |
 | Conectivos | "Por isso", "Em primeiro lugar", "Em segundo lugar", "No mesmo ano", "Isso revela", "pois", "Logo", "Portanto", "Para diminuir", "Desse modo"; nenhum repetido |
-| Propostas de intervenção | duas, ambas com os 5 elementos: (1) prefeituras, com recursos da União / adaptar as cidades / alertas, manutenção, realocação / reduzir mortes / de áreas de risco; (2) governo federal / combater o desmatamento e ampliar o crédito para renováveis / monitoramento por satélite do Inpe / cortar as emissões / crédito para renováveis |
+| Propostas de intervenção | duas, ambas com os 5 elementos: (1) prefeituras, com recursos da União / adaptar as cidades / alertas, manutenção, realocação / reduzir mortes / de áreas de risco; (2) governo federal / combater o desmatamento e ampliar o crédito para renováveis / monitoramento por satélite / cortar as emissões / "do Inpe" (detalha o meio; é o elemento mais fraco das duas propostas) |
 
 Rubrica híbrida: 10 em todos os critérios, ENEM equivalente 1000. Previsões na plataforma iguais às de M1 e M2.
 

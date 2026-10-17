@@ -165,8 +165,7 @@ lógica).
 ## Texto M5: segunda redação do Claude, para comparação com a do usuário (2026-10-17)
 
 `experimentos/textos/M5-clima-desigualdade.txt`: escrito sem ter visto o texto do usuário, seguindo o mesmo roteiro
-que foi passado a ele (mapa → estrutura → checklist). 1.960 caracteres com espaços (1.963 contando as quebras), 321
-palavras, 16 frases. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
+que foi passado a ele (mapa → estrutura → checklist). 1.977 caracteres com espaços (1.980 contando as quebras) na versão revisada. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
 
 Mapa usado:
 
@@ -177,6 +176,17 @@ Mapa usado:
 | Repertório | Constituição, art. 225 ("todos", "presentes e futuras gerações"), retomado no fecho ("valerá para todos, hoje e amanhã") |
 | Eixo 1 | Petrópolis, 2022: mais de 230 mortos; IBGE/Cemaden: ~8 milhões em áreas de risco; causa: falta de moradia segura → proposta 1: priorizar famílias de áreas de risco nos programas habitacionais e ampliar os alertas por celular |
 | Eixo 2 | Science, 2021: 7× mais ondas de calor; causa: acúmulo de CO₂ (IPCC) e desmatamento como maior fonte (SEEG) → proposta 2: combate ao desmatamento com fiscalização por satélite e punição |
+
+Revisão de coesão (2026-10-17, ainda sem ter visto o texto do usuário). A versão anterior está no histórico do git.
+- Exemplo sem marcador, agora "É o caso de Petrópolis".
+- Estimativa do IBGE (base no Censo de 2010) apresentada como dado atual, agora "segundo estimativa do IBGE".
+- "8 milhões de brasileiros … são famílias", troca de categoria, agora "trata-se de famílias".
+- Cadeia causal incompleta (permanência sem acúmulo), agora "o gás carbônico se acumula".
+- Duas finalidades em cada proposta, agora "o que evitará" e "cortando".
+- "Alertas por celular" sem diagnóstico no desenvolvimento: removidos.
+- Passagem entre as propostas sem marcador, agora "Já para".
+- "Valerá para todos", que sugeria que o direito não vale hoje, agora "será, de fato, garantido a todos", retomando o
+  verbo "garante" da abertura.
 
 Rubrica híbrida: 10 em todos os critérios. Ponto fraco declarado: cinco das ligações ainda são de conclusão ("Por
 isso", "Desse modo", "Logo", "Portanto", "Assim"), e a única concessão é "mesmo com".

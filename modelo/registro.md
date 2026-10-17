@@ -106,3 +106,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.5 | 2026-10-16 | série 003 (tema "Mudanças climáticas", simulado): texto M1 e previsões em `experimentos/protocolo-003-clima.md`; testa se tratar causas e soluções como subordinadas ao recorte é lido como aderência ou como cobertura incompleta |
 | v0.6 | 2026-10-17 | série 003: texto paralelo M2, escrito do zero, sem repertório em comum com o M1 e com a mesma nota pela rubrica; o par testa o que a rubrica não captura |
 | v0.7 | 2026-10-17 | série 003: texto M3, de amarração máxima, com mapa de ligações verificado por `ferramentas/verificar_amarracao.py` |
+| v0.8 | 2026-10-17 | série 003: revisão de coesão do M3 e texto M4 (premissa do acúmulo, transições temáticas, concessão com dados do SEEG e da EPE, proposta 2 alinhada ao diagnóstico) |

@@ -140,6 +140,28 @@ mede mal: as causas viram propostas, há duas propostas completas e as ligaçõe
 maior que o M1 na plataforma, ganha apoio a ideia de que a Abrangência ou o Tangenciamento premiam essa articulação,
 e a rubrica precisaria de um descritor para ela.
 
+## Texto M4: M3 aprofundado (2026-10-17)
+
+`experimentos/textos/M4-clima-aprofundada.txt` (1,981 caracteres com espaços, 1,984 contando as quebras).
+Elos: `experimentos/textos/M4-clima-aprofundada.elos.json` (14 de 14). Mudanças em relação ao M3, cada uma
+corrigindo uma fraqueza específica:
+
+| Fraqueza do M3 | Mudança no M4 |
+|---|---|
+| Lacuna lógica no D2: de "o aquecimento resulta da ação humana" não se segue que "cada ano de emissões aumenta a conta das próximas gerações". Faltava a premissa do acúmulo | "Essa herança se acumula porque, conforme o IPCC, o aquecimento é causado pelas emissões humanas, e parte do gás carbônico permanece séculos na atmosfera" |
+| Transições só ordinais ("Em primeiro lugar", "Em segundo lugar") | Transições temáticas, "No presente" e "No futuro", que retomam os dois tempos da tese |
+| Nenhuma relação de oposição; quase todos os conectores eram de conclusão | Concessão com base em fato: "No Brasil, embora a eletricidade seja sobretudo renovável, o desmatamento é a maior fonte de emissões, aponta o SEEG" (SEEG 13: mudança de uso da terra = 42% das emissões brutas de 2024; EPE: 88,2% da eletricidade renovável) |
+| Proposta 2 desalinhada do diagnóstico ("financiar renováveis" num país de eletricidade já renovável) e com detalhamento fraco | Combate ao desmatamento "com monitoramento por satélite e punição efetiva dos infratores, de modo a cortar a principal fonte de emissões" |
+| Fecho do D2 genérico ("cada ano de emissões elevadas") | "cada hectare derrubado hoje aumenta a conta das próximas gerações", consequência direta das duas premissas anteriores |
+
+O que saiu para caber no limite: "2,4 milhões de afetados", "combustíveis fósseis", "com recursos da União" e
+"do Inpe". A proposta 1 continua com os 5 elementos (detalhamento: famílias de áreas de risco).
+
+Rubrica híbrida: 10 em todos os critérios, como o M3, porque a rubrica não distingue estas melhorias. Elas são o que
+um corretor exigente cobraria na C3 (lacuna de premissa) e na C4 (variedade de relações lógicas). Previsões na
+plataforma: as mesmas do M3. Se o M4 tiver Abrangência maior que o M3, ganha apoio H-A2 (profundidade e consistência
+lógica).
+
 ## Resultado
 
 | Texto | Nota Final | G | A | T | E | Nota online | Status/obs. |
@@ -147,3 +169,4 @@ e a rubrica precisaria de um descritor para ela.
 | M1 | | | | | | | |
 | M2 | | | | | | | |
 | M3 | | | | | | | |
+| M4 | | | | | | | |

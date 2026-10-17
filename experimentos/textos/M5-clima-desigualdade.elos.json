@@ -1,15 +1,125 @@
 [
-  {"elo": "repertório (art. 225): abertura -> fecho", "termo": "artigo 225", "paragrafos": [1, 4]},
-  {"elo": "\"todos\" (direito de todos): abertura -> fecho", "termo": "todos", "paragrafos": [1, 4]},
-  {"elo": "gerações: abertura -> D2 -> propostas", "termo": "gerações", "paragrafos": [1, 3, 4]},
-  {"elo": "desigualdade social (pobres): tese -> D1", "termo": "pobres", "paragrafos": [1, 2]},
-  {"elo": "eixo 1 (vulnerabilidade): tese -> D1 -> proposta 1", "termo": "vulner", "paragrafos": [1, 2, 4]},
-  {"elo": "eixo 2 (peso deixado às próximas gerações): tese -> D2 -> proposta 2", "termo": "peso", "paragrafos": [1, 3, 4]},
-  {"elo": "tempo presente: abertura do D1 -> fecho", "termo": "hoje", "paragrafos": [2, 4]},
-  {"elo": "causa do D1 (falta de moradia segura) -> ação da proposta 1 (programas habitacionais)", "termo": "moradia|habitac", "paragrafos": [2, 4]},
-  {"elo": "D1 (áreas de risco) -> proposta 1 (famílias de áreas de risco)", "termo": "áreas de risco", "paragrafos": [2, 4]},
-  {"elo": "efeito do D1 (mortos) -> finalidade da proposta 1", "termo": "mort", "paragrafos": [2, 4]},
-  {"elo": "D1 (evento extremo/desastres) -> proposta 1 (desastres)", "termo": "desastres", "paragrafos": [2, 4]},
-  {"elo": "causa do D2 (desmatamento) -> ação da proposta 2", "termo": "desmatamento", "paragrafos": [3, 4]},
-  {"elo": "D2 (maior fonte, SEEG) -> finalidade da proposta 2 (principal fonte)", "termo": "fonte", "paragrafos": [3, 4]}
+  {
+    "elo": "repertório (art. 225): abertura -> fecho",
+    "termo": "artigo 225",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "\"todos\" (direito de todos): abertura -> fecho",
+    "termo": "todos",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "gerações: abertura -> D2 -> propostas",
+    "termo": "gerações",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "desigualdade social (pobres): tese -> D1",
+    "termo": "pobres",
+    "paragrafos": [
+      1,
+      2
+    ]
+  },
+  {
+    "elo": "eixo 1 (vulnerabilidade): tese -> D1 -> proposta 1",
+    "termo": "vulner",
+    "paragrafos": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "eixo 2 (peso deixado às próximas gerações): tese -> D2 -> proposta 2",
+    "termo": "peso",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "tempo presente: abertura do D1 -> fecho",
+    "termo": "hoje",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "causa do D1 (falta de moradia segura) -> ação da proposta 1 (programas habitacionais)",
+    "termo": "moradia|habitac",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "D1 (áreas de risco) -> proposta 1 (famílias de áreas de risco)",
+    "termo": "áreas de risco",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "efeito do D1 (mortos) -> finalidade da proposta 1",
+    "termo": "mort",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "D1 (evento extremo/desastres) -> proposta 1 (desastres)",
+    "termo": "desastres",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "causa do D2 (desmatamento) -> ação da proposta 2",
+    "termo": "desmatamento",
+    "paragrafos": [
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "D2 (maior fonte, SEEG) -> finalidade da proposta 2 (principal fonte)",
+    "termo": "fonte",
+    "paragrafos": [
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "causa do D1 com dado (déficit habitacional, FJP) -> ação da proposta 1 (programas habitacionais)",
+    "termo": "déficit|habitac",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "baixa renda/pobres: tese -> D1",
+    "termo": "pobres|baixa renda",
+    "paragrafos": [
+      1,
+      2
+    ]
+  }
 ]

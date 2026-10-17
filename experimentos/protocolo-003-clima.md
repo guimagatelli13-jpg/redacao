@@ -165,7 +165,7 @@ lógica).
 ## Texto M5: segunda redação do Claude, para comparação com a do usuário (2026-10-17)
 
 `experimentos/textos/M5-clima-desigualdade.txt`: escrito sem ter visto o texto do usuário, seguindo o mesmo roteiro
-que foi passado a ele (mapa → estrutura → checklist). 1.974 caracteres com espaços (1.977 contando as quebras) na versão revisada. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
+que foi passado a ele (mapa → estrutura → checklist). 1.979 caracteres com espaços (1.982 contando as quebras) na versão atual. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
 
 Mapa usado:
 
@@ -188,7 +188,21 @@ Revisão de coesão (2026-10-17, ainda sem ter visto o texto do usuário). A ver
 - "Valerá para todos", que sugeria que o direito não vale hoje, agora "será, de fato, garantido a todos", retomando o
   verbo "garante" da abertura.
 
-Rubrica híbrida: 10 em todos os critérios. Ponto fraco declarado: cinco das ligações ainda são de conclusão ("Por
+Fortalecimento (2026-10-17, ainda sem ter visto o texto do usuário). Ataca os dois pontos fracos declarados na
+revisão anterior:
+- A premissa da proposta 1 ("essas pessoas não têm acesso a moradia segura") era afirmação sem dado. Agora: "Essa
+  exposição reflete o déficit de 6 milhões de moradias, concentrado na baixa renda, segundo a Fundação João Pinheiro"
+  (FJP: 6,2 milhões de domicílios em 2022). O dado liga o eixo dos "mais pobres" à proposta dos programas
+  habitacionais.
+- Faltava relação de oposição. Agora a tese tem uma oposição real entre a norma e a prática: "A Constituição… garante a
+  todos, inclusive às futuras gerações, o direito… Na prática, porém, os efeitos… ameaçam esse direito de forma
+  desigual".
+- "evitará mortes" foi trocado por "reduzirá as mortes", que é o que a medida pode prometer.
+
+Para caber no limite, saíram "de enchentes e deslizamentos" (implícito em "áreas de risco") e "o dever de preservá-lo"
+(a ideia de futuras gerações ficou em "inclusive às futuras gerações"). Elos: 15 de 15.
+
+Rubrica híbrida: 10 em todos os critérios. Ponto fraco restante: as ligações de conclusão ainda são cinco ("Por
 isso", "Desse modo", "Logo", "Portanto", "Assim"), e a única concessão é "mesmo com".
 
 Se o usuário submeter os dois textos no mesmo simulado, a comparação na plataforma fica controlada: mesmo tema, mesma

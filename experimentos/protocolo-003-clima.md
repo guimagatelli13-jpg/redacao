@@ -162,6 +162,28 @@ um corretor exigente cobraria na C3 (lacuna de premissa) e na C4 (variedade de r
 plataforma: as mesmas do M3. Se o M4 tiver Abrangência maior que o M3, ganha apoio H-A2 (profundidade e consistência
 lógica).
 
+## Texto M5: segunda redação do Claude, para comparação com a do usuário (2026-10-17)
+
+`experimentos/textos/M5-clima-desigualdade.txt`: escrito sem ter visto o texto do usuário, seguindo o mesmo roteiro
+que foi passado a ele (mapa → estrutura → checklist). 1.960 caracteres com espaços (1.963 contando as quebras), 321
+palavras, 16 frases. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
+
+Mapa usado:
+
+| Peça | Conteúdo |
+|---|---|
+| Recorte | efeitos negativos |
+| Tese | os efeitos ameaçam de forma desigual o direito ao meio ambiente: atingem primeiro os mais pobres (eixo 1) e se agravam para os jovens (eixo 2) |
+| Repertório | Constituição, art. 225 ("todos", "presentes e futuras gerações"), retomado no fecho ("valerá para todos, hoje e amanhã") |
+| Eixo 1 | Petrópolis, 2022: mais de 230 mortos; IBGE/Cemaden: ~8 milhões em áreas de risco; causa: falta de moradia segura → proposta 1: priorizar famílias de áreas de risco nos programas habitacionais e ampliar os alertas por celular |
+| Eixo 2 | Science, 2021: 7× mais ondas de calor; causa: acúmulo de CO₂ (IPCC) e desmatamento como maior fonte (SEEG) → proposta 2: combate ao desmatamento com fiscalização por satélite e punição |
+
+Rubrica híbrida: 10 em todos os critérios. Ponto fraco declarado: cinco das ligações ainda são de conclusão ("Por
+isso", "Desse modo", "Logo", "Portanto", "Assim"), e a única concessão é "mesmo com".
+
+Se o usuário submeter os dois textos no mesmo simulado, a comparação na plataforma fica controlada: mesmo tema, mesma
+sessão, autoria diferente.
+
 ## Resultado
 
 | Texto | Nota Final | G | A | T | E | Nota online | Status/obs. |
@@ -170,3 +192,5 @@ lógica).
 | M2 | | | | | | | |
 | M3 | | | | | | | |
 | M4 | | | | | | | |
+| M5 | | | | | | | |
+| texto do usuário | | | | | | | |

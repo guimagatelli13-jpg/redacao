@@ -105,3 +105,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.4 | 2026-10-16 | série 002 (tema "Consumo e consumismo", simulado): texto C1 escrito para a rubrica híbrida e previsões em `experimentos/protocolo-002-consumo.md`; primeiro teste da rubrica fora do tema de origem |
 | v0.5 | 2026-10-16 | série 003 (tema "Mudanças climáticas", simulado): texto M1 e previsões em `experimentos/protocolo-003-clima.md`; testa se tratar causas e soluções como subordinadas ao recorte é lido como aderência ou como cobertura incompleta |
 | v0.6 | 2026-10-17 | série 003: texto paralelo M2, escrito do zero, sem repertório em comum com o M1 e com a mesma nota pela rubrica; o par testa o que a rubrica não captura |
+| v0.7 | 2026-10-17 | série 003: texto M3, de amarração máxima, com mapa de ligações verificado por `ferramentas/verificar_amarracao.py` |

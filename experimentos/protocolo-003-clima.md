@@ -87,9 +87,52 @@ plataforma der notas diferentes a eles (acima do ruído medido no X0), a diferen
 captura: por exemplo, preferência por certos tipos de repertório, ou pelo ângulo das gerações futuras, que a
 proposta pergunta explicitamente. Se der notas iguais, a rubrica descreve bem o que pesa.
 
+## Texto M3: versão de amarração máxima (2026-10-17)
+
+`experimentos/textos/M3-clima-amarrada.txt`. O objetivo foi atender às duas avaliações ao mesmo tempo sem pontas
+soltas, isto é:
+- todo eixo anunciado na tese é desenvolvido;
+- toda causa apontada num desenvolvimento é respondida por uma proposta específica;
+- o repertório da abertura volta no fecho.
+
+As ligações são verificadas mecanicamente com
+`python3 ferramentas/verificar_amarracao.py experimentos/textos/M3-clima-amarrada.txt experimentos/textos/M3-clima-amarrada.elos.json`
+(12 de 12 elos completos).
+
+Mapa de amarração:
+
+| Elemento | Introdução | Desenvolvimento | Conclusão |
+|---|---|---|---|
+| Repertório | Jonas: não comprometer as gerações futuras | — | "a responsabilidade defendida por Jonas" |
+| Eixo 1 | "proteger quem já sofre com os eventos extremos" | D1: OMM 2024, enchentes no RS; causa: falha do sistema contra cheias → cidades despreparadas | proposta 1, aberta com a mesma expressão: alertas, **manutenção do sistema contra cheias**, realocação → reduzir mortes |
+| Eixo 2 | "reduzir a herança climática deixada aos jovens" | D2: Science 2021 (7× mais ondas de calor); causa: ação humana (IPCC), combustíveis fósseis e **desmatamento** → "conta das próximas gerações" | proposta 2, aberta com "Para diminuir a herança climática": combate ao **desmatamento** e crédito para renováveis → cortar as **emissões** |
+| Tempo | "no presente" / "no futuro" | D1 = presente; D2 = futuro | "exercida no presente e garantida às próximas gerações" |
+
+As 5 perguntas da proposta são todas respondidas sem sair do recorte:
+- P2: mudanças percebidas e efeitos;
+- P3: próximas gerações e contribuição da sociedade;
+- P4: ações.
+
+As duas causas do P3 viram as duas ações da proposta 2.
+
+| Indicador | M3 |
+|---|---|
+| Caracteres com espaços / sem espaços | 1.985 / 1.673 (1.988 contando as quebras) |
+| Palavras / parágrafos / frases | 317 / 4 / 14 |
+| Conectivos | "Por isso", "Em primeiro lugar", "Em segundo lugar", "No mesmo ano", "Isso revela", "pois", "Logo", "Portanto", "Para diminuir", "Desse modo"; nenhum repetido |
+| Propostas de intervenção | duas, ambas com os 5 elementos: (1) prefeituras, com recursos da União / adaptar as cidades / alertas, manutenção, realocação / reduzir mortes / de áreas de risco; (2) governo federal / combater o desmatamento e ampliar o crédito para renováveis / monitoramento por satélite do Inpe / cortar as emissões / crédito para renováveis |
+
+Rubrica híbrida: 10 em todos os critérios, ENEM equivalente 1000. Previsões na plataforma iguais às de M1 e M2.
+
+**Diferença em relação ao M1, pela rubrica: nenhuma** (os dois têm 10 em tudo). A diferença está no que a rubrica
+mede mal: as causas viram propostas, há duas propostas completas e as ligações são explícitas. Se o M3 tiver nota
+maior que o M1 na plataforma, ganha apoio a ideia de que a Abrangência ou o Tangenciamento premiam essa articulação,
+e a rubrica precisaria de um descritor para ela.
+
 ## Resultado
 
 | Texto | Nota Final | G | A | T | E | Nota online | Status/obs. |
 |---|---|---|---|---|---|---|---|
 | M1 | | | | | | | |
 | M2 | | | | | | | |
+| M3 | | | | | | | |

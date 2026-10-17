@@ -29,6 +29,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `experimentos/textos/` | textos escritos do zero para experimentos (não gerados por substituição), como o X8 |
 | `ferramentas/testar_modelos.py` | testa fórmulas, regras de arredondamento, faixas de pesos e regras da Nota Final contra todas as avaliações |
 | `ferramentas/gerar_variantes.py` | gera as variantes a partir do texto-base por substituição exata |
+| `ferramentas/verificar_amarracao.py` | confere se cada elo de um texto (eixo, causa, proposta, repertório) aparece em todos os parágrafos esperados |
 
 ## Como registrar uma nova avaliação
 

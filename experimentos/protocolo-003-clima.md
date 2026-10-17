@@ -66,8 +66,30 @@ Comparação útil com a série 002:
 
 Aviso de circularidade: rubrica, texto e avaliação são do mesmo autor.
 
+## Texto paralelo M2 (escrito do zero, 2026-10-17)
+
+`experimentos/textos/M2-clima-hibrida.txt`: mesmo tema, mesma estratégia de recorte e mesmas metas da rubrica,
+mas **nenhum repertório em comum** com o M1. O ângulo também muda: em vez de efeitos presentes e gerações futuras,
+trata de bens essenciais (água, energia, saúde) e da desigualdade na distribuição dos danos.
+
+| Indicador | M2 |
+|---|---|
+| Caracteres com espaços / sem espaços | 1.973 / 1.649 (1.976 contando as quebras) |
+| Palavras / parágrafos / frases | 328 / 4 / 14 |
+| Recorte | "efeitos negativos" na 2ª frase (8% do texto); os 4 parágrafos tratam de efeitos ou de como atenuá-los |
+| Repertórios e fatos | encíclica *Laudato Si'* (2015) na introdução e na conclusão; crise hídrica de 2021, a pior em 91 anos, e a bandeira tarifária de escassez hídrica criada pela Aneel; dengue em 2024, recorde histórico com mais de 6 milhões de casos prováveis; Oxfam (dados de 2019): o 1% mais rico emitiu tanto quanto os 5 bilhões mais pobres; Banco Mundial (Groundswell, 2021): até 216 milhões de migrantes climáticos internos até 2050 |
+| Proposta de intervenção | agente (Ministério da Saúde, em parceria com estados e municípios), ação (planos permanentes de resposta a ondas de calor e epidemias), meio (alertas, reforço do atendimento nas periferias, combate aos focos do mosquito), finalidade (reduzir mortes e internações agravadas pelo clima), detalhamento (permanentes; nas periferias); segunda ação: renováveis menos dependentes de chuva, ligada à crise hídrica discutida no P2 |
+
+Rubrica híbrida: 10 em todos os critérios, como o M1. Previsões na plataforma: as mesmas do M1.
+
+**Para que serve o par M1/M2.** Os dois textos recebem a mesma nota pela rubrica e diferem só no conteúdo. Se a
+plataforma der notas diferentes a eles (acima do ruído medido no X0), a diferença revela algo que a rubrica não
+captura: por exemplo, preferência por certos tipos de repertório, ou pelo ângulo das gerações futuras, que a
+proposta pergunta explicitamente. Se der notas iguais, a rubrica descreve bem o que pesa.
+
 ## Resultado
 
 | Texto | Nota Final | G | A | T | E | Nota online | Status/obs. |
 |---|---|---|---|---|---|---|---|
 | M1 | | | | | | | |
+| M2 | | | | | | | |

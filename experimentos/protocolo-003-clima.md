@@ -165,7 +165,7 @@ lógica).
 ## Texto M5: segunda redação do Claude, para comparação com a do usuário (2026-10-17)
 
 `experimentos/textos/M5-clima-desigualdade.txt`: escrito sem ter visto o texto do usuário, seguindo o mesmo roteiro
-que foi passado a ele (mapa → estrutura → checklist). 1.977 caracteres com espaços (1.980 contando as quebras) na versão revisada. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
+que foi passado a ele (mapa → estrutura → checklist). 1.974 caracteres com espaços (1.977 contando as quebras) na versão revisada. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
 
 Mapa usado:
 
@@ -180,7 +180,7 @@ Mapa usado:
 Revisão de coesão (2026-10-17, ainda sem ter visto o texto do usuário). A versão anterior está no histórico do git.
 - Exemplo sem marcador, agora "É o caso de Petrópolis".
 - Estimativa do IBGE (base no Censo de 2010) apresentada como dado atual, agora "segundo estimativa do IBGE".
-- "8 milhões de brasileiros … são famílias", troca de categoria, agora "trata-se de famílias".
+- "8 milhões de brasileiros … são famílias", troca de categoria, agora "essas pessoas não têm acesso".
 - Cadeia causal incompleta (permanência sem acúmulo), agora "o gás carbônico se acumula".
 - Duas finalidades em cada proposta, agora "o que evitará" e "cortando".
 - "Alertas por celular" sem diagnóstico no desenvolvimento: removidos.

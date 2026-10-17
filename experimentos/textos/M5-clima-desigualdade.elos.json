@@ -16,8 +16,8 @@
     ]
   },
   {
-    "elo": "gerações: abertura -> D2 -> propostas",
-    "termo": "gerações",
+    "elo": "futuras gerações: abertura -> D2 (jovens, quem ainda vai nascer) -> propostas",
+    "termo": "gerações|jovens|nascer",
     "paragrafos": [
       1,
       3,

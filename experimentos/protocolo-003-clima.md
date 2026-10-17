@@ -165,7 +165,7 @@ lógica).
 ## Texto M5: segunda redação do Claude, para comparação com a do usuário (2026-10-17)
 
 `experimentos/textos/M5-clima-desigualdade.txt`: escrito sem ter visto o texto do usuário, seguindo o mesmo roteiro
-que foi passado a ele (mapa → estrutura → checklist). 1.980 caracteres com espaços (1.983 contando as quebras) na versão atual. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (15 de 15).
+que foi passado a ele (mapa → estrutura → checklist). 1.981 caracteres com espaços (1.984 contando as quebras) na versão atual. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (15 de 15).
 
 Mapa usado:
 

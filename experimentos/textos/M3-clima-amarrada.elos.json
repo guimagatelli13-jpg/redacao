@@ -1,14 +1,109 @@
 [
-  {"elo": "repertório Jonas: abertura -> fecho", "termo": "Jonas", "paragrafos": [1, 4]},
-  {"elo": "responsabilidade: abertura -> fecho", "termo": "responsabilidade", "paragrafos": [1, 4]},
-  {"elo": "gerações futuras: abertura -> D2 -> fecho", "termo": "gerações", "paragrafos": [1, 3, 4]},
-  {"elo": "presente e futuro: tese -> fecho", "termo": "presente", "paragrafos": [1, 4]},
-  {"elo": "eixo 1 (proteger quem já sofre com os eventos extremos): tese -> proposta 1", "termo": "quem já sofre com os eventos extremos", "paragrafos": [1, 4]},
-  {"elo": "eixo 1 (eventos extremos): tese -> D1 -> proposta 1", "termo": "eventos extremos", "paragrafos": [1, 2, 4]},
-  {"elo": "eixo 2 (herança climática): tese -> D2 -> proposta 2", "termo": "herança", "paragrafos": [1, 3, 4]},
-  {"elo": "causa do D1 (sistema contra cheias) -> meio da proposta 1", "termo": "sistema contra cheias", "paragrafos": [2, 4]},
-  {"elo": "efeito do D1 (cidades despreparadas) -> ação da proposta 1", "termo": "cidades", "paragrafos": [2, 4]},
-  {"elo": "efeito do D1 (mortos) -> finalidade da proposta 1", "termo": "mort", "paragrafos": [2, 4]},
-  {"elo": "causa do D2 (desmatamento) -> ação da proposta 2", "termo": "desmatamento", "paragrafos": [3, 4]},
-  {"elo": "causa do D2 (emissões) -> finalidade da proposta 2", "termo": "emissões", "paragrafos": [3, 4]}
+  {
+    "elo": "repertório Jonas: abertura -> fecho",
+    "termo": "Jonas",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "responsabilidade: abertura -> fecho",
+    "termo": "responsabilidade",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "gerações futuras: abertura -> D2 -> fecho",
+    "termo": "gerações",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "presente e futuro: tese -> fecho",
+    "termo": "presente",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "eixo 1 (proteger quem já sofre com os eventos extremos): tese -> proposta 1",
+    "termo": "quem já sofre com os eventos extremos",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "eixo 1 (eventos extremos): tese -> D1 -> proposta 1",
+    "termo": "eventos extremos",
+    "paragrafos": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "eixo 2 (herança climática): tese -> D2 -> proposta 2",
+    "termo": "herança",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "causa do D1 (sistema contra cheias) -> meio da proposta 1",
+    "termo": "sistema contra cheias",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "efeito do D1 (cidades despreparadas) -> ação da proposta 1",
+    "termo": "cidades",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "efeito do D1 (mortos) -> finalidade da proposta 1",
+    "termo": "mort",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "causa do D2 (desmatamento) -> ação da proposta 2",
+    "termo": "desmatamento",
+    "paragrafos": [
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "causa do D2 (emissões) -> finalidade da proposta 2",
+    "termo": "emissões",
+    "paragrafos": [
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "D1 (desastres assim tendem a aumentar) -> efeito da proposta 1 (reduzirá mortes em desastres)",
+    "termo": "desastres",
+    "paragrafos": [
+      2,
+      4
+    ]
+  }
 ]

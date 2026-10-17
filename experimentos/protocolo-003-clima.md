@@ -165,7 +165,7 @@ lógica).
 ## Texto M5: segunda redação do Claude, para comparação com a do usuário (2026-10-17)
 
 `experimentos/textos/M5-clima-desigualdade.txt`: escrito sem ter visto o texto do usuário, seguindo o mesmo roteiro
-que foi passado a ele (mapa → estrutura → checklist). 1.979 caracteres com espaços (1.982 contando as quebras) na versão atual. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (13 de 13).
+que foi passado a ele (mapa → estrutura → checklist). 1.980 caracteres com espaços (1.983 contando as quebras) na versão atual. Elos: `experimentos/textos/M5-clima-desigualdade.elos.json` (15 de 15).
 
 Mapa usado:
 
@@ -197,7 +197,7 @@ revisão anterior:
 - Faltava relação de oposição. Agora a tese tem uma oposição real entre a norma e a prática: "A Constituição… garante a
   todos, inclusive às futuras gerações, o direito… Na prática, porém, os efeitos… ameaçam esse direito de forma
   desigual".
-- "evitará mortes" foi trocado por "reduzirá as mortes", que é o que a medida pode prometer.
+- "evitará mortes" foi trocado por "diminuirá as mortes", que é o que a medida pode prometer.
 
 Para caber no limite, saíram "de enchentes e deslizamentos" (implícito em "áreas de risco") e "o dever de preservá-lo"
 (a ideia de futuras gerações ficou em "inclusive às futuras gerações"). Elos: 15 de 15.

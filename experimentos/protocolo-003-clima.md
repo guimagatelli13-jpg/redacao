@@ -142,7 +142,7 @@ e a rubrica precisaria de um descritor para ela.
 
 ## Texto M4: M3 aprofundado (2026-10-17)
 
-`experimentos/textos/M4-clima-aprofundada.txt` (1,981 caracteres com espaços, 1,984 contando as quebras).
+`experimentos/textos/M4-clima-aprofundada.txt` (1.981 caracteres com espaços, 1.984 contando as quebras).
 Elos: `experimentos/textos/M4-clima-aprofundada.elos.json` (14 de 14). Mudanças em relação ao M3, cada uma
 corrigindo uma fraqueza específica:
 

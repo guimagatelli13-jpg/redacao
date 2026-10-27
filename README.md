@@ -30,6 +30,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `experimentos/protocolo*.md` | experimentos controlados de cada série, com previsões registradas antes dos resultados |
 | `experimentos/variantes/` | textos prontos para submissão e `MUDANCAS.md`, com o diff exato de cada um |
 | `experimentos/textos/` | textos escritos do zero para experimentos (não gerados por substituição), como o X8 |
+| `simulador/simulador.html` | simulador de treino para os três temas, publicado como artefato: prevê os campos da plataforma (modelo v0.18), confere o método da professora, corrige por IA e guarda as tentativas com as notas oficiais registradas |
 | `ferramentas/testar_modelos.py` | testa fórmulas, regras de arredondamento, faixas de pesos e regras da Nota Final contra todas as avaliações |
 | `ferramentas/gerar_variantes.py` | gera as variantes a partir do texto-base por substituição exata |
 | `ferramentas/sobreposicao_lexical.py` | mede quanto do vocabulário da proposta (tema e perguntas) aparece em cada redação avaliada |

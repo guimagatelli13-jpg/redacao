@@ -17,6 +17,7 @@ Legenda de status das hipóteses:
 |---|---|---|---|---|---|---|---|---|---|
 | 001 | Descarte correto do lixo | 9,90 | 3,00 | 7,10 | 4,00 | 6,60 | 0,00 | linha de base | `relatorios/001-analise-inicial.md` |
 | 002 | Descarte correto do lixo (texto B) | 9,70 | 3,20 | 8,70 | 7,00 | 6,90 | 0,00 | avaliação externa | `relatorios/002-segunda-avaliacao.md` |
+| 003 | Consumo e consumismo (texto A) | 9,60 | 2,40 | 8,50 | 0,00 | 6,50 | 0,00 | avaliação externa | `relatorios/003-terceira-avaliacao.md` |
 
 ## 2. Dados de contexto informados depois da análise inicial
 
@@ -24,6 +25,7 @@ Legenda de status das hipóteses:
 |---|---|---|---|
 | 2026-10-16 | limite máximo de 2.000 caracteres | informado pelo usuário (sem documento) | H-A4 enfraquecida; P-MAX não explica o zero; X3, X4, X5 e X8 refeitos para caber no limite |
 | 2026-10-27 | instituição: Faculdades Pequeno Príncipe (FPP); a "Nota Final" tem a descrição "Exibe a nota final calculada para a inscrição" | tela da plataforma | a Nota Final é um campo da inscrição; P-OUT reforçada |
+| 2026-10-27 | a plataforma conta todos os caracteres, inclusive espaços e quebras: o contador mostrou 1.680 para 1.674 caracteres de texto mais 3 linhas em branco | tela de redação (avaliação 003) | confirma a transcrição; as quebras de parágrafo com linha em branco contam 2 |
 | 2026-10-27 | redação online vale até 10; classificação com 6,0 ou mais, sem zerar nenhum critério; de 1.200 a 2.000 caracteres; resultado em até 48 horas úteis | blog oficial da FPP (Verão 2027) e Edital FPP 016 (Verão 2026), lidos por trechos de busca porque o domínio está bloqueado neste ambiente | P-N7 contradiz o documento; as notas online 6,6 e 6,9 classificariam; o zero não decorre das regras documentadas |
 
 ## 3. Hipóteses
@@ -36,8 +38,8 @@ Legenda de status das hipóteses:
 | M1b | média com arredondamento sobre valores internos ocultos | — | **refutada** pela 002 | — | — |
 | M1c | média das notas exibidas com arredondamento a 0,1 ou 0,01 | — | **refutada** | dá 6,7 / 6,67 | — |
 | M2 | pesos desiguais; com 001 e 002 a faixa compatível encolheu para wG 37–46%, **wA 38–42%**, wT 13–25% | IF | ativa | reproduz 001 e 002 | perfis variados |
-| M2a | arred₀,₁(0,4G + 0,4A + 0,2T) = (2G + 2A + T)/5 | H | **melhor candidato**: única combinação da grade de 0,05 compatível com 001 e 002 | 6,58 → 6,6; 6,90 → 6,9 | próxima avaliação |
-| M2b | trunc₀,₁((5G + 5A + 3T)/13) | H | ativa (menos simples) | 6,60; 6,97 → 6,9 | casos em que arredondar e truncar divergem |
+| M2a | arred₀,₁(0,4G + 0,4A + 0,2T) = (2G + 2A + T)/5 | H | **apoiada**: registrada como melhor candidato antes da 003 e acertou (6,50) | 6,58 → 6,6; 6,90 → 6,9; 6,50 → 6,5 | caso em que arredondar e truncar divirjam |
+| M2b | trunc₀,₁((5G + 5A + 3T)/13) | H | ativa (menos simples); também acerta a 003 (6,58 → 6,5) | 6,60; 6,97 → 6,9; 6,58 → 6,5 | casos em que arredondar e truncar divergem |
 | M3 | 0,29G + 0,32A + 0,39T, exato | — | **refutada** pela 002 | — | — |
 | M4 | (G+A+T − 0,05E)/3 | — | **refutada** pela 002 (dá 7,08) | — | — |
 | M5 | média incluindo E | — | **refutada** | dá 6,00 | — |
@@ -52,12 +54,14 @@ Legenda de status das hipóteses:
 |---|---|---|---|---|
 | G-esc | G em 0–10, passo 0,1 | IF | ativa | novas avaliações |
 | MG1 | G = 10 − 0,025E | — | **refutada** pela 002 (dá 9,8; observado 9,7) | — |
-| MG2 | G = arred₀,₁(10(1 − E/palavras)) | H | **apoiada**: formulada antes da 002 e acertou (10·(1 − 7/266) = 9,74 → 9,7) | X1a/X1b |
+| MG2 | G = arred₀,₁(10(1 − E/palavras)), com E = apontamentos exibidos | — | **refutada** pela 003: E = 0, mas G = 9,6 (acertara a 002) | — |
+| MG2' | G = arred₀,₁(10(1 − n/palavras)), com n = contagem interna de erros, que inclui ortografia | H | ativa: compatível com as três (n de 1–4, de 7–9 e de 9–11; no 003 há ≥ 9 erros reais) | X1a/X1b |
 | MG3 | G = 10 − 0,1E | — | **refutada** (dá 9,6) | — |
-| E-cont | E é uma contagem de apontamentos | H | ativa | X1, X2 |
+| E-cont | E é a contagem de todos os erros | — | **enfraquecida**: E = 0 num texto com ≥ 9 erros reais | — |
+| H-E2 | E conta só desvios gramaticais ou sintáticos, e não ortografia | H | ativa, frágil ("guiado" deveria contar) | X1a (erros de concordância e crase) |
 | E-fp | os 4 apontamentos são falsos positivos nos 5 trechos listados | H | ativa | X2 |
 | T-ori | T: maior = mais aderente | IF | ativa | X6, X7 |
-| T-tese | T sobe quando a tese nomeia o recorte | H | **apoio fraco** (comparação não controlada): o recorte aparece aos 57% do texto no 001 (T = 7,1) e aos 17% no B, onde está na tese (T = 8,7) | X6 |
+| T-tese | T sobe quando a tese nomeia o recorte | H | **apoio** (comparação não controlada): com o recorte na tese, 8,7 (002) e 8,5 (003); sem ele, 7,1 (001) | X6 |
 | T-prop | T acompanha a proporção do texto dedicada ao recorte | H | ativa | X4, X5, X7 |
 | H-A1 | A = cobertura das perguntas (0–10) | H | **enfraquecida** | X7 |
 | H-A1' | A = contagem de perguntas (0–4) | H | **enfraquecida** | — |
@@ -81,6 +85,7 @@ Legenda de status das hipóteses:
 | P-A5 | zera se A < 5 (ou algum critério < 5) | ativa, mas não documentada (o documento fala só em "zerar" um critério) |
 | P-OUT | causa externa às notas (status do processo, integridade, etapa pendente) | **reforçada**: campo "calculado para a inscrição"; pelas regras documentadas, 6,6 e 6,9 classificariam |
 | P-DOC | regra documentada: classificado com nota ≥ 6,0 e nenhum critério zerado | **documentada** (FPP); não explica o 0,00 |
+| P-E | zera por apontamentos (≥ 4, ou = 0 como "critério zerado") | **não explica**: E = 4, 7 e 0, sempre com Nota Final 0 |
 | P-EXT | zera por extensão abaixo do mínimo | muito improvável (1.564 a 1.844 caracteres) |
 | P-MAX | zera por exceder o máximo de 2.000 caracteres | **não explica**: 1.844 caracteres, contando as quebras |
 
@@ -116,3 +121,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.9 | 2026-10-17 | série 003: M5, segunda redação do Claude, escrita sem ver o texto do usuário, para comparação |
 | v0.10 | 2026-10-17 | série 003: M5 revisado (coesão) e fortalecido (déficit habitacional da FJP como premissa da proposta 1; oposição norma × prática na tese) |
 | v0.11 | 2026-10-27 | avaliação 002 (texto B, mesmo tema): média simples refutada; pesos ~0,4/0,4/0,2; MG2 apoiada; instituição e regras documentadas (FPP) |
+| v0.12 | 2026-10-27 | avaliação 003 (consumo): M2a acerta a previsão; MG2 com apontamentos refutada (vira MG2' com contagem interna); H-E2; T-tese com mais apoio; contagem de caracteres da plataforma |

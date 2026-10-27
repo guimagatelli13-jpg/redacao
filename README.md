@@ -6,9 +6,10 @@ como confirmada, inferência forte ou hipótese exploratória.
 
 ## Estado atual
 
-- **1 avaliação.** Rubrica parcial (v0.1); nenhuma regra documentada.
-- **Melhor candidato para a nota online:** `trunc₀,₁((Gramática + Abrangência + Tangenciamento)/3)`. Ainda não é
-  identificável, porque outras fórmulas também reproduzem o dado.
+- **2 avaliações** (mesmo tema). Instituição: Faculdades Pequeno Príncipe. Regras documentadas: nota até 10;
+  classificação com 6,0 ou mais e nenhum critério zerado; 1.200 a 2.000 caracteres.
+- **Melhor candidato para a nota online:** `arred₀,₁(0,4·Gramática + 0,4·Abrangência + 0,2·Tangenciamento)`.
+  A média simples foi refutada; o peso da Abrangência está entre 38% e 42%.
 - **"Nota Final" e "Nota Final da Redação Online" são grandezas diferentes.** O 0,00 da primeira não sai das notas
   parciais.
 

@@ -129,7 +129,7 @@ Nota prevista na plataforma:
 - G ≈ H1 (a plataforma é mais tolerante, então G ≥ H1 na prática);
 - T ≈ H2;
 - A ≈ (H3a + H3b)/2, corrigida pela âncora (ver abaixo) [H];
-- nota online = trunc₀,₁((G + A + T)/3) (M1) [H].
+- nota online = arred₀,₁(0,4·G + 0,4·A + 0,2·T) (M2a) [H; atualizado em 2026-10-27, depois que a avaliação 002 refutou a média simples M1].
 
 Nota ENEM equivalente:
 - C1 = 20·H1;
@@ -144,6 +144,9 @@ Nota ENEM equivalente:
 Até haver mais dados, a previsão de A sai como faixa entre essas duas correções e a régua sem correção.
 
 ## 4. Aplicação aos três textos
+
+> As previsões de nota online desta seção foram calculadas com M1, refutada em 2026-10-27. Os valores atualizados
+> estão em `relatorios/002-segunda-avaliacao.md`, seção 7.
 
 Esta avaliação foi feita por quem escreveu a rubrica e os textos X8 e X9: ela verifica se a rubrica é aplicável, não
 se é válida.

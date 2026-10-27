@@ -23,6 +23,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `avaliacoes/NNN-tema/` | proposta, redação exatamente como submetida e notas exatamente como exibidas |
 | `propostas/` | propostas de tema ainda sem avaliação registrada |
 | `relatorios/` | análises; cada relatório é um retrato do momento em que foi escrito |
+| `fontes/` | fontes externas que não são da plataforma, como as orientações da professora |
 | `modelo/registro.md` | registro vivo: hipóteses e seus status, previsões e resultados, questões em aberto |
 | `modelo/rubrica-hibrida-enem.md` | critérios do ENEM adaptados à plataforma: correspondências, descritores por nível e cálculo da nota prevista e da nota ENEM equivalente |
 | `experimentos/protocolo*.md` | experimentos controlados de cada série, com previsões registradas antes dos resultados |

@@ -14,6 +14,11 @@ Legenda de classificação:
 > X3, X4, X5 e X8 (as extensões citadas na seção 8 são das versões antigas). O estado atual está em
 > `modelo/registro.md` e `experimentos/protocolo.md`.
 
+> **Atualização (2026-10-27):** a média simples (M1) foi refutada pela avaliação 002; o melhor modelo é
+> 0,4·G + 0,4·A + 0,2·T. A afirmação de que seguir o plano facultativo da proposta induz ao tangenciamento (§3.3)
+> ficou enfraquecida: o Tangenciamento acompanha a presença literal das palavras do tema (relatório 004), e a
+> professora orienta justamente a responder uma pergunta por parágrafo (`fontes/orientacoes-professora.md`).
+
 Quando cabe, o rótulo traz um grau de confiança (alta/média/baixa). Os números citados podem ser reproduzidos com `python3 ferramentas/testar_modelos.py` e `python3 ferramentas/gerar_variantes.py`.
 
 ---

@@ -73,8 +73,34 @@ O que cada resultado significaria:
 
 Aviso de circularidade: rubrica, texto e avaliação são do mesmo autor.
 
+## Texto C2: C1 reescrito pelo método da professora (2026-10-27)
+
+`experimentos/textos/C2-consumo-metodo.txt` (1,982 caracteres; 1,988 como a plataforma conta, com as linhas em
+branco; 331 palavras). Elos: `experimentos/textos/C2-consumo-metodo.elos.json` (11 de 11).
+
+| Regra | Como o C2 cumpre | Problema do C1 que foi corrigido |
+|---|---|---|
+| Uma pergunta por parágrafo, aberta com as palavras dela | P1 "A diferença entre consumo e consumismo…"; P2 "Para estabelecer limite entre o necessário e o exagero ao consumir…"; P3 "Entre as principais consequências de um consumismo desenfreado…"; P4 "…ações contribuem para que a população possa consumir produtos de forma mais consciente" | o C1 organizava por eixos próprios |
+| Cada resposta serve ao recorte | todo parágrafo fecha no limite entre o necessário e o exagero | — |
+| O dado prova a afirmação | P2: o art. 49 do CDC (prazo de reflexão) prova que a lei reconhece decisões que merecem ser repensadas; P3: a queda de 36% no uso das roupas antes do descarte (Fundação Ellen MacArthur) prova compra além do uso; o lixo eletrônico (ONU) cresce, entre outros fatores, pelo consumo e pela falta de conserto | o C1 usava a inadimplência (Serasa) como sinal de consumismo |
+| Nada de repertório de bolso | nenhum autor de bolso; só uma lei e dois dados específicos | o C1 usava Bauman |
+| Vocabulário da proposta | cobertura do núcleo 1,00; todas as palavras do tema; 10 de 11 pares de palavras do tema | C1: núcleo 0,50 |
+| Propostas ligadas às causas | educação para o consumo (orçamento e propagandas, do P2); peças e conserto acessíveis (falta de conserto, do P3) | — |
+
+Previsões (M2a; registradas antes de qualquer resultado):
+
+| Campo | H-A9 e T-lex certas | Hipótese nula |
+|---|---|---|
+| Gramática | 10 (nenhum erro encontrado) | 10 |
+| Tangenciamento | 8,5 a 9,5 | 8,5 a 9,5 (todas as palavras do tema estão presentes, como no 003) |
+| Abrangência | 3 a 5 | cerca de 2,4 |
+| Nota online | 6,9 a 7,9 | cerca de 6,7 |
+
+Use só em simulado. Numa prova real, a decisão é do candidato.
+
 ## Resultado
 
 | Texto | Nota Final | G | A | T | E | Nota online | Status/obs. |
 |---|---|---|---|---|---|---|---|
 | C1 | | | | | | | |
+| C2 | | | | | | | |

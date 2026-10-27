@@ -1,0 +1,87 @@
+[
+  {
+    "elo": "P1 responde à pergunta 1 com as palavras dela (diferença entre consumo e consumismo)",
+    "termo": "diferença entre consumo e consumismo",
+    "paragrafos": [
+      1
+    ]
+  },
+  {
+    "elo": "P2 responde à pergunta 2 com as palavras dela",
+    "termo": "estabelecer limite entre o necessário e o exagero ao consumir",
+    "paragrafos": [
+      2
+    ]
+  },
+  {
+    "elo": "P3 responde à pergunta 3 com as palavras dela",
+    "termo": "principais consequências de um consumismo desenfreado",
+    "paragrafos": [
+      3
+    ]
+  },
+  {
+    "elo": "P4 responde à pergunta 4 com as palavras dela",
+    "termo": "ações contribuem para que a população possa consumir produtos de forma mais consciente",
+    "paragrafos": [
+      4
+    ]
+  },
+  {
+    "elo": "recorte (necessário × exagero): tese -> P2 -> P3 -> fecho",
+    "termo": "necessário",
+    "paragrafos": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "desperdício: tese -> P3",
+    "termo": "desperdício",
+    "paragrafos": [
+      1,
+      3
+    ]
+  },
+  {
+    "elo": "impulso: definição -> critério do P2",
+    "termo": "impulso",
+    "paragrafos": [
+      1,
+      2
+    ]
+  },
+  {
+    "elo": "publicidade (P2) -> análise de propagandas (proposta 1)",
+    "termo": "publicidade|propagandas",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "orçamento (critério do P2) -> exercícios de orçamento (proposta 1)",
+    "termo": "orçamento",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "falta de conserto (P3) -> peças e conserto (proposta 2)",
+    "termo": "conserto",
+    "paragrafos": [
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "reflexão: critério -> prova (art. 49)",
+    "termo": "reflexão",
+    "paragrafos": [
+      2
+    ]
+  }
+]

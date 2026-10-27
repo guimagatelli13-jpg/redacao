@@ -6,7 +6,7 @@ como confirmada, inferência forte ou hipótese exploratória.
 
 ## Estado atual
 
-- **2 avaliações** (mesmo tema). Instituição: Faculdades Pequeno Príncipe. Regras documentadas: nota até 10;
+- **4 avaliações** (2 temas). Instituição: Faculdades Pequeno Príncipe; plataforma: CRM Educacional. Regras documentadas: nota até 10;
   classificação com 6,0 ou mais e nenhum critério zerado; 1.200 a 2.000 caracteres.
 - **Melhor candidato para a nota online:** `arred₀,₁(0,4·Gramática + 0,4·Abrangência + 0,2·Tangenciamento)`.
   A média simples foi refutada; o peso da Abrangência está entre 38% e 42%.
@@ -30,6 +30,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `experimentos/textos/` | textos escritos do zero para experimentos (não gerados por substituição), como o X8 |
 | `ferramentas/testar_modelos.py` | testa fórmulas, regras de arredondamento, faixas de pesos e regras da Nota Final contra todas as avaliações |
 | `ferramentas/gerar_variantes.py` | gera as variantes a partir do texto-base por substituição exata |
+| `ferramentas/sobreposicao_lexical.py` | mede quanto do vocabulário da proposta (tema e perguntas) aparece em cada redação avaliada |
 | `ferramentas/verificar_amarracao.py` | confere se cada elo de um texto (eixo, causa, proposta, repertório) aparece em todos os parágrafos esperados |
 
 ## Como registrar uma nova avaliação

@@ -1,0 +1,21 @@
+# Notas — avaliação 004
+
+Valores exatamente como exibidos (`tela-notas.jpg`, captura de celular). A barra de endereço mostra o domínio
+"…crmeducacional.com": a plataforma de inscrição e correção é da CRM Educacional. Texto: `redacao.txt`, colado pelo
+usuário com o título "Entre o ter e o ser: os limites do consumo". Não se sabe se o título foi digitado no campo da
+redação; se foi, o envio teve cerca de 1.816 caracteres. Proposta: `propostas/002-consumo-consumismo.md`.
+
+| Campo (nome exato) | Valor |
+|---|---|
+| Nota Final ("Exibe a nota final calculada para a inscrição.") | 0,00 |
+| Nota de Gramática da Redação Online | 10,00 |
+| Nota da Abrangência da Redação Online | 2,40 |
+| Nota do Tangenciamento (Fuga) | 7,40 |
+| Apontamento de erro gramatical | 1,00 |
+| Nota Final da Redação Online | 6,40 |
+
+Características: repertório nomeado (Zygmunt Bauman, *Vida para consumo*), dois dados com fonte (CNC: mais de 75%
+das famílias endividadas; ONU: mais de 60 milhões de toneladas de lixo eletrônico em 2022, menos de um quarto
+reciclado), proposta com agentes. 1.766 caracteres no corpo, 280 palavras.
+
+Não informados: data, se foi simulado ou inscrição real, status, autoria.

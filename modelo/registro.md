@@ -18,6 +18,7 @@ Legenda de status das hipóteses:
 | 001 | Descarte correto do lixo | 9,90 | 3,00 | 7,10 | 4,00 | 6,60 | 0,00 | linha de base | `relatorios/001-analise-inicial.md` |
 | 002 | Descarte correto do lixo (texto B) | 9,70 | 3,20 | 8,70 | 7,00 | 6,90 | 0,00 | avaliação externa | `relatorios/002-segunda-avaliacao.md` |
 | 003 | Consumo e consumismo (texto A) | 9,60 | 2,40 | 8,50 | 0,00 | 6,50 | 0,00 | avaliação externa | `relatorios/003-terceira-avaliacao.md` |
+| 004 | Consumo e consumismo (texto B) | 10,00 | 2,40 | 7,40 | 1,00 | 6,40 | 0,00 | avaliação externa | `relatorios/004-quarta-avaliacao.md` |
 
 ## 2. Dados de contexto informados depois da análise inicial
 
@@ -25,6 +26,7 @@ Legenda de status das hipóteses:
 |---|---|---|---|
 | 2026-10-16 | limite máximo de 2.000 caracteres | informado pelo usuário (sem documento) | H-A4 enfraquecida; P-MAX não explica o zero; X3, X4, X5 e X8 refeitos para caber no limite |
 | 2026-10-27 | instituição: Faculdades Pequeno Príncipe (FPP); a "Nota Final" tem a descrição "Exibe a nota final calculada para a inscrição" | tela da plataforma | a Nota Final é um campo da inscrição; P-OUT reforçada |
+| 2026-10-27 | plataforma da CRM Educacional (domínio na barra de endereço). Segundo a documentação: abrangência = "se o candidato entendeu e desenvolveu bem o tema proposto… de maneira completa e coerente"; gramática = "correção ortográfica e gramatical"; parâmetros ajustáveis pela instituição | tela da avaliação 004; artigo de suporte da CRM Educacional (trechos de busca) | os pesos 0,4/0,4/0,2 provavelmente são configuração da FPP; a gramática inclui ortografia |
 | 2026-10-27 | a plataforma conta todos os caracteres, inclusive espaços e quebras: o contador mostrou 1.680 para 1.674 caracteres de texto mais 3 linhas em branco | tela de redação (avaliação 003) | confirma a transcrição; as quebras de parágrafo com linha em branco contam 2 |
 | 2026-10-27 | redação online vale até 10; classificação com 6,0 ou mais, sem zerar nenhum critério; de 1.200 a 2.000 caracteres; resultado em até 48 horas úteis | blog oficial da FPP (Verão 2027) e Edital FPP 016 (Verão 2026), lidos por trechos de busca porque o domínio está bloqueado neste ambiente | P-N7 contradiz o documento; as notas online 6,6 e 6,9 classificariam; o zero não decorre das regras documentadas |
 
@@ -38,7 +40,7 @@ Legenda de status das hipóteses:
 | M1b | média com arredondamento sobre valores internos ocultos | — | **refutada** pela 002 | — | — |
 | M1c | média das notas exibidas com arredondamento a 0,1 ou 0,01 | — | **refutada** | dá 6,7 / 6,67 | — |
 | M2 | pesos desiguais; com 001 e 002 a faixa compatível encolheu para wG 37–46%, **wA 38–42%**, wT 13–25% | IF | ativa | reproduz 001 e 002 | perfis variados |
-| M2a | arred₀,₁(0,4G + 0,4A + 0,2T) = (2G + 2A + T)/5 | H | **apoiada**: registrada como melhor candidato antes da 003 e acertou (6,50) | 6,58 → 6,6; 6,90 → 6,9; 6,50 → 6,5 | caso em que arredondar e truncar divirjam |
+| M2a | arred₀,₁(0,4G + 0,4A + 0,2T) = (2G + 2A + T)/5 | IF | **apoiada**: acertou duas previsões seguidas (003: 6,50; 004: 6,44 → 6,4) | 6,58 → 6,6; 6,90 → 6,9; 6,50 → 6,5 | caso em que arredondar e truncar divirjam |
 | M2b | trunc₀,₁((5G + 5A + 3T)/13) | H | ativa (menos simples); também acerta a 003 (6,58 → 6,5) | 6,60; 6,97 → 6,9; 6,58 → 6,5 | casos em que arredondar e truncar divergem |
 | M3 | 0,29G + 0,32A + 0,39T, exato | — | **refutada** pela 002 | — | — |
 | M4 | (G+A+T − 0,05E)/3 | — | **refutada** pela 002 (dá 7,08) | — | — |
@@ -61,14 +63,16 @@ Legenda de status das hipóteses:
 | H-E2 | E conta só desvios gramaticais ou sintáticos, e não ortografia | H | ativa, frágil ("guiado" deveria contar) | X1a (erros de concordância e crase) |
 | E-fp | os 4 apontamentos são falsos positivos nos 5 trechos listados | H | ativa | X2 |
 | T-ori | T: maior = mais aderente | IF | ativa | X6, X7 |
-| T-tese | T sobe quando a tese nomeia o recorte | H | **apoio** (comparação não controlada): com o recorte na tese, 8,7 (002) e 8,5 (003); sem ele, 7,1 (001) | X6 |
+| T-tese | T sobe quando a tese nomeia o recorte | H | **enfraquecida** pela 004: recorte na introdução ("o limite entre ambos"), mas T = 7,4 | X6 |
+| T-lex | T acompanha a presença literal das palavras da frase do tema | H | **nova**: explica as 4 avaliações (todas as palavras → 8,5/8,7; 2/3 → 7,1/7,4; na 004 faltam "necessário" e "exagero") | L1 |
 | T-prop | T acompanha a proporção do texto dedicada ao recorte | H | ativa | X4, X5, X7 |
 | H-A1 | A = cobertura das perguntas (0–10) | H | **enfraquecida** | X7 |
 | H-A1' | A = contagem de perguntas (0–4) | H | **enfraquecida** | — |
-| H-A2 | A = profundidade de desenvolvimento | H | ativa | X4 vs. X5 |
-| H-A3 | A = fatos e repertório | H | **enfraquecida**: o texto B, sem nenhum dado ou fonte, teve A = 3,2, acima do texto 001 (1 fato, A = 3,0) | X3 vs. X5 |
-| H-A4 | A = extensão | H | **enfraquecida**: o texto usou 92% do máximo de 2.000 caracteres; se A fosse proporcional à fração usada, valeria ~9, e não 3 | X3, X4, X5 vs. base; X7 |
-| H-A5 | A = gabarito de tópicos do tema | H | ativa | novos temas |
+| H-A2 | A = profundidade de desenvolvimento | H | **fortemente enfraquecida**: 003 (genérico) e 004 (mecanismos e três dimensões de consequências) tiveram 2,4 as duas | — |
+| H-A3 | A = fatos e repertório | H | **fortemente enfraquecida**: 004 (Bauman, CNC, ONU) e 003 (nada) tiveram 2,4 as duas; 002 (nada) superou 001 (1 fato) | — |
+| H-A4 | A = extensão | H | **enfraquecida**: o texto usou 92% do máximo e teve A ≈ 3; e a 004, mais longa que a 003, teve a mesma nota | controle de extensão no L1 |
+| H-A5 | A = gabarito de tópicos do tema | H | ativa: as notas se agrupam por tema (lixo 3,0/3,2; consumo 2,4/2,4) | L1; mais temas |
+| H-A9 | A acompanha a cobertura lexical do núcleo da proposta (frase do tema + perguntas) | H | **nova**: mesma ordem nas 4 avaliações (0,44/0,50/0,60/0,67 → 2,4/2,4/3,0/3,2); confundida com o tema | L1 |
 | H-A6 | A = diversidade de dimensões | H | **enfraquecida** | — |
 | H-A7 | A em níveis discretos | — | **enfraquecida**: A = 3,2 não é inteiro | — |
 | H-A8 | A instável | H | ativa | X0 |
@@ -122,3 +126,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.10 | 2026-10-17 | série 003: M5 revisado (coesão) e fortalecido (déficit habitacional da FJP como premissa da proposta 1; oposição norma × prática na tese) |
 | v0.11 | 2026-10-27 | avaliação 002 (texto B, mesmo tema): média simples refutada; pesos ~0,4/0,4/0,2; MG2 apoiada; instituição e regras documentadas (FPP) |
 | v0.12 | 2026-10-27 | avaliação 003 (consumo): M2a acerta a previsão; MG2 com apontamentos refutada (vira MG2' com contagem interna); H-E2; T-tese com mais apoio; contagem de caracteres da plataforma |
+| v0.13 | 2026-10-27 | avaliação 004: M2a acerta de novo; a Abrangência não responde a fatos, profundidade nem extensão; hipóteses lexicais H-A9 e T-lex; plataforma identificada (CRM Educacional) e definições do fornecedor; experimento L1 |

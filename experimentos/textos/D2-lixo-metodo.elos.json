@@ -1,0 +1,74 @@
+[
+  {
+    "elo": "P1 responde à pergunta 1 (a população descarta corretamente o lixo?)",
+    "termo": "população brasileira ainda não descarta corretamente",
+    "paragrafos": [
+      1
+    ]
+  },
+  {
+    "elo": "P2 responde à pergunta 2 (implicações do descarte indevido)",
+    "termo": "implicações do descarte indevido do lixo",
+    "paragrafos": [
+      2
+    ]
+  },
+  {
+    "elo": "P3 responde à pergunta 3 (importância da educação e da conscientização)",
+    "termo": "importância da educação e da conscientização",
+    "paragrafos": [
+      1,
+      3
+    ]
+  },
+  {
+    "elo": "P4 responde à pergunta 4 (ações para ampliar a conscientização)",
+    "termo": "ações podem contribuir para ampliar a conscientização",
+    "paragrafos": [
+      4
+    ]
+  },
+  {
+    "elo": "tese 'transformar informação em hábito': tese -> P3 -> proposta 1",
+    "termo": "hábito",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "dado do Ibope (97% acham importante) -> proposta 2 (quem já reconhece) -> fecho (consciência que já demonstra)",
+    "termo": "importante|reconhece a importância|já demonstra",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "separar/separação: dado do P1 -> P3 -> proposta 2",
+    "termo": "separ",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "escola/crianças (P3) -> projetos nas escolas (proposta 1)",
+    "termo": "escola",
+    "paragrafos": [
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "descarte correto: tese -> P3 -> fecho",
+    "termo": "descarte correto",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  }
+]

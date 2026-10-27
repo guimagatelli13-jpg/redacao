@@ -1,0 +1,97 @@
+[
+  {
+    "elo": "P1 responde à pergunta 1 (principais mudanças percebidas)",
+    "termo": "principais mudanças climáticas percebidas nos últimos tempos",
+    "paragrafos": [
+      1
+    ]
+  },
+  {
+    "elo": "P2 responde à pergunta 2 (efeitos negativos)",
+    "termo": "efeitos negativos",
+    "paragrafos": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "P3 responde à pergunta 3 (comprometer o futuro das próximas gerações)",
+    "termo": "comprometer de forma grave o futuro das próximas gerações",
+    "paragrafos": [
+      3
+    ]
+  },
+  {
+    "elo": "P3 responde à pergunta 4 (sociedade está contribuindo para a aceleração)",
+    "termo": "sociedade está contribuindo para a aceleração",
+    "paragrafos": [
+      3
+    ]
+  },
+  {
+    "elo": "P4 responde à pergunta 5 (ações para atenuar)",
+    "termo": "ações podem ser realizadas para atenuar",
+    "paragrafos": [
+      4
+    ]
+  },
+  {
+    "elo": "tese 'proteger quem já sofre' -> proposta 1",
+    "termo": "proteger quem já sofre",
+    "paragrafos": [
+      1,
+      4
+    ]
+  },
+  {
+    "elo": "tese 'frear a aceleração' -> P3 -> proposta 2",
+    "termo": "frear a aceleração|aceleração",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "chuvas extremas (P1) -> enchentes/temporal (P2)",
+    "termo": "chuvas|enchentes|temporal",
+    "paragrafos": [
+      1,
+      2
+    ]
+  },
+  {
+    "elo": "causa do P2 (sistema contra cheias) -> proposta 1",
+    "termo": "sistema contra cheias|sistemas contra cheias",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "causa do P2 (moradias em encostas) -> proposta 1 (programas habitacionais)",
+    "termo": "moradias|habitacionais|áreas de risco",
+    "paragrafos": [
+      2,
+      4
+    ]
+  },
+  {
+    "elo": "causa do P3 (desmatamento) -> proposta 2",
+    "termo": "desmatamento",
+    "paragrafos": [
+      3,
+      4
+    ]
+  },
+  {
+    "elo": "futuro: tese -> P3 -> fecho",
+    "termo": "futuro",
+    "paragrafos": [
+      1,
+      3,
+      4
+    ]
+  }
+]

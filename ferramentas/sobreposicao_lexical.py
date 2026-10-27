@@ -1,6 +1,7 @@
 """Mede a sobreposição de vocabulário entre cada redação avaliada e o enunciado da sua proposta.
 
-Uso: python3 ferramentas/sobreposicao_lexical.py
+Uso: python3 ferramentas/sobreposicao_lexical.py            (todas as avaliações registradas)
+     python3 ferramentas/sobreposicao_lexical.py TEXTO TEMA  (um texto; TEMA = lixo, consumo ou clima)
 
 Testa a hipótese de que Abrangência e Tangenciamento acompanham a semelhança lexical com a proposta (H-A9, H-T-lex).
 As métricas são simples e transparentes (palavras de conteúdo, sem dicionário de sinônimos):
@@ -34,6 +35,10 @@ PROPOSTAS = {
     "consumo": {
         "arquivo": RAIZ / "propostas" / "002-consumo-consumismo.md",
         "tema": "consumo e consumismo: como estabelecer limite entre o necessário e o exagero",
+    },
+    "clima": {
+        "arquivo": RAIZ / "propostas" / "003-mudancas-climaticas.md",
+        "tema": "efeitos negativos das mudanças climáticas",
     },
 }
 
@@ -74,6 +79,19 @@ def cosseno(a, b):
     return num / den if den else 0.0
 
 
+def medir(caminho_texto, tema):
+    """Cobertura do núcleo, palavras do tema e pares de palavras do tema para um texto qualquer."""
+    texto = Path(caminho_texto).read_text(encoding="utf-8")
+    pt = set(palavras(texto))
+    pn = set(palavras(nucleo(PROPOSTAS[tema]["arquivo"], PROPOSTAS[tema]["tema"])))
+    ptema = set(palavras(PROPOSTAS[tema]["tema"]))
+    tn = " " + " ".join(re.findall(r"[a-z]+", normalizar(texto))) + " "
+    tokens = re.findall(r"[a-z]+", normalizar(PROPOSTAS[tema]["tema"]))
+    bigramas = [" ".join(tokens[i:i + 2]) for i in range(len(tokens) - 1)]
+    return {"nucleo": len(pn & pt) / len(pn), "tema": len(ptema & pt) / len(ptema),
+            "bigramas": (sum(1 for b in bigramas if f" {b} " in tn), len(bigramas)), "ausentes": sorted(pn - pt)}
+
+
 def main():
     notas = {}
     with open(RAIZ / "dados" / "avaliacoes.csv", encoding="utf-8") as f:
@@ -101,4 +119,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) == 3:
+        m = medir(sys.argv[1], sys.argv[2])
+        print(f"núcleo {m['nucleo']:.2f} | tema {m['tema']:.2f} | pares de palavras do tema "
+              f"{m['bigramas'][0]}/{m['bigramas'][1]} | ausentes do núcleo: {m['ausentes']}")
+    else:
+        main()

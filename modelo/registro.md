@@ -135,3 +135,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.14 | 2026-10-27 | as quatro avaliações foram provas reais; título da 004 incluído no texto (T continua na mesma ordem dos pares de palavras do tema: 2, 5, 6, 10 → 7,1; 7,4; 8,5; 8,7); hipóteses P-ED, P-CAMPO e P-ETAPA para a Nota Final |
 | v0.15 | 2026-10-27 | orientações da professora registradas e comparadas com os dados; o relatório 001 dizia que seguir o plano induz ao tangenciamento, e isso fica enfraquecido |
 | v0.16 | 2026-10-27 | C2: o C1 reescrito pelo método da professora (uma pergunta por parágrafo, dado que prova a afirmação, sem repertório de bolso), com cobertura do núcleo 1,00 e previsões registradas |
+| v0.17 | 2026-10-27 | a proposta é sorteada entre três temas (lixo, consumismo, clima); roteiros de preparação por tema em `modelo/roteiros-por-tema.md` |

@@ -22,3 +22,5 @@ Erros reais identificados no texto (leitura humana):
 - paralelismo: "sobre a durabilidade e descarte".
 
 Não informados: data, se foi simulado ou inscrição real, status, autoria.
+
+**Prova real** (informado pelo usuário em 2026-10-27): não foi simulado.

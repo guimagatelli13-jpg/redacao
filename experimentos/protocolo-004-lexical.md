@@ -14,7 +14,8 @@ Previsões registradas em 2026-10-27, antes de qualquer resultado.
 
 ## Variável única
 
-Texto-base: redação 004 (`avaliacoes/004-consumo-b/redacao.txt`). Variante: `experimentos/textos/L1-004-lexical.txt`.
+Texto-base: redação 004 (`avaliacoes/004-consumo-b/redacao.txt`), **com o título na primeira linha, como foi
+submetido**. Variante: `experimentos/textos/L1-004-lexical.txt`, com o mesmo título.
 Três frases foram trocadas por versões que repetem palavras da proposta, sem mudar nenhuma ideia:
 
 | Antes | Depois |
@@ -26,7 +27,10 @@ Três frases foram trocadas por versões que repetem palavras da proposta, sem m
 Efeitos medidos pelas ferramentas:
 - cobertura do núcleo: de 0,50 para 1,00;
 - palavras do tema presentes: de 0,67 para 1,00;
-- extensão: 1.766 → 1.872 caracteres (+6,0%; 1.878 com linhas em branco), dentro do limite.
+- extensão: 1.808 → 1.914 caracteres com o título (+5,9%; 1.922 com linhas em branco), dentro do limite.
+
+Atenção: as quatro avaliações foram provas reais. Submeta a L1 apenas em modo de simulado ou treino da mesma
+plataforma, se houver; não gaste uma inscrição real com um experimento.
 
 ## Previsões
 

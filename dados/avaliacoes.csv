@@ -1,5 +1,5 @@
 id,tema,gramatica,abrangencia,tangenciamento,apont_erro,nota_online,nota_final,chars_com_espaco,chars_sem_espaco,palavras,paragrafos,experimento,observacoes
-001,Descarte correto do lixo,9.90,3.00,7.10,4.00,6.60,0.00,1841,1564,281,4,linha-de-base,Primeira observação; texto original
-002,Descarte correto do lixo (texto B),9.70,3.20,8.70,7.00,6.90,0.00,1831,1569,266,4,avaliacao-externa,Texto enviado pelo usuário; mesma proposta da 001; recorte na tese; sem dados nem fontes
-003,Consumo e consumismo (texto A),9.60,2.40,8.50,0.00,6.50,0.00,1674,1426,252,4,avaliacao-externa,Texto enviado pelo usuário; contador da plataforma 1680 (conta linhas em branco); erros de digitação; sem dados nem fontes
-004,Consumo e consumismo (texto B),10.00,2.40,7.40,1.00,6.40,0.00,1766,1490,280,4,avaliacao-externa,Texto enviado pelo usuário com o título "Entre o ter e o ser: os limites do consumo"; Bauman; CNC; ONU
+001,Descarte correto do lixo,9.90,3.00,7.10,4.00,6.60,0.00,1841,1564,281,4,prova-real,Primeira observação; texto original
+002,Descarte correto do lixo (texto B),9.70,3.20,8.70,7.00,6.90,0.00,1831,1569,266,4,prova-real,Texto enviado pelo usuário; mesma proposta da 001; recorte na tese; sem dados nem fontes
+003,Consumo e consumismo (texto A),9.60,2.40,8.50,0.00,6.50,0.00,1674,1426,252,4,prova-real,Texto enviado pelo usuário; contador da plataforma 1680 (conta linhas em branco); erros de digitação; sem dados nem fontes
+004,Consumo e consumismo (texto B),10.00,2.40,7.40,1.00,6.40,0.00,1808,1523,289,4,prova-real,"Prova real; título ""Entre o ter e o ser: os limites do consumo"" digitado no campo do texto (1ª linha); Bauman; CNC; ONU"

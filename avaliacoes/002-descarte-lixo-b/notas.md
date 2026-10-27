@@ -15,3 +15,5 @@ agora com a identificação da instituição: **Faculdades Pequeno Príncipe**.
 
 Não informados: data da submissão, se foi simulado ou inscrição real, status textual, trechos apontados e autoria
 do texto.
+
+**Prova real** (informado pelo usuário em 2026-10-27): não foi simulado.

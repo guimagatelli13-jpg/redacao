@@ -26,6 +26,7 @@ Legenda de status das hipóteses:
 |---|---|---|---|
 | 2026-10-16 | limite máximo de 2.000 caracteres | informado pelo usuário (sem documento) | H-A4 enfraquecida; P-MAX não explica o zero; X3, X4, X5 e X8 refeitos para caber no limite |
 | 2026-10-27 | instituição: Faculdades Pequeno Príncipe (FPP); a "Nota Final" tem a descrição "Exibe a nota final calculada para a inscrição" | tela da plataforma | a Nota Final é um campo da inscrição; P-OUT reforçada |
+| 2026-10-27 | as avaliações 001 a 004 foram **provas reais**; na 004 o título foi digitado no campo da redação | informado pelo usuário | o 0,00 da Nota Final aparece em quatro provas reais com nota online de 6,4 a 6,9, acima do corte de 6,0 publicado no blog da FPP; a regra documentada não explica o zero |
 | 2026-10-27 | plataforma da CRM Educacional (domínio na barra de endereço). Segundo a documentação: abrangência = "se o candidato entendeu e desenvolveu bem o tema proposto… de maneira completa e coerente"; gramática = "correção ortográfica e gramatical"; parâmetros ajustáveis pela instituição | tela da avaliação 004; artigo de suporte da CRM Educacional (trechos de busca) | os pesos 0,4/0,4/0,2 provavelmente são configuração da FPP; a gramática inclui ortografia |
 | 2026-10-27 | a plataforma conta todos os caracteres, inclusive espaços e quebras: o contador mostrou 1.680 para 1.674 caracteres de texto mais 3 linhas em branco | tela de redação (avaliação 003) | confirma a transcrição; as quebras de parágrafo com linha em branco contam 2 |
 | 2026-10-27 | redação online vale até 10; classificação com 6,0 ou mais, sem zerar nenhum critério; de 1.200 a 2.000 caracteres; resultado em até 48 horas úteis | blog oficial da FPP (Verão 2027) e Edital FPP 016 (Verão 2026), lidos por trechos de busca porque o domínio está bloqueado neste ambiente | P-N7 contradiz o documento; as notas online 6,6 e 6,9 classificariam; o zero não decorre das regras documentadas |
@@ -89,6 +90,9 @@ Legenda de status das hipóteses:
 | P-A5 | zera se A < 5 (ou algum critério < 5) | ativa, mas não documentada (o documento fala só em "zerar" um critério) |
 | P-OUT | causa externa às notas (status do processo, integridade, etapa pendente) | **reforçada**: campo "calculado para a inscrição"; pelas regras documentadas, 6,6 e 6,9 classificariam |
 | P-DOC | regra documentada: classificado com nota ≥ 6,0 e nenhum critério zerado | **documentada** (FPP); não explica o 0,00 |
+| P-ED | o corte da edição dessas provas é diferente do publicado para Verão 2027 (por exemplo, 7,0) | ativa: explicaria as quatro; depende do edital da edição |
+| P-CAMPO | a "Nota Final" é um campo genérico da inscrição, usado em outra modalidade (por exemplo, ENEM), e fica 0 na redação online | ativa: explicaria as quatro sem afetar o resultado |
+| P-ETAPA | a Nota Final só é calculada depois de uma etapa posterior (o botão "Continuar" sugere um fluxo em andamento) | ativa |
 | P-E | zera por apontamentos (≥ 4, ou = 0 como "critério zerado") | **não explica**: E = 4, 7 e 0, sempre com Nota Final 0 |
 | P-EXT | zera por extensão abaixo do mínimo | muito improvável (1.564 a 1.844 caracteres) |
 | P-MAX | zera por exceder o máximo de 2.000 caracteres | **não explica**: 1.844 caracteres, contando as quebras |
@@ -127,3 +131,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.11 | 2026-10-27 | avaliação 002 (texto B, mesmo tema): média simples refutada; pesos ~0,4/0,4/0,2; MG2 apoiada; instituição e regras documentadas (FPP) |
 | v0.12 | 2026-10-27 | avaliação 003 (consumo): M2a acerta a previsão; MG2 com apontamentos refutada (vira MG2' com contagem interna); H-E2; T-tese com mais apoio; contagem de caracteres da plataforma |
 | v0.13 | 2026-10-27 | avaliação 004: M2a acerta de novo; a Abrangência não responde a fatos, profundidade nem extensão; hipóteses lexicais H-A9 e T-lex; plataforma identificada (CRM Educacional) e definições do fornecedor; experimento L1 |
+| v0.14 | 2026-10-27 | as quatro avaliações foram provas reais; título da 004 incluído no texto (T continua na mesma ordem dos pares de palavras do tema: 2, 5, 6, 10 → 7,1; 7,4; 8,5; 8,7); hipóteses P-ED, P-CAMPO e P-ETAPA para a Nota Final |

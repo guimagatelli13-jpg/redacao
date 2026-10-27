@@ -71,3 +71,14 @@ inscrição (P-OUT).
   (definições de abrangência e gramática; parâmetros ajustáveis por chamado; mínimo recomendado de 100 palavras ou
   500 caracteres). Lido por trechos de busca: o domínio está bloqueado neste ambiente.
 - [CRM Educacional](https://crmeducacional.com/)
+
+## 7. Atualização (2026-10-27)
+
+- **As quatro avaliações foram provas reais.** O 0,00 da Nota Final em quatro provas reais com nota online acima de
+  6,0 não é explicado pela regra publicada. As explicações compatíveis estão no registro: P-ED (corte diferente na
+  edição dessas provas), P-CAMPO (campo usado em outra modalidade), P-ETAPA (cálculo posterior) e P-A5 (Abrangência
+  mínima, não documentada). O que decide é o resultado real desses candidatos.
+- **O título da 004 foi digitado no campo da redação** e agora é a primeira linha do arquivo. Com ele, os pares de
+  palavras do tema presentes passam de 3 para 5 de 11. A ordem do Tangenciamento continua a mesma (2, 5, 6, 10 → 7,1;
+  7,4; 8,5; 8,7). A cobertura do núcleo não muda (0,50).
+

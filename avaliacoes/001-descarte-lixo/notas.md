@@ -13,3 +13,5 @@ Valores exatamente como exibidos pelo sistema, na ordem em que foram fornecidos.
 
 Contexto: notas atribuídas por um avaliador baseado em inteligência artificial. Instituição, plataforma, data,
 número da tentativa, status textual e comentários do avaliador não foram informados.
+
+**Prova real** (informado pelo usuário em 2026-10-27): não foi simulado.

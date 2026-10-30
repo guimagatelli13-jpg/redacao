@@ -1,4 +1,4 @@
-# Rubrica híbrida v0.3: critérios do ENEM adaptados à plataforma
+# Rubrica híbrida v0.4: critérios do ENEM adaptados à plataforma
 
 Combina duas fontes de natureza diferente:
 
@@ -87,9 +87,9 @@ em H1 garante G ≈ 10, mas a recíproca não vale.
 
 | Nota | Descritor híbrido |
 |---|---|
-| 10 | a introdução anuncia os eixos da argumentação; cada desenvolvimento segue a sequência tópico frasal → explicação do mecanismo → evidência → consequência ou fecho ligado à tese; nenhuma afirmação central sem sustentação |
+| 10 | cada pergunta da proposta respondida no seu parágrafo, de forma pertinente ao recorte; cada desenvolvimento segue a sequência tópico frasal → explicação do mecanismo → evidência → consequência ou fecho ligado à tese; nenhuma afirmação central sem sustentação; nenhuma ponta solta; a conclusão retoma a introdução |
 | 8 | projeto claro, mas um argumento é afirmado sem demonstração |
-| 6 | projeto previsível (segue a ordem das perguntas da proposta); argumentos pouco desenvolvidos |
+| 6 | argumentos pouco desenvolvidos, ou uma pergunta respondida de forma solta (seguir a ordem das perguntas não é defeito: é o método da professora, v0.4) |
 | 4 | argumentos enumerados, sem desenvolvimento |
 | 2 | desorganizado |
 | 0 | sem defesa de ponto de vista |
@@ -142,6 +142,11 @@ Nota ENEM equivalente:
 **Correção da Abrangência pela âncora.** No texto original, a régua do ENEM dá (6 + 6)/2 = 6, mas a plataforma deu
 3,0. Com uma única observação, tanto um deslocamento (A ≈ régua − 3) quanto uma razão (A ≈ régua × 0,5) se ajustam.
 Até haver mais dados, a previsão de A sai como faixa entre essas duas correções e a régua sem correção.
+
+**Nota pelo critério (meta 10), usada no simulador desde a v0.4.** É a fórmula da plataforma aplicada à rubrica,
+sem a correção pela âncora: G pela contagem de erros; A = (H3a + H3b)/2; T = H2. Um texto que cumpre todos os
+descritores tira 10. A previsão da plataforma (base do tema para A, palavras e pares do tema para T) aparece ao lado,
+como referência do que o sistema real tende a dar.
 
 ## 4. Aplicação aos três textos
 

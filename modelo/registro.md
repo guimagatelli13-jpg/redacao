@@ -145,3 +145,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.17 | 2026-10-27 | a proposta é sorteada entre três temas (lixo, consumismo, clima); roteiros de preparação por tema em `modelo/roteiros-por-tema.md` |
 | v0.18 | 2026-10-27 | série 005: D2 (lixo), C2 (consumo) e M6 (clima) pelo método, com cobertura do núcleo 1,00 e previsões registradas; ferramenta de sobreposição aceita um texto avulso e inclui o tema clima |
 | v0.19 | 2026-10-30 | avaliação 005: M2a acerta de novo; T-lex apoiada e reajustada; H-A9 refutada; o simulador passa a estimar A pela base do tema (lixo 3,0, consumo 2,4) e o teto dele cai de 7,6 para cerca de 7,0 |
+| v0.20 | 2026-10-30 | simulador: a nota principal passa a ser a nota pelo critério (meta 10), pela rubrica híbrida v0.4; a previsão da plataforma fica como referência. Na rubrica, H3b deixa de tratar a ordem das perguntas como defeito (método da professora) |

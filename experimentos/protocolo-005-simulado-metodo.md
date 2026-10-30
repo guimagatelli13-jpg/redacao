@@ -33,6 +33,19 @@ usado.
 O teste decisivo é a Abrangência no tema **consumo**, cuja referência é 2,4 nas duas provas. Uma nota de 3,5 ou mais
 no C2 apoiaria H-A9; 2,4 de novo a enfraqueceria. No lixo, a referência é 3,0 e 3,2.
 
+### Revisão de 2026-10-30, ainda antes de qualquer envio da série (modelo v0.19)
+
+A avaliação 005 refutou H-A9 antes dos envios desta série (`relatorios/005-quinta-avaliacao.md`). As previsões
+acima ficam como foram registradas; estas são as revisadas:
+
+| Texto | G | A | T | Nota online |
+|---|---|---|---|---|
+| D2 (lixo) | 9,9 a 10 | 3,0 (2,8 a 3,2) | 9,0 | 7,0 (6,9 a 7,1) |
+| C2 (consumo) | 9,9 a 10 | 2,4 | 8,9 | 6,7 (6,7 a 6,8) |
+| M6 (clima) | 9,9 a 10 | sem referência (2,4 a 3,2) | 9,0 | 6,9 (6,7 a 7,1) |
+
+Uma Abrangência de 3,5 ou mais em qualquer um dos três contraria a base por tema (H-A5).
+
 ## O que registrar a cada envio
 
 O tema sorteado, os seis campos, a contagem de caracteres mostrada pela plataforma e qualquer mensagem ou status.

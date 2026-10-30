@@ -47,6 +47,7 @@ AVALIACOES = {
     "002": ("lixo", "avaliacoes/002-descarte-lixo-b/redacao.txt"),
     "003": ("consumo", "avaliacoes/003-consumo-a/redacao.txt"),
     "004": ("consumo", "avaliacoes/004-consumo-b/redacao.txt"),
+    "005": ("lixo", "avaliacoes/005-descarte-lixo-c/redacao.txt"),
 }
 
 

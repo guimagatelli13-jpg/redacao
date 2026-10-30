@@ -290,7 +290,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
       <section class="card" aria-labelledby="h-placar">
         <div class="card-head">
           <h2 id="h-placar">Previsão da plataforma</h2>
-          <span class="tiny">modelo v0.18 · 4 provas reais</span>
+          <span class="tiny">modelo v0.19 · 5 provas reais</span>
         </div>
         <div class="placar">
           <div class="campo destaque">
@@ -346,6 +346,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
             <div class="barra"><i id="b-pares"></i></div>
           </div>
         </div>
+        <p class="tiny" style="margin-top:10px">As palavras e os pares da frase do tema movem o Tangenciamento. O núcleo inteiro serve ao método da professora (uma pergunta por parágrafo); nas provas, ele não mudou a Abrangência.</p>
         <div id="ausentes-box" hidden>
           <p class="small muted" style="margin-top:12px">Palavras da proposta que ainda não aparecem no texto:</p>
           <div class="chips" id="ausentes"></div>
@@ -378,10 +379,11 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
   <details class="como">
     <summary>Como as notas são estimadas</summary>
     <div class="corpo">
-      <p><strong>Nota online:</strong> <code>arred(0,4·G + 0,4·A + 0,2·T)</code>. A média simples foi refutada. Esta fórmula acertou duas previsões registradas antes do resultado (provas 003 e 004).</p>
+      <p><strong>Nota online:</strong> <code>arred(0,4·G + 0,4·A + 0,2·T)</code>. A média simples foi refutada. Esta fórmula acertou as três provas que vieram depois dela (003, 004 e 005).</p>
       <p><strong>Gramática (G):</strong> <code>10 × (1 − erros ÷ palavras)</code>, arredondado a uma casa. Os erros incluem ortografia e acentuação. Aqui eles são contados pela correção por IA. O campo “Apontamento de erro gramatical” da plataforma não é esse número: a prova 003 mostrou 0 apontamentos com G = 9,6. Sem a correção por IA, o simulador supõe G entre 9,6 e 10.</p>
-      <p><strong>Abrangência (A):</strong> <code>0,60 + 3,89 × núcleo</code>, em que o núcleo é a fração das palavras da frase do tema e das perguntas que aparecem no texto. Nas provas, o núcleo foi de 0,44 a 0,67 e A foi de 2,4 a 3,2. Acima de 0,67, a estimativa é extrapolação. Hipótese alternativa: A não depende do texto e repete a média do tema (3,1 no lixo e 2,4 no consumo).</p>
-      <p><strong>Tangenciamento (T):</strong> <code>4,91 + 3,09 × palavras do tema + 0,87 × pares do tema</code>. Ajusta bem as 4 provas, mas são 3 parâmetros para 4 pontos: trate como tendência, não como certeza.</p>
+      <p><strong>Abrangência (A):</strong> base do tema: 3,0 no lixo (provas com 2,8, 3,0 e 3,2), 2,4 no consumo (2,4 nas duas) e 2,8 no clima, que ainda não tem prova. Até a versão 0.18, o simulador estimava A pelo vocabulário da proposta (<code>0,60 + 3,89 × núcleo</code>), o que punha o teto em 7,6. A prova 005 refutou isso: com núcleo 0,93, a fórmula previa 4,2 e a plataforma deu 2,8. Fatos, repertório, profundidade e tamanho também não moveram A.</p>
+      <p><strong>Tangenciamento (T):</strong> <code>4,94 + 2,96 × palavras do tema + 1,05 × pares do tema</code>. A versão anterior previu 8,9 para a prova 005, que teve 9,0. Com o tema completo, o máximo observado é 9,0.</p>
+      <p><strong>Teto atual:</strong> com G = 10 e o tema completo, cerca de 7,0 no lixo (até 7,1 se A vier 3,2), 6,8 no consumo e 6,9 no clima. A maior nota online observada nas provas é 6,9.</p>
       <p><strong>Classificação:</strong> nas regras da instituição, classifica-se quem tem 6,0 ou mais sem zerar nenhum critério, com 1.200 a 2.000 caracteres. Os caracteres incluem espaços e quebras de linha, e uma linha em branco entre parágrafos conta 2.</p>
       <p><strong>Régua do ENEM:</strong> a correção por IA também dá as cinco competências (0 a 200 cada) pela rubrica híbrida. Essa régua mede qualidade e não substitui a previsão da plataforma.</p>
       <p>Cada envio que você registra no histórico permite recalibrar essas fórmulas.</p>
@@ -414,7 +416,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
         "Que ações podem contribuir para ampliar a conscientização sobre descartar corretamente o lixo?",
       ],
       parMin: 4, parMax: 4,
-      nulaA: "3,1 (média das provas 001 e 002)",
+      baseA: { media: 3.0, min: 2.8, max: 3.2, fonte: "provas 001, 002 e 005: 3,0, 3,2 e 2,8" },
     },
     consumo: {
       rotulo: "Consumismo",
@@ -427,7 +429,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
         "Que ações contribuem para que a população possa consumir produtos de forma mais consciente?",
       ],
       parMin: 4, parMax: 4,
-      nulaA: "2,4 (provas 003 e 004)",
+      baseA: { media: 2.4, min: 2.4, max: 2.4, fonte: "provas 003 e 004: 2,4 nas duas" },
     },
     clima: {
       rotulo: "Clima",
@@ -441,7 +443,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
         "Que ações podem ser realizadas para atenuar os efeitos negativos das mudanças climáticas?",
       ],
       parMin: 4, parMax: 5,
-      nulaA: null,
+      baseA: { media: 2.8, min: 2.4, max: 3.2, fonte: "sem prova neste tema; média das cinco provas" },
     },
   };
   const ORDEM = ["lixo", "consumo", "clima"];
@@ -569,8 +571,9 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     const frases = texto.split(/(?<=[.!?])\s+/);
     const dados = frases.filter((f) => /\d/.test(f) && FONTE.test(normalizar(f))).length;
 
-    const A = limitar(0.600 + 3.892 * nucleo);
-    const Tg = limitar(4.907 + 3.094 * temaLit + 0.868 * paresFr);
+    // v0.19: a Abrangência não acompanhou o vocabulário (prova 005); usa a base do tema.
+    const A = T.baseA.media;
+    const Tg = limitar(4.942 + 2.958 * temaLit + 1.052 * paresFr);
 
     return {
       chars, nPalavras, pars, titulo, nucleo, temaLit, paresAch, paresTotal: bigramas.length, paresFr,
@@ -746,11 +749,12 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     const a = ultima;
     if (!a) return null;
     const G = iaValida() ? ia.G : null;
-    const base = 0.4 * a.A + 0.2 * a.T;
+    const { min, max } = TEMAS[tema].baseA;
+    const nota = (g, aa) => arred1(0.4 * g + 0.4 * aa + 0.2 * a.T);
     return {
       G, A: a.A, T: a.T,
-      online: G != null ? arred1(0.4 * G + base) : null,
-      faixa: [arred1(0.4 * 9.6 + base), arred1(0.4 * 10 + base)],
+      online: G != null ? nota(G, a.A) : null,
+      faixa: G != null ? [nota(G, min), nota(G, max)] : [nota(9.6, min), nota(10, max)],
     };
   }
 
@@ -761,19 +765,24 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     if (!p) {
       ["v-online", "v-g", "v-a", "v-t"].forEach((i) => ($(i).textContent = "–"));
       $("f-g").textContent = "depende da correção por IA";
+      $("f-online").textContent = "0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento";
       selo.className = "selo neutro"; selo.textContent = "–";
       $("aviso-extrap").hidden = true;
       return;
     }
     $("v-a").textContent = br(p.A);
     $("v-t").textContent = br(p.T);
-    $("f-a").textContent = "estimativa lexical, experimental";
-    $("f-t").textContent = "estimativa lexical, experimental";
+    const bA = TEMAS[tema].baseA;
+    $("f-a").textContent = bA.min === bA.max ? "base do tema nas provas" : `base do tema; nas provas, de ${br(bA.min)} a ${br(bA.max)}`;
+    $("f-t").textContent = "pelas palavras e pares do tema";
     if (p.G != null) {
       $("v-g").textContent = br(p.G);
       $("f-g").textContent = `${ia.n} erro${ia.n === 1 ? "" : "s"} em ${milhar(a.nPalavras)} palavras (correção por IA)`;
       $("v-online").textContent = br(p.online);
+      $("f-online").textContent = p.faixa[0] === p.faixa[1] ? "0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento"
+        : `de ${br(p.faixa[0])} a ${br(p.faixa[1])}, conforme a Abrangência do tema`;
     } else {
+      $("f-online").textContent = "0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento";
       $("v-g").textContent = "9,6–10";
       $("f-g").textContent = "presumida; corrija com IA para estimar";
       $("v-online").textContent = p.faixa[0] === p.faixa[1] ? br(p.faixa[0]) : `${br(p.faixa[0])}–${br(p.faixa[1])}`;
@@ -785,13 +794,8 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     else if (p.online == null && p.faixa[1] >= 6) { selo.className = "selo warn"; selo.textContent = "perto do corte de 6,0"; }
     else { selo.className = "selo bad"; selo.textContent = "abaixo do corte de 6,0"; }
 
-    const avisos = [];
-    if (a.nucleo > 0.67) avisos.push(`Núcleo ${br(a.nucleo, 2)} está acima do maior valor observado nas provas (0,67): a Abrangência estimada é extrapolação.`);
-    else if (a.nucleo < 0.44) avisos.push(`Núcleo ${br(a.nucleo, 2)} está abaixo do menor valor observado nas provas (0,44): a Abrangência estimada é extrapolação.`);
-    if (TEMAS[tema].nulaA) avisos.push(`Se a Abrangência não depender do texto, ela ficará perto de ${TEMAS[tema].nulaA}.`);
-    else avisos.push("Ainda não há prova real neste tema para comparar.");
     $("aviso-extrap").hidden = false;
-    $("aviso-extrap").textContent = avisos.join(" ");
+    $("aviso-extrap").textContent = `Abrangência: ainda não sabemos o que a move. Fatos, repertório, tamanho e vocabulário da proposta não mudaram a nota (a prova 005 tinha o vocabulário quase completo e teve 2,8). Por isso o simulador usa a base do tema (${bA.fonte}), e a nota prevista quase não muda com o conteúdo.`;
   }
 
   function itemCheck(estado, titulo, det, sub) {
@@ -1076,7 +1080,7 @@ FORMATO (somente o JSON):
       origem: texto === MODELOS[tema] ? "modelo-005" : "proprio",
       caracteres: ultima.chars, palavras: ultima.nPalavras, paragrafos: ultima.pars.length, titulo: ultima.titulo,
       metricas: { nucleo: +ultima.nucleo.toFixed(3), temaLit: +ultima.temaLit.toFixed(3), pares: [ultima.paresAch, ultima.paresTotal] },
-      previsao: { G: p.G, A: p.A, T: p.T, online: p.online, faixaOnline: p.faixa, modelo: "v0.18" },
+      previsao: { G: p.G, A: p.A, T: p.T, online: p.online, faixaOnline: p.faixa, modelo: "v0.19" },
       ia: resumoIA(),
       atualizadoEm: new Date().toISOString(),
     };

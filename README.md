@@ -6,10 +6,13 @@ como confirmada, inferência forte ou hipótese exploratória.
 
 ## Estado atual
 
-- **4 avaliações** (2 temas). Instituição: Faculdades Pequeno Príncipe; plataforma: CRM Educacional. Regras documentadas: nota até 10;
+- **5 avaliações** (2 temas). Instituição: Faculdades Pequeno Príncipe; plataforma: CRM Educacional. Regras documentadas: nota até 10;
   classificação com 6,0 ou mais e nenhum critério zerado; 1.200 a 2.000 caracteres.
-- **Melhor candidato para a nota online:** `arred₀,₁(0,4·Gramática + 0,4·Abrangência + 0,2·Tangenciamento)`.
-  A média simples foi refutada; o peso da Abrangência está entre 38% e 42%.
+- **Melhor candidato para a nota online:** `arred₀,₁(0,4·Gramática + 0,4·Abrangência + 0,2·Tangenciamento)`, que acertou
+  as três avaliações posteriores a ela. A média simples foi refutada; o peso da Abrangência está entre 38,7% e 40,7%.
+- **Tangenciamento:** acompanha as palavras e os pares da frase do tema presentes no texto; o máximo observado é 9,0.
+- **Abrangência:** fica agrupada por tema (lixo 2,8 a 3,2; consumo 2,4) e não respondeu a fatos, repertório, tamanho
+  nem vocabulário da proposta. Por isso a maior nota online observada é 6,9 e o teto prático é por volta de 7,0.
 - **"Nota Final" e "Nota Final da Redação Online" são grandezas diferentes.** O 0,00 da primeira não sai das notas
   parciais.
 

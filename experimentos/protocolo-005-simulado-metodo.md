@@ -46,6 +46,18 @@ acima ficam como foram registradas; estas são as revisadas:
 
 Uma Abrangência de 3,5 ou mais em qualquer um dos três contraria a base por tema (H-A5).
 
+### Previsões da rubrica calibrada v1, 2026-10-30, ainda antes de qualquer envio
+
+Detalhes em `modelo/rubrica-calibrada.md`, seção 6. Elas competem com a revisão acima (base do tema):
+
+| Texto | G | A | T | Nota online |
+|---|---|---|---|---|
+| D2 (lixo) | 10,0 | 4,0 | 9,0 | 7,4 |
+| C2 (consumo) | 10,0 | 3,8 | 8,9 | 7,3 |
+| M6 (clima) | 10,0 | 3,8 | 10,0 | 7,5 |
+
+A de 3,6 a 4,0 apoia a rubrica; A na base do tema (2,4 a 3,2) a refuta.
+
 ## O que registrar a cada envio
 
 O tema sorteado, os seis campos, a contagem de caracteres mostrada pela plataforma e qualquer mensagem ou status.

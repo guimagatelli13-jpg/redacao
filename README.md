@@ -13,6 +13,9 @@ como confirmada, inferência forte ou hipótese exploratória.
 - **Tangenciamento:** acompanha as palavras e os pares da frase do tema presentes no texto; o máximo observado é 9,0.
 - **Abrangência:** fica agrupada por tema (lixo 2,8 a 3,2; consumo 2,4) e não respondeu a fatos, repertório, tamanho
   nem vocabulário da proposta. Por isso a maior nota online observada é 6,9 e o teto prático é por volta de 7,0.
+- **Rubrica calibrada v1** (`modelo/rubrica-calibrada.md`): critérios com teto 10 que reproduzem G, A, T e a nota
+  online das 5 provas. Pista principal: a Abrangência exibida parece ser 0,4 × uma nota de 0 a 10; se for, a nota online
+  da plataforma vai no máximo a 7,6. Previsões registradas para a série 005.
 - **"Nota Final" e "Nota Final da Redação Online" são grandezas diferentes.** O 0,00 da primeira não sai das notas
   parciais.
 
@@ -29,6 +32,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `fontes/` | fontes externas que não são da plataforma, como as orientações da professora |
 | `modelo/registro.md` | registro vivo: hipóteses e seus status, previsões e resultados, questões em aberto |
 | `modelo/roteiros-por-tema.md` | roteiros de preparação para os três temas sorteados (lixo, consumismo, clima), para o candidato escrever a própria redação |
+| `modelo/rubrica-calibrada.md` | critérios com teto 10 calibrados para reproduzir as notas reais, com o histórico do que foi testado e as previsões |
 | `modelo/rubrica-hibrida-enem.md` | critérios do ENEM adaptados à plataforma: correspondências, descritores por nível e cálculo da nota prevista e da nota ENEM equivalente |
 | `experimentos/protocolo*.md` | experimentos controlados de cada série, com previsões registradas antes dos resultados |
 | `experimentos/variantes/` | textos prontos para submissão e `MUDANCAS.md`, com o diff exato de cada um |
@@ -37,6 +41,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `ferramentas/testar_modelos.py` | testa fórmulas, regras de arredondamento, faixas de pesos e regras da Nota Final contra todas as avaliações |
 | `ferramentas/gerar_variantes.py` | gera as variantes a partir do texto-base por substituição exata |
 | `ferramentas/sobreposicao_lexical.py` | mede quanto do vocabulário da proposta (tema e perguntas) aparece em cada redação avaliada |
+| `ferramentas/rubrica_calibrada.py` | aplica a rubrica calibrada às avaliações reais e aos textos da série 005 e compara com as notas |
 | `ferramentas/verificar_amarracao.py` | confere se cada elo de um texto (eixo, causa, proposta, repertório) aparece em todos os parágrafos esperados |
 
 ## Como registrar uma nova avaliação

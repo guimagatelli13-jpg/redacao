@@ -91,6 +91,25 @@ PREVISOES = {
                       "enchentes no Rio Grande do Sul (2024) e Petrópolis (2022)",
                       "Science (2021); IPCC; SEEG", None],
         "recorte_intro": True, "nao_pertinente": [], "vago": [], "bolso": []}),
+    # Série 007: textos escritos para cumprir todos os critérios da rubrica (nota pelo critério 10).
+    "D3": ("lixo", "experimentos/textos/D3-lixo-nota10.txt", {
+        "E": 0, "S": 0,
+        "evidencia": ["Ibope 2018: 97% e 39%", "Goiânia, 1987: césio-137 matou quatro pessoas",
+                      "Constituição, artigo 225", "Ministério da Educação"],
+        "recorte_intro": True, "nao_pertinente": [], "vago": [], "bolso": []}),
+    "C3": ("consumo", "experimentos/textos/C3-consumo-nota10.txt", {
+        "E": 0, "S": 0,
+        "evidencia": ["Fundação Ellen MacArthur: uso das roupas caiu 36% em quinze anos",
+                      "Código de Defesa do Consumidor, artigo 49",
+                      "Monitor Global de Lixo Eletrônico da ONU: 62 milhões de toneladas em 2022",
+                      "Ministério da Educação; Secretaria Nacional do Consumidor"],
+        "recorte_intro": True, "nao_pertinente": [], "vago": [], "bolso": []}),
+    "M7": ("clima", "experimentos/textos/M7-clima-nota10.txt", {
+        "E": 0, "S": 0,
+        "evidencia": ["Organização Meteorológica Mundial: 2024, ano mais quente",
+                      "enchentes no Rio Grande do Sul (2024) e Petrópolis (2022)",
+                      "Science (2021); IPCC; SEEG", "Ministério das Cidades; Ibama"],
+        "recorte_intro": True, "nao_pertinente": [], "vago": [], "bolso": []}),
 }
 
 DESCONTOS = {"sem_evidencia": 0.5, "recorte_fora": 1.0, "nao_pertinente": 2.0, "vago": 1.0, "bolso": 1.0}
@@ -211,7 +230,7 @@ def main():
         print(f"{id_:<6}{cel[0]:>11}{r['Ab']:>9.1f}{cel[1]:>11}{cel[2]:>11}{cel[3]:>12}{r['criterio']:>10.1f}")
     print("\nacertos exatos: " + ", ".join(f"{k} {v}/5" for k, v in acertos.items()))
 
-    print("\nPrevisões para a série 005 (registradas antes do envio)\n")
+    print("\nPrevisões para as séries 005 e 007 (registradas antes do envio)\n")
     print(f"{'texto':<6}{'G':>6}{'A bruta':>9}{'A':>6}{'T':>6}{'online':>8}{'critério':>10}  T: tema/pares/intro/conclusão")
     for nome, (tema, caminho, a) in PREVISOES.items():
         r = avaliar((RAIZ / caminho).read_text(encoding="utf-8"), tema, a)

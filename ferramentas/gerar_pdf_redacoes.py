@@ -1,6 +1,6 @@
 """Gera o PDF de uma série de redações, um tema por página.
 
-Uso (na raiz do repositório): python3 ferramentas/gerar_pdf_redacoes.py SERIE      (SERIE = 007 ou 008)
+Uso (na raiz do repositório): python3 ferramentas/gerar_pdf_redacoes.py SERIE      (SERIE = 007, 008 ou 009)
 """
 import sys
 from xml.sax.saxutils import escape
@@ -34,6 +34,15 @@ SERIES = {
             "lixo": "Gramática 10,0 · Abrangência 3,0 (2,8 a 3,2) · Tangenciamento 8,7 · nota online 6,9 (6,7 a 7,1). Pela rubrica: 10,0.",
             "consumo": "Gramática 10,0 · Abrangência 2,5 (2,4 a 2,7) · Tangenciamento 8,7 · nota online 6,7 (6,6 a 6,9). Pela rubrica: 10,0.",
             "clima": "Gramática 10,0 · Abrangência 2,8 (2,4 a 3,2) · Tangenciamento 8,7 · nota online 6,9 (6,6 a 7,1). Pela rubrica: 10,0.",
+        },
+    },
+    "009": {
+        "titulo": "série 009 · padrão ENEM, aberta por repertório",
+        "textos": [("lixo", "D5-lixo-enem"), ("consumo", "C5-consumo-enem"), ("clima", "M9-clima-enem")],
+        "previsao": {
+            "lixo": "Plataforma: Gramática 10,0 · Abrangência 3,0 (2,8 a 3,2) · Tangenciamento 8,7 · nota online 6,9 (6,7 a 7,1). Autoavaliação ENEM: 1000.",
+            "consumo": "Plataforma: Gramática 10,0 · Abrangência 2,5 (2,4 a 2,7) · Tangenciamento 8,6 · nota online 6,7 (6,6 a 6,9). Autoavaliação ENEM: 1000.",
+            "clima": "Plataforma: Gramática 10,0 · Abrangência 2,8 (2,4 a 3,2) · Tangenciamento 8,7 · nota online 6,9 (6,6 a 7,1). Autoavaliação ENEM: 1000.",
         },
     },
 }
@@ -96,4 +105,4 @@ def gerar(serie):
 
 
 if __name__ == "__main__":
-    gerar(sys.argv[1] if len(sys.argv) > 1 else "008")
+    gerar(sys.argv[1] if len(sys.argv) > 1 else "009")

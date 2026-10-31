@@ -49,16 +49,42 @@ def revisar(caminho, tema):
         ok.append(f"{len(pars)} parágrafos")
     else:
         falhas.append(f"{len(pars)} parágrafos; o esperado é um por pergunta")
+    # Cada parágrafo responde à sua pergunta: as palavras da pergunta precisam estar no parágrafo, mas não
+    # necessariamente na primeira frase (a abertura repetindo a pergunta soa solta).
     mapa = list(range(len(qs))) if len(pars) == len(qs) else ([0, 1, 2, 2, 3] if tema == "clima" and len(pars) == 4 else None)
     if mapa:
         for i, q in enumerate(qs):
             j = mapa[i]
             qp = set(palavras_limpas(q))
-            alvo = frases(pars[j]) if i > 0 and mapa[i - 1] == j else frases(pars[j])[:1]
-            cob = max(len(qp & set(palavras_limpas(f))) / len(qp) for f in alvo)
-            faltam = sorted(qp - set(palavras_limpas(" ".join(alvo))))
+            cob = len(qp & set(palavras_limpas(pars[j]))) / len(qp)
+            faltam = sorted(qp - set(palavras_limpas(pars[j])))
             (ok if cob >= 0.8 else falhas).append(
-                f"P{i + 1} no §{j + 1}: a abertura retoma {cob:.0%} das palavras da pergunta" + (f" (faltam {', '.join(faltam)})" if faltam else ""))
+                f"P{i + 1} no §{j + 1}: o parágrafo retoma {cob:.0%} das palavras da pergunta" + (f" (faltam {', '.join(faltam)})" if faltam else ""))
+
+    # O texto começa por um repertório (dado, fato, lei, obra), não pela pergunta da proposta.
+    primeira = frases(pars[0])[0]
+    n1 = lex.normalizar(primeira)
+    repert = re.search(r"\d", primeira) or re.search(rc.LEI, n1) or re.search(r"\b(segundo|conforme|de acordo com)\b", n1)
+    (ok if repert else falhas).append("a primeira frase traz um repertório" if repert else f"a primeira frase não traz repertório: “{primeira}”")
+
+    # Frases soltas: cada frase (e cada parágrafo, a partir do 2º) deve se prender ao que veio antes por um conectivo
+    # ou por uma retomada (pronome demonstrativo, "tal", "assim"...) logo no começo.
+    ELO = re.compile(r"\b(esse|essa|esses|essas|isso|este|esta|estes|estas|isto|tal|tais|dessa|desse|desses|dessas|disso|nesse|nessa|"
+                     r"nesses|nessas|neste|nesta|ambos|ambas|assim|logo|portanto|porem|contudo|entretanto|todavia|alem disso|ademais|"
+                     r"por isso|desse modo|dessa forma|diante|ou seja|com isso|consequentemente|por conseguinte|nao por acaso|"
+                     r"paralelamente|so assim|embora|ainda que|apesar|mesmo|tambem|afinal|quando|como|dai|enfim|por sua vez|"
+                     r"o mesmo|a mesma|seu|sua|seus|suas|dele|dela|deles|delas|o primeiro|o segundo|no primeiro|no segundo|"
+                     r"em ambos|antes|depois|mais de|trinta|decadas|aquele|aquela|aqueles|aquelas|na pratica|prova disso|em primeiro lugar|"
+                     r"primeiramente|por fim|nesse sentido|isso porque|ainda|para tanto|entre as|entre os|ele|ela|eles|elas|o restante|os demais)\b")
+    soltas = []
+    for j, p in enumerate(pars):
+        for k, f in enumerate(frases(p)):
+            if j == 0 and k == 0:
+                continue
+            inicio = " ".join(lex.normalizar(f).split()[:8])
+            if not ELO.search(inicio):
+                soltas.append(f"§{j + 1}, frase {k + 1}: “{' '.join(f.split()[:8])}…”")
+    (falhas if soltas else ok).append(f"frases sem elo com a anterior no começo: {soltas or 'nenhuma'}")
 
     m = lex.medir(caminho, tema)
     T, feat = rc.tangenciamento(texto, tema)

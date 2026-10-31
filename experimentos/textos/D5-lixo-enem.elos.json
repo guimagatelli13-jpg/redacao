@@ -1,0 +1,97 @@
+[
+ {
+  "elo": "repertório inicial (césio-137 em Goiânia) retomado nas implicações e na conclusão",
+  "termo": "Goiânia|césio",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "§1 responde à pergunta 1",
+  "termo": "não descarta corretamente",
+  "paragrafos": [
+   1
+  ]
+ },
+ {
+  "elo": "§2 responde à pergunta 2",
+  "termo": "implicações desse descarte indevido",
+  "paragrafos": [
+   2
+  ]
+ },
+ {
+  "elo": "§3 responde à pergunta 3 (e a tese a anuncia)",
+  "termo": "importância da educação e da conscientização",
+  "paragrafos": [
+   1,
+   3
+  ]
+ },
+ {
+  "elo": "§4 responde à pergunta 4",
+  "termo": "ampliar a conscientização",
+  "paragrafos": [
+   4
+  ]
+ },
+ {
+  "elo": "desinformação: causa (§1) → informação que chega a cada lar (§4)",
+  "termo": "informação",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "a fiscalização não chega às casas (§3) → agentes que visitam as casas (§4)",
+  "termo": "casas",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "a criança leva o costume para a família (§3) → alcançar as famílias (§4)",
+  "termo": "famíli",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "dengue (§2) → agentes no combate à dengue (§4)",
+  "termo": "dengue",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "renda dos catadores (§2) → coleta com cooperativas de reciclagem (§4)",
+  "termo": "catadores|cooperativas",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "separação: quem não separa (§1) → separar por convicção (§3) → projetos de separação (§4)",
+  "termo": "separ",
+  "paragrafos": [
+   1,
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "costume (§3) → hábito desde a infância (§4)",
+  "termo": "costume|hábito",
+  "paragrafos": [
+   3,
+   4
+  ]
+ }
+]

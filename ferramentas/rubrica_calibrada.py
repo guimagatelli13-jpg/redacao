@@ -178,7 +178,7 @@ BOLSO = [r"\bbauman\b", r"modernidade liquida", r"\bfreire\b", r"hans jonas|\bjo
          r"byung|sociedade do cansaco", r"laudato", r"\bhabermas\b", r"\bhannah arendt\b|\barendt\b"]
 ENDIVID = r"endivid|inadimpl|serasa|\bdividas?\b"
 FONTE = (r"\b(segundo|conforme|de acordo com|aponta|apontam|indica|indicam|revela|revelam|registrou|estima|estimam|"
-         r"pesquisa|estudo|levantamento|relatorio|dados d[oa]s?|lei|artigo|ibge|onu|oms|ipcc|ibope|datafolha|inpe)\b")
+         r"pesquisa|estudo|levantamento|relatorio|dados d[oa]s?|lei|artigo|ibge|onu|oms|ipcc|ibope|datafolha|inpe|estimou|attribution)\b")
 LEI = r"\b(lei|constituicao|codigo|estatuto|decreto|politica nacional|artigo \d+|art\. ?\d+)\b"
 ORGAO = r"\b(ministerio|secretaria|agencia|ibama|anvisa|inep|ibge|conselho nacional|congresso|senado)\b"
 ANO = r"\b(19|20)\d{2}\b"

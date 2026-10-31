@@ -35,6 +35,7 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `modelo/rubrica-calibrada.md` | critérios com teto 10 calibrados para reproduzir as notas reais, com o histórico do que foi testado e as previsões |
 | `modelo/rubrica-hibrida-enem.md` | critérios do ENEM adaptados à plataforma: correspondências, descritores por nível e cálculo da nota prevista e da nota ENEM equivalente |
 | `experimentos/protocolo*.md` | experimentos controlados de cada série, com previsões registradas antes dos resultados |
+| `experimentos/historico-simulador/` | as redações salvas no histórico do simulador, com previsões em `protocolo-006-historico.md` |
 | `experimentos/variantes/` | textos prontos para submissão e `MUDANCAS.md`, com o diff exato de cada um |
 | `experimentos/textos/` | textos escritos do zero para experimentos (não gerados por substituição), como o X8 |
 | `simulador/simulador.html` | simulador de treino para os três temas, publicado como artefato: prevê os campos da plataforma (modelo v0.18), confere o método da professora, corrige por IA e guarda as tentativas com as notas oficiais registradas |

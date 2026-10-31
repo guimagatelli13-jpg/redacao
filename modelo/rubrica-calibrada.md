@@ -126,7 +126,22 @@ e vai testar isso.
 
 Os descontos 5 e 6 e o peso da ortografia vêm, cada um, de uma única prova. São as partes mais frágeis.
 
-## 6. Previsões registradas antes do envio (série 005)
+**Validação deixando uma prova de fora** (`python3 ferramentas/rubrica_calibrada.py`). Se cada uma dessas três regras
+não existisse, a rubrica teria errado a prova que a originou:
+
+| Prova | Sem a regra | Real |
+|---|---|---|
+| 001 | A = 3,4 | 3,0 |
+| 005 | A = 3,2 | 2,8 |
+| 003 | G = 9,8 | 9,6 |
+
+Ou seja, fora da amostra a rubrica acertaria só parte das provas. Isso não a derruba, mas mostra que ela ainda não
+foi testada de verdade.
+
+**Marcação automática.** Uma versão automática da Abrangência (a mesma da prévia do simulador) coincide com a
+correção manual nos oito textos anotados: as cinco provas e D2, C2 e M6.
+
+## 6. Previsões registradas antes do envio (série 005; as 12 redações do histórico estão em `experimentos/protocolo-006-historico.md`)
 
 | Texto | G | A bruta | A exibida | T | Nota online | Nota pelo critério |
 |---|---|---|---|---|---|---|

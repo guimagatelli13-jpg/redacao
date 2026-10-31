@@ -140,6 +140,49 @@ def tangenciamento(texto, tema):
     return arred1(valor), dict(tema=t, pares=p, intro=i, conclusao=c)
 
 
+# Marcação automática da Abrangência, igual à prévia do simulador. Serve para conferir a correção manual e para
+# registrar previsões de muitos textos de uma vez.
+BOLSO = [r"\bbauman\b", r"modernidade liquida", r"\bfreire\b", r"hans jonas|\bjonas\b", r"\bkant\b", r"\bplatao\b",
+         r"\baristoteles\b", r"\bsocrates\b", r"\bdescartes\b", r"\brousseau\b", r"\bhobbes\b", r"\blocke\b",
+         r"\bdurkheim\b", r"\bmarx\b", r"\bfoucault\b", r"\bsartre\b", r"\bnietzsche\b", r"\bmaquiavel\b",
+         r"\bmontesquieu\b", r"\badorno\b|\bhorkheimer\b|industria cultural", r"\bdebord\b|sociedade do espetaculo",
+         r"byung|sociedade do cansaco", r"laudato", r"\bhabermas\b", r"\bhannah arendt\b|\barendt\b"]
+ENDIVID = r"endivid|inadimpl|serasa|\bdividas?\b"
+FONTE = (r"\b(segundo|conforme|de acordo com|aponta|apontam|indica|indicam|revela|revelam|registrou|estima|estimam|"
+         r"pesquisa|estudo|levantamento|relatorio|dados d[oa]s?|lei|artigo|ibge|onu|oms|ipcc|ibope|datafolha|inpe)\b")
+LEI = r"\b(lei|constituicao|codigo|estatuto|decreto|politica nacional|artigo \d+|art\. ?\d+)\b"
+ORGAO = r"\b(ministerio|secretaria|agencia|ibama|anvisa|inep|ibge|conselho nacional|congresso|senado)\b"
+ANO = r"\b(19|20)\d{2}\b"
+VAGO = r"\b(milhoes|bilhoes|milhares|centenas) de\b|\b(estudos|pesquisas|dados) (mostram|apontam|indicam)\b"
+RECORTE = {"lixo": r"educa|conscientiz", "consumo": r"\blimites?\b", "clima": r"efeitos negativos"}
+
+
+def abrangencia_automatica(texto, tema):
+    _, pars = paragrafos(texto)
+    norm = lambda x: lex.normalizar(x)
+    frases = lambda x: [f for f in re.split(r"(?<=[.!?])\s+", x) if f]
+    tudo = norm(texto)
+    bolso = [b for b in BOLSO if re.search(b, tudo)]
+
+    def tem_evidencia(p, ultimo):
+        for f in frases(p):
+            n = norm(f)
+            if any(re.search(b, n) for b in BOLSO) or (tema == "consumo" and re.search(ENDIVID, n)):
+                continue
+            if (re.search(r"\d", n) and re.search(FONTE, n)) or re.search(LEI, n) or re.search(ANO, n) \
+                    or (ultimo and re.search(ORGAO, n)):
+                return True
+        return False
+
+    return {
+        "evidencia": ["sim" if tem_evidencia(p, i == len(pars) - 1) else None for i, p in enumerate(pars)],
+        "recorte_intro": bool(re.search(RECORTE[tema], norm(pars[0]))),
+        "nao_pertinente": ["endividamento"] if tema == "consumo" and re.search(ENDIVID, tudo) else [],
+        "vago": [f for f in frases(texto) if re.search(VAGO, norm(f)) and not re.search(r"\d", f)],
+        "bolso": bolso,
+    }
+
+
 def avaliar(texto, tema, a):
     G, W = gramatica(texto, a["E"], a["S"])
     Ab = abrangencia_bruta(a)
@@ -177,5 +220,35 @@ def main():
               f"  {f['tema']:.2f}/{f['pares']:.2f}/{f['intro']:.2f}/{f['conclusao']}")
 
 
+def conferir_automatica():
+    """Compara a marcação automática com a correção manual nos textos anotados."""
+    print("\nMarcação automática × correção manual (A bruta)")
+    textos = {i: (lex.AVALIACOES[i][0], lex.AVALIACOES[i][1], a) for i, a in ANOTACOES.items()}
+    textos.update(PREVISOES)
+    for nome, (tema, caminho, a) in textos.items():
+        texto = (RAIZ / caminho).read_text(encoding="utf-8")
+        auto = abrangencia_bruta(abrangencia_automatica(texto, tema))
+        manual = abrangencia_bruta(a)
+        print(f"  {nome:<4} manual {manual:4.1f}  automática {auto:4.1f}{'' if auto == manual else '  ✗'}")
+
+
+def validacao_cruzada():
+    """Deixa uma prova de fora: tira as regras que só existem por causa dela e vê se a rubrica ainda a acertaria."""
+    print("\nValidação deixando uma prova de fora (regras que dependem de uma prova só)")
+    casos = [("001", "recorte_fora", "o desconto do recorte fora da introdução só existe por causa da 001"),
+             ("005", "vago", "o desconto do dado vago só existe por causa da 005")]
+    for id_, regra, motivo in casos:
+        tema, caminho = lex.AVALIACOES[id_]
+        a = ANOTACOES[id_]
+        guardado = DESCONTOS[regra]
+        DESCONTOS[regra] = 0.0
+        r = avaliar((RAIZ / caminho).read_text(encoding="utf-8"), tema, a)
+        DESCONTOS[regra] = guardado
+        print(f"  {id_}: sem a regra, A = {r['A']:.1f} (real {ESCALA_A * abrangencia_bruta(a):.1f}); {motivo}")
+    print("  003: sem o peso 1,5 da ortografia (peso 1), G = 9,8 (real 9,6); o peso só existe por causa da 003")
+
+
 if __name__ == "__main__":
     main()
+    conferir_automatica()
+    validacao_cruzada()

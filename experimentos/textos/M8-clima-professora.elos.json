@@ -1,0 +1,88 @@
+[
+ {
+  "elo": "P1 responde à pergunta 1",
+  "termo": "principais mudanças climáticas percebidas",
+  "paragrafos": [
+   1
+  ]
+ },
+ {
+  "elo": "P2 responde à pergunta 2 (e o tema volta na tese e na proposta)",
+  "termo": "efeitos negativos das mudanças climáticas",
+  "paragrafos": [
+   1,
+   2,
+   5
+  ]
+ },
+ {
+  "elo": "P3 responde à pergunta 3",
+  "termo": "comprometer o futuro das próximas gerações",
+  "paragrafos": [
+   3
+  ]
+ },
+ {
+  "elo": "P4 responde à pergunta 4",
+  "termo": "contribuindo para a aceleração",
+  "paragrafos": [
+   4
+  ]
+ },
+ {
+  "elo": "P5 responde à pergunta 5",
+  "termo": "atenuar os efeitos negativos",
+  "paragrafos": [
+   5
+  ]
+ },
+ {
+  "elo": "proteger os vulneráveis: tese (P1) → proposta (P5)",
+  "termo": "vulneráveis",
+  "paragrafos": [
+   1,
+   5
+  ]
+ },
+ {
+  "elo": "frear o aquecimento: tese (P1) → proposta (P5)",
+  "termo": "frear o aquecimento",
+  "paragrafos": [
+   1,
+   5
+  ]
+ },
+ {
+  "elo": "Petrópolis (P2) → mortes a evitar (P5)",
+  "termo": "Petrópolis",
+  "paragrafos": [
+   2,
+   5
+  ]
+ },
+ {
+  "elo": "desmatamento (P4) → fiscalização do Ibama (P5)",
+  "termo": "desmatamento",
+  "paragrafos": [
+   4,
+   5
+  ]
+ },
+ {
+  "elo": "futuro: tese (P1) → próximas gerações (P3) → conclusão (P5)",
+  "termo": "futuro",
+  "paragrafos": [
+   1,
+   3,
+   5
+  ]
+ },
+ {
+  "elo": "calor recorde (P1) → ondas de calor (P3)",
+  "termo": "calor",
+  "paragrafos": [
+   1,
+   3
+  ]
+ }
+]

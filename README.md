@@ -43,6 +43,8 @@ Leia `relatorios/001-analise-inicial.md` para a análise completa e `modelo/regi
 | `ferramentas/gerar_variantes.py` | gera as variantes a partir do texto-base por substituição exata |
 | `ferramentas/sobreposicao_lexical.py` | mede quanto do vocabulário da proposta (tema e perguntas) aparece em cada redação avaliada |
 | `ferramentas/rubrica_calibrada.py` | aplica a rubrica calibrada às avaliações reais e aos textos da série 005 e compara com as notas |
+| `ferramentas/revisar_redacao.py` | revisão automática de uma redação: uma pergunta por parágrafo, tema na introdução, evidência por parágrafo, repertório de bolso, dado vago, gerúndio, frases longas e repetições |
+| `ferramentas/gerar_pdf_redacoes.py` | gera o PDF de uma série de redações (`entregas/`) |
 | `ferramentas/verificar_amarracao.py` | confere se cada elo de um texto (eixo, causa, proposta, repertório) aparece em todos os parágrafos esperados |
 
 ## Como registrar uma nova avaliação

@@ -1,0 +1,97 @@
+[
+ {
+  "elo": "P1 responde à pergunta 1",
+  "termo": "não descarta corretamente",
+  "paragrafos": [
+   1
+  ]
+ },
+ {
+  "elo": "P2 responde à pergunta 2",
+  "termo": "implicações do descarte indevido",
+  "paragrafos": [
+   2
+  ]
+ },
+ {
+  "elo": "P3 responde à pergunta 3 (e a tese a anuncia)",
+  "termo": "importância da educação e da conscientização",
+  "paragrafos": [
+   1,
+   3
+  ]
+ },
+ {
+  "elo": "P4 responde à pergunta 4",
+  "termo": "ampliar a conscientização",
+  "paragrafos": [
+   4
+  ]
+ },
+ {
+  "elo": "falta de informação: causa (P1), consequência extrema (P2), solução (P4)",
+  "termo": "informação|desinformação",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "os 66% da introdução voltam na conclusão",
+  "termo": "66%",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "a fiscalização não entra nas casas (P3) → agentes que visitam as casas (P4)",
+  "termo": "casas",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "a criança aprende na escola (P3) → currículo desde a infância (P4)",
+  "termo": "escola|currículo|infância",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "dengue (P2) → agentes que combatem a dengue (P4)",
+  "termo": "dengue",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "renda dos catadores (P2) → coleta seletiva com as cooperativas de reciclagem (P4)",
+  "termo": "catadores|cooperativas",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "separação: quem não separa (P1) → separar por convicção (P3) → aprender a separar (P4)",
+  "termo": "separ",
+  "paragrafos": [
+   1,
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "hábito (P3) → formar o hábito (P4)",
+  "termo": "hábito",
+  "paragrafos": [
+   3,
+   4
+  ]
+ }
+]

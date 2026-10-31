@@ -1,0 +1,81 @@
+[
+ {
+  "elo": "P1 responde à pergunta 1",
+  "termo": "diferença entre consumo e consumismo",
+  "paragrafos": [
+   1
+  ]
+ },
+ {
+  "elo": "P2 responde à pergunta 2 (e a introdução a anuncia)",
+  "termo": "estabelecer limite entre o necessário e o exagero",
+  "paragrafos": [
+   1,
+   2
+  ]
+ },
+ {
+  "elo": "P3 responde à pergunta 3",
+  "termo": "consequências de um consumismo desenfreado",
+  "paragrafos": [
+   3
+  ]
+ },
+ {
+  "elo": "P4 responde à pergunta 4",
+  "termo": "consumir produtos de forma mais consciente",
+  "paragrafos": [
+   4
+  ]
+ },
+ {
+  "elo": "meio e fim: definição (P1) → conclusão (P4)",
+  "termo": "\\bmeio\\b",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "o uso como medida: definição (P1) → critério (P2) → educação (P4)",
+  "termo": "\\buso\\b",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "publicidade e impulso (P2) → análise de propagandas (P4)",
+  "termo": "publicidade|propagandas",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "troca de aparelhos (P3) → consertar compensa mais que trocar (P4)",
+  "termo": "troca",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "exagero: tema (P1, P2) → exagero individual (P3)",
+  "termo": "exagero",
+  "paragrafos": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "elo": "lei: prazo de reflexão (P2) → peças exigidas por lei (P4)",
+  "termo": "\\blei\\b|Código",
+  "paragrafos": [
+   2,
+   4
+  ]
+ }
+]

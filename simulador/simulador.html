@@ -294,7 +294,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
       <section class="card" aria-labelledby="h-placar">
         <div class="card-head">
           <h2 id="h-placar">Nota pelo critério</h2>
-          <span class="tiny">meta 10 · rubrica híbrida</span>
+          <span class="tiny">meta 10 · rubrica calibrada v1</span>
         </div>
         <div class="placar">
           <div class="campo destaque">
@@ -322,7 +322,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
           </div>
           <div class="campo largo plataforma">
             <div>
-              <div class="nome">Previsão da plataforma hoje <span class="tiny">· modelo v0.19, 5 provas reais</span></div>
+              <div class="nome">Previsão da plataforma <span class="tiny">· mesma rubrica, com a Abrangência exibida × 0,4</span></div>
               <div class="valor" id="v-online">–</div>
               <div class="fonte" id="f-online">0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento</div>
             </div>
@@ -330,6 +330,11 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
           </div>
         </div>
         <p class="aviso" id="aviso-extrap" hidden></p>
+      </section>
+
+      <section class="card" aria-labelledby="h-faltas">
+        <h2 id="h-faltas">O que falta para 10</h2>
+        <div class="itens" id="faltas"></div>
       </section>
 
       <section class="card" aria-labelledby="h-tema">
@@ -381,17 +386,16 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
   <details class="como">
     <summary>Como as notas são estimadas</summary>
     <div class="corpo">
-      <p><strong>Nota pelo critério (meta 10):</strong> a mesma fórmula da plataforma, <code>0,4·G + 0,4·A + 0,2·T</code>, com cada parte medida pela rubrica híbrida do projeto e pelo método da professora: G pela contagem de erros; A pela média entre repertório e desenvolvimento; T pela aderência ao recorte do tema. Um texto que cumpre todos os critérios tira 10. A IA avalia e diz o que falta para 10 em cada parte.</p>
-      <p>As notas abaixo explicam a <strong>previsão da plataforma hoje</strong>, que mostra o que o sistema real tende a dar ao mesmo texto.</p>
-      <p><strong>Nota online:</strong> <code>arred(0,4·G + 0,4·A + 0,2·T)</code>. A média simples foi refutada. Esta fórmula acertou as três provas que vieram depois dela (003, 004 e 005).</p>
-      <p><strong>Gramática (G):</strong> <code>10 × (1 − erros ÷ palavras)</code>, arredondado a uma casa. Os erros incluem ortografia e acentuação. Aqui eles são contados pela correção por IA. O campo “Apontamento de erro gramatical” da plataforma não é esse número: a prova 003 mostrou 0 apontamentos com G = 9,6. Sem a correção por IA, o simulador supõe G entre 9,6 e 10.</p>
-      <p><strong>Abrangência (A):</strong> base do tema: 3,0 no lixo (provas com 2,8, 3,0 e 3,2), 2,4 no consumo (2,4 nas duas) e 2,8 no clima, que ainda não tem prova. Até a versão 0.18, o simulador estimava A pelo vocabulário da proposta (<code>0,60 + 3,89 × núcleo</code>), o que punha o teto em 7,6. A prova 005 refutou isso: com núcleo 0,93, a fórmula previa 4,2 e a plataforma deu 2,8. Fatos, repertório, profundidade e tamanho também não moveram A.</p>
-      <p><strong>Tangenciamento (T):</strong> <code>4,94 + 2,96 × palavras do tema + 1,05 × pares do tema</code>. A versão anterior previu 8,9 para a prova 005, que teve 9,0. Com o tema completo, o máximo observado é 9,0.</p>
-      <p><strong>Teto atual:</strong> com G = 10 e o tema completo, cerca de 7,0 no lixo (até 7,1 se A vier 3,2), 6,8 no consumo e 6,9 no clima. A maior nota online observada nas provas é 6,9.</p>
-      <p><strong>Classificação:</strong> nas regras da instituição, classifica-se quem tem 6,0 ou mais sem zerar nenhum critério, com 1.200 a 2.000 caracteres. Os caracteres incluem espaços e quebras de linha, e uma linha em branco entre parágrafos conta 2.</p>
-      <p><strong>Régua do ENEM:</strong> sai dos mesmos critérios (C1 = 20 × norma, C2 = 20 × repertório, C3 = 20 × desenvolvimento, C4 = 20 × coesão, C5 = 20 × intervenção). Com tangenciamento, C2, C3 e C5 ficam limitadas a 40.</p>
-      <p><strong>Não previstos:</strong> a “Nota Final” (0,00 em todas as provas, por causa desconhecida) e o “Apontamento de erro gramatical”, que não coincide com o número de erros.</p>
-      <p>Cada envio que você registra no histórico permite recalibrar essas fórmulas.</p>
+      <p><strong>Rubrica calibrada v1.</strong> Aplicada às cinco provas reais, ela reproduz exatamente a Gramática, a Abrangência, o Tangenciamento e a nota online de todas (20 de 20). Parte das regras foi ajustada a uma prova só, então ela ainda está em teste: as previsões para os textos da série 005 foram registradas antes dos envios.</p>
+      <p><strong>Gramática:</strong> <code>10 × (1 − n ÷ palavras)</code>, com n = apontamentos + 1,5 × erros de ortografia. Zero erros dá 10.</p>
+      <p><strong>Abrangência (bruta, 0 a 10):</strong> 10 menos os descontos. −0,5 por parágrafo sem evidência concreta e pertinente (dado com número e fonte, fato com lugar ou data, lei nomeada ou, nas propostas, órgão específico); −1 se a introdução não trata do recorte; −2 por dado ou argumento que não prova o que afirma; −1 por dado vago; −1 por repertório de bolso.</p>
+      <p><strong>Abrangência exibida pela plataforma:</strong> nas cinco provas, ela foi sempre múltiplo de 0,2, e dividida por 0,4 deu 7,5, 8, 6, 6 e 7. A hipótese é que a plataforma mostra 0,4 × a nota bruta. Se for assim, a Abrangência exibida vai no máximo a 4,0 e a nota online a 7,6.</p>
+      <p><strong>Tangenciamento:</strong> 10 − 3 × (palavras da frase do tema ausentes) − 0,8 × (pares do tema ausentes) − 0,25 × (palavras do tema ausentes da introdução) − 1,05 se o último parágrafo não traz a frase do tema completa. Esse último ponto nunca foi observado: é hipótese, e o texto M6 vai testá-lo.</p>
+      <p><strong>Nota pelo critério:</strong> <code>0,4·G + 0,4·A bruta + 0,2·T</code>, que vai até 10. <strong>Previsão da plataforma:</strong> a mesma conta com a Abrangência exibida.</p>
+      <p><strong>Classificação:</strong> 6,0 ou mais, sem zerar critério, com 1.200 a 2.000 caracteres (os caracteres incluem espaços e quebras; linha em branco entre parágrafos conta 2).</p>
+      <p><strong>Régua do ENEM:</strong> sai das notas que a IA dá a norma, repertório, desenvolvimento, coesão e intervenção (Cn = 20 × nota). É uma referência de qualidade, fora da conta da plataforma.</p>
+      <p><strong>Não previstos:</strong> a “Nota Final” (0,00 em todas as provas, por causa desconhecida) e o “Apontamento de erro gramatical”.</p>
+      <p>Detalhes e histórico do que foi testado: <code>modelo/rubrica-calibrada.md</code> no repositório.</p>
     </div>
   </details>
 </div>
@@ -421,7 +425,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
         "Que ações podem contribuir para ampliar a conscientização sobre descartar corretamente o lixo?",
       ],
       parMin: 4, parMax: 4,
-      baseA: { media: 3.0, min: 2.8, max: 3.2, fonte: "provas 001, 002 e 005: 3,0, 3,2 e 2,8" },
+      recorte: /educa|conscientiz/, recorteTexto: "a educação e a conscientização",
     },
     consumo: {
       rotulo: "Consumismo",
@@ -434,7 +438,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
         "Que ações contribuem para que a população possa consumir produtos de forma mais consciente?",
       ],
       parMin: 4, parMax: 4,
-      baseA: { media: 2.4, min: 2.4, max: 2.4, fonte: "provas 003 e 004: 2,4 nas duas" },
+      recorte: /\blimites?\b/, recorteTexto: "o limite entre o necessário e o exagero",
     },
     clima: {
       rotulo: "Clima",
@@ -448,7 +452,7 @@ details.como code { font-size: .88em; background: var(--surface-2); padding: 1px
         "Que ações podem ser realizadas para atenuar os efeitos negativos das mudanças climáticas?",
       ],
       parMin: 4, parMax: 5,
-      baseA: { media: 2.8, min: 2.4, max: 3.2, fonte: "sem prova neste tema; média das cinco provas" },
+      recorte: /efeitos negativos/, recorteTexto: "os efeitos negativos das mudanças climáticas",
     },
   };
   const ORDEM = ["lixo", "consumo", "clima"];
@@ -473,6 +477,13 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     [/byung|sociedade do cansaco/, "Byung-Chul Han"], [/laudato/, "Laudato Si'"], [/\bhabermas\b/, "Habermas"], [/\bhannah arendt\b|\barendt\b/, "Hannah Arendt"],
   ];
   const ENDIVID = /endivid|inadimpl|serasa|\bdividas?\b/;
+  // Rubrica calibrada v1 (modelo/rubrica-calibrada.md): evidência concreta, descontos e escala da Abrangência.
+  const LEI = /\b(lei|constituicao|codigo|estatuto|decreto|politica nacional|artigo \d+|art\. ?\d+)\b/;
+  const ORGAO = /\b(ministerio|secretaria|agencia|ibama|anvisa|inep|ibge|conselho nacional|congresso|senado)\b/;
+  const ANO = /\b(19|20)\d{2}\b/;
+  const VAGO = /\b(milhoes|bilhoes|milhares|centenas) de\b|\b(estudos|pesquisas|dados) (mostram|apontam|indicam)\b/;
+  const DESC = { semEvidencia: 0.5, recorteFora: 1, naoProva: 2, vago: 1, bolso: 1 };
+  const ESCALA_A = 0.4;
   const FONTE = /\b(segundo|conforme|de acordo com|aponta|apontam|indica|indicam|revela|revelam|registrou|estima|estimam|pesquisa|estudo|levantamento|relatorio|dados d[oa]s?|lei|artigo|ibge|onu|oms|ipcc|ibope|datafolha|inpe)\b/;
 
   function normalizar(s) {
@@ -576,15 +587,34 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     const frases = texto.split(/(?<=[.!?])\s+/);
     const dados = frases.filter((f) => /\d/.test(f) && FONTE.test(normalizar(f))).length;
 
-    // v0.19: a Abrangência não acompanhou o vocabulário (prova 005); usa a base do tema.
-    const A = T.baseA.media;
-    const Tg = limitar(4.942 + 2.958 * temaLit + 1.052 * paresFr);
+    // Tangenciamento (T-R1): palavras e pares do tema, palavras do tema na introdução e frase completa no fim.
+    const introPal = setDe(palavras(intro));
+    const temaIntro = frac(temaLista.filter((w) => introPal.has(w)).length, temaLista.length);
+    const ultimoPar = " " + tokens(pars[pars.length - 1] || "").join(" ") + " ";
+    const fraseFim = ultimoPar.includes(" " + tt.join(" ") + " ");
+    const Tg = limitar(10 - 3 * (1 - temaLit) - 0.8 * (1 - paresFr) - 0.25 * (1 - temaIntro) - 1.05 * (fraseFim ? 0 : 1));
+
+    // Prévia local da Abrangência bruta (A-R1); a correção por IA substitui estas marcas.
+    const evid = pars.map((p, j) => frasesDe(p).some((f) => {
+      const n = normalizar(f);
+      if (BOLSO.some(([re]) => re.test(n))) return false;
+      if (chave === "consumo" && ENDIVID.test(n)) return false;
+      return (/\d/.test(n) && FONTE.test(n)) || LEI.test(n) || ANO.test(n) || (j === pars.length - 1 && ORGAO.test(n));
+    }));
+    const recorteIntro = T.recorte.test(normalizar(intro));
+    const vagos = frases.filter((f) => VAGO.test(normalizar(f)) && !/\d/.test(f)).map((f) => f.trim());
+    const naoProva = endivid ? ["dívida ou endividamento usado como sinal de consumismo"] : [];
+    const Ab = Math.max(0, 10 - DESC.semEvidencia * evid.filter((e) => !e).length - (recorteIntro ? 0 : DESC.recorteFora)
+      - DESC.naoProva * naoProva.length - DESC.vago * vagos.length - DESC.bolso * bolso.length);
 
     return {
       chars, nPalavras, pars, titulo, nucleo, temaLit, paresAch, paresTotal: bigramas.length, paresFr,
       ausentes: grafia(T.tema + " " + T.perguntas.join(" "), nucleoLista.filter((p) => !pt.has(p))), perguntas,
       temaFaltaIntro: grafia(T.tema, temaFaltaIntro), bolso, constituicao, endivid,
-      conclusaoComp: grafia(intro, conclusaoComp), dados, A: arred1(A), T: arred1(Tg),
+      conclusaoComp: grafia(intro, conclusaoComp), dados, T: arred1(Tg),
+      temaIntro, fraseFim, evid, recorteIntro, vagos, naoProva, Ab,
+      temaFalta: grafia(T.tema, temaLista.filter((w) => !pt.has(w))),
+      paresFalta: bigramas.filter((b) => !fluxo.includes(" " + b + " ")),
     };
   }
 
@@ -750,82 +780,78 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     renderChecklist();
   }
 
+  // Abrangência pela correção por IA: as mesmas marcas da prévia, lidas no texto pela IA.
+  function rubricaIA() {
+    if (!iaValida() || !ultima) return null;
+    const ab = ia.resultado.abrangencia;
+    if (!ab || typeof ab !== "object") return null;
+    const ps = arr(ab.paragrafos);
+    const semLista = [];
+    for (let i = 0; i < ultima.pars.length; i++) {
+      const q = ps.find((x) => x && Number(x.n) === i + 1);
+      const ok = q && str(q.tipo) !== "nenhuma" && q.pertinente !== false && str(q.evidencia).trim();
+      if (!ok) semLista.push({ n: i + 1, comentario: q ? str(q.comentario) : "" });
+    }
+    const recorte = ab.recorte_na_introducao !== false;
+    const naoProva = arr(ab.nao_prova).filter((x) => x && str(x.trecho).trim()).map((x) => `${str(x.trecho)}${str(x.motivo) ? ": " + str(x.motivo) : ""}`);
+    const vagos = arr(ab.vagos).filter((x) => x && str(x.trecho).trim()).map((x) => `${str(x.trecho)}${str(x.motivo) ? ": " + str(x.motivo) : ""}`);
+    const bolso = arr(ia.resultado.repertorio_de_bolso).map(str).filter(Boolean);
+    const Ab = Math.max(0, 10 - DESC.semEvidencia * semLista.length - (recorte ? 0 : DESC.recorteFora)
+      - DESC.naoProva * naoProva.length - DESC.vago * vagos.length - DESC.bolso * bolso.length);
+    return { Ab, semLista, recorte, naoProva, vagos, bolso };
+  }
+
   function previsao() {
     const a = ultima;
     if (!a) return null;
     const G = iaValida() ? ia.G : null;
-    const { min, max } = TEMAS[tema].baseA;
+    const r = rubricaIA();
+    const Ab = r ? r.Ab : a.Ab;
+    const A = arred1(ESCALA_A * Ab);
     const nota = (g, aa) => arred1(0.4 * g + 0.4 * aa + 0.2 * a.T);
     return {
-      G, A: a.A, T: a.T,
-      online: G != null ? nota(G, a.A) : null,
-      faixa: G != null ? [nota(G, min), nota(G, max)] : [nota(9.6, min), nota(10, max)],
+      G, Ab, A, T: a.T, r,
+      criterio: G != null ? nota(G, Ab) : null, criterioFaixa: [nota(9.6, Ab), nota(10, Ab)],
+      online: G != null ? nota(G, A) : null, faixa: [nota(9.6, A), nota(10, A)],
     };
   }
-
-  // Nota pelo critério: G pela contagem de erros; A = média de repertório e desenvolvimento; T = aderência ao recorte.
   function criterios() {
-    if (!iaValida()) return null;
-    const c = ia.resultado.criterios;
-    if (!c || typeof c !== "object") return null;
-    const n = (k) => {
-      const v = Number(c[k] && c[k].nota);
-      return Number.isFinite(v) ? Math.max(0, Math.min(10, v)) : null;
-    };
-    const rep = n("repertorio"), des = n("desenvolvimento"), tg = n("tangenciamento");
-    if (rep == null || des == null || tg == null) return null;
-    const A = arred1((rep + des) / 2);
-    return { G: ia.G, A, T: tg, rep, des, nota: arred1(0.4 * ia.G + 0.4 * A + 0.2 * tg) };
+    const p = previsao();
+    return p && p.G != null ? { G: p.G, Ab: p.Ab, T: p.T, nota: p.criterio, A: p.A, online: p.online, fonteA: p.r ? "ia" : "previa" } : null;
   }
 
   function renderPlacar() {
     const p = previsao();
-    const m = criterios();
     const a = ultima;
     const selo = $("selo-classif"), seloM = $("selo-meta");
     if (!p) {
       ["v-meta", "v-online", "v-g", "v-a", "v-t"].forEach((i) => ($(i).textContent = "–"));
-      ["f-g", "f-a", "f-t"].forEach((i) => ($(i).textContent = "corrija com IA"));
+      ["f-g", "f-a", "f-t"].forEach((i) => ($(i).textContent = "–"));
       $("f-meta").textContent = "0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento";
-      $("f-online").textContent = "0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento";
+      $("f-online").textContent = "0,4 × Gramática + 0,4 × (0,4 × Abrangência) + 0,2 × Tangenciamento";
       selo.className = seloM.className = "selo neutro";
       selo.textContent = seloM.textContent = "–";
       $("aviso-extrap").hidden = true;
+      renderFaltas(null);
       return;
     }
-    const bA = TEMAS[tema].baseA;
-    const plat = (v) => `plataforma hoje: ${v}`;
+    const faixaTxt = (f) => (f[0] === f[1] ? br(f[0]) : `${br(f[0])}–${br(f[1])}`);
+    const melhor = p.criterio != null ? p.criterio : p.criterioFaixa[1];
+    $("v-meta").textContent = p.criterio != null ? br(p.criterio) : faixaTxt(p.criterioFaixa);
+    $("f-meta").textContent = p.G != null ? "0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento"
+      : "Gramática presumida entre 9,6 e 10 até a correção por IA";
+    if (melhor >= 10) { seloM.className = "selo ok"; seloM.textContent = "nota máxima"; }
+    else { seloM.className = "selo warn"; seloM.textContent = `faltam ${br(arred1(10 - melhor))} para 10`; }
 
-    if (m) {
-      $("v-meta").textContent = br(m.nota);
-      $("f-meta").textContent = "0,4 × Gramática + 0,4 × Abrangência + 0,2 × Tangenciamento, pela rubrica";
-      if (m.nota >= 10) { seloM.className = "selo ok"; seloM.textContent = "nota máxima"; }
-      else { seloM.className = "selo warn"; seloM.textContent = `faltam ${br(arred1(10 - m.nota))} para 10`; }
-      $("v-g").textContent = br(m.G);
-      $("v-a").textContent = br(m.A);
-      $("v-t").textContent = br(m.T);
-      $("f-g").textContent = `${ia.n} erro${ia.n === 1 ? "" : "s"} em ${milhar(a.nPalavras)} palavras`;
-      $("f-a").textContent = `repertório ${br(m.rep)} e desenvolvimento ${br(m.des)} · ${plat(br(p.A))}`;
-      $("f-t").textContent = plat(br(p.T));
-    } else {
-      $("v-meta").textContent = "–";
-      $("f-meta").textContent = sampleEstado === "indisponivel" ? "a correção por IA não está disponível nesta visualização" : "corrija com IA para ver a nota pelo critério";
-      seloM.className = "selo neutro"; seloM.textContent = "meta 10";
-      $("v-g").textContent = iaValida() ? br(ia.G) : "–";
-      $("v-a").textContent = "–";
-      $("v-t").textContent = "–";
-      $("f-g").textContent = iaValida() ? `${ia.n} erro${ia.n === 1 ? "" : "s"} em ${milhar(a.nPalavras)} palavras` : "corrija com IA";
-      $("f-a").textContent = plat(br(p.A));
-      $("f-t").textContent = plat(br(p.T));
-    }
+    $("v-g").textContent = p.G != null ? br(p.G) : "9,6–10";
+    $("f-g").textContent = p.G != null ? `${ia.n} erro${ia.n === 1 ? "" : "s"} em ${milhar(a.nPalavras)} palavras` : "presumida; corrija com IA";
+    $("v-a").textContent = br(p.Ab);
+    $("f-a").textContent = `${p.r ? "pela correção por IA" : "prévia sem IA"} · a plataforma exibe ${br(p.A)}`;
+    $("v-t").textContent = br(p.T);
+    $("f-t").textContent = "pelas palavras e pela frase do tema; igual na plataforma";
 
-    const gTxt = p.G != null ? br(p.G) : "9,6–10";
-    if (p.G != null) {
-      $("v-online").textContent = p.faixa[0] === p.faixa[1] ? br(p.online) : `${br(p.online)} (${br(p.faixa[0])}–${br(p.faixa[1])})`;
-    } else {
-      $("v-online").textContent = p.faixa[0] === p.faixa[1] ? br(p.faixa[0]) : `${br(p.faixa[0])}–${br(p.faixa[1])}`;
-    }
-    $("f-online").textContent = `G ${gTxt} · A ${br(p.A)} (base do tema) · T ${br(p.T)} (vocabulário do tema). Maior nota já vista: 6,9.`;
+    $("v-online").textContent = p.online != null ? br(p.online) : faixaTxt(p.faixa);
+    $("f-online").textContent = `G ${p.G != null ? br(p.G) : "9,6–10"} · A exibida ${br(p.A)} (0,4 × ${br(p.Ab)}) · T ${br(p.T)}`;
     const nota = p.online != null ? p.online : p.faixa[0];
     const foraFaixa = a.chars < 1200 || a.chars > 2000;
     if (foraFaixa) { selo.className = "selo bad"; selo.textContent = a.chars < 1200 ? "abaixo de 1.200 caracteres" : "acima de 2.000 caracteres"; }
@@ -834,7 +860,35 @@ seja sejam você voce num numa nesse nessa neste nesta desse dessa deste desta`.
     else { selo.className = "selo bad"; selo.textContent = "abaixo do corte de 6,0"; }
 
     $("aviso-extrap").hidden = false;
-    $("aviso-extrap").textContent = `A meta é 10 pela rubrica. Na plataforma, nenhum texto passou de 6,9 até agora: a Abrangência ficou entre 2,4 e 3,2 em todas as provas (${bA.fonte}), e ainda não sabemos o que a move. Registrar as notas oficiais no histórico ajuda a descobrir.`;
+    $("aviso-extrap").textContent = "As cinco provas sugerem que a plataforma exibe 0,4 × a Abrangência bruta. Se for assim, a nota online dela vai no máximo a 7,6, mesmo com 10 em todos os critérios. Os textos da série 005 vão confirmar ou derrubar isso.";
+    renderFaltas(p);
+  }
+
+  // O que falta para 10, desconto por desconto (prévia local; com IA, a Abrangência usa as marcas da correção).
+  function renderFaltas(p) {
+    const box = $("faltas");
+    const a = ultima;
+    if (!p || !a) { box.replaceChildren(el("p", { class: "muted small", text: "Comece a escrever para ver o que falta." })); return; }
+    const itens = [];
+    const add = (cls, crit, txt) => itens.push(el("div", { class: "item " + cls }, el("strong", { text: crit + ": " }), txt));
+    if (p.G == null) add("warn", "Gramática", "corrija com IA para contar os erros; cada erro custa cerca de 0,04 em 300 palavras.");
+    else if (p.G < 10) add("bad", "Gramática", `corrigir ${ia.n} erro${ia.n === 1 ? "" : "s"} (lista na correção por IA).`);
+    const r = p.r;
+    const sem = r ? r.semLista.map((x) => x.n) : a.evid.map((e, i) => (e ? 0 : i + 1)).filter(Boolean);
+    for (const n of sem) {
+      const com = r ? (r.semLista.find((x) => x.n === n) || {}).comentario : "";
+      add("warn", "Abrangência −0,5", `§${n} sem evidência concreta e pertinente (dado com número e fonte, fato com lugar ou data, lei nomeada${n === a.pars.length ? " ou órgão específico como agente" : ""}).${com ? " " + com : ""}`);
+    }
+    if (!(r ? r.recorte : a.recorteIntro)) add("bad", "Abrangência −1", `a introdução não trata do recorte do tema (${TEMAS[tema].recorteTexto}).`);
+    for (const x of r ? r.naoProva : a.naoProva) add("bad", "Abrangência −2", `dado ou argumento que não prova o que afirma: ${x}.`);
+    for (const x of r ? r.vagos : a.vagos) add("bad", "Abrangência −1", `dado vago usado como prova: ${x}`);
+    for (const x of r ? r.bolso : a.bolso) add("bad", "Abrangência −1", `repertório de bolso: ${x}.`);
+    if (a.temaFalta.length) add("bad", `Tangenciamento −${br(3 * (1 - a.temaLit))}`, `faltam palavras da frase do tema: ${a.temaFalta.join(", ")}.`);
+    if (a.paresFalta.length) add("warn", `Tangenciamento −${br(0.8 * (1 - a.paresFr))}`, `faltam pares do tema, literais: ${a.paresFalta.map((b) => "“" + b + "”").join(", ")}.`);
+    if (a.temaIntro < 1) add("warn", `Tangenciamento −${br(0.25 * (1 - a.temaIntro))}`, "a introdução não tem todas as palavras da frase do tema.");
+    if (!a.fraseFim) add("warn", "Tangenciamento −1,05 (hipótese)", `o último parágrafo não traz a frase do tema completa: “${TEMAS[tema].tema}”. É o ponto que nenhuma prova teve; está em teste.`);
+    if (!r && sem.length + a.vagos.length + a.bolso.length + a.naoProva.length > 0) itens.push(el("p", { class: "tiny", text: "As marcas de Abrangência acima são uma prévia automática. A correção por IA confere parágrafo por parágrafo." }));
+    box.replaceChildren(...(itens.length ? itens : [el("p", { class: "small", text: "Nada: o texto atende a todos os critérios." })]));
   }
 
   function itemCheck(estado, titulo, det, sub) {
@@ -921,6 +975,10 @@ REGRAS
 - "erros": só desvios inequívocos da norma-padrão: ortografia, acentuação, concordância, regência, crase, pontuação obrigatória, colocação pronominal. Não conte escolhas de estilo nem construções que a gramática normativa aceita. Cada ocorrência é um item separado. "trecho" deve ser copiado exatamente do texto, com 1 a 6 palavras, e incluir a palavra errada.
 - "dados": cada número, pesquisa, lei ou fato citado. Você não pode consultar fontes: use "confere" apenas para o que você conhece com segurança e "duvidoso" para o resto; "incorreto" quando souber que está errado; "nao_prova" quando o dado pode ser verdadeiro, mas não prova a afirmação.
 - "perguntas": uma entrada por pergunta da proposta, dizendo em que parágrafo ela é respondida (contando a partir de 1, sem contar um título) e se a resposta é pertinente ao recorte.
+- "abrangencia.paragrafos": uma entrada por parágrafo (contando a partir de 1, sem contar um título), com a evidência concreta mais forte do parágrafo e o "tipo": "dado" (número com fonte nomeada), "fato" (acontecimento identificado por lugar ou data), "lei" (lei, norma ou política pública nomeada), "orgao" (só no parágrafo de propostas: órgão público específico nomeado como agente, como "Ministério da Educação"; "escolas", "prefeituras", "governo", "poder público", "Estado" e "empresas" são genéricos e não contam) ou "nenhuma". Repertório de bolso não é evidência. "pertinente": false quando a evidência não prova o que o parágrafo afirma.
+- "abrangencia.recorte_na_introducao": true se a introdução trata do recorte do tema (${T.recorteTexto}).
+- "abrangencia.nao_prova": dados ou argumentos usados como prova de algo que não provam (exemplo: endividamento das famílias como prova de consumismo).
+- "abrangencia.vagos": dados sem número ou sem fonte precisa usados como prova (exemplos: "milhões de toneladas", "pesquisas mostram").
 - "criterios": uma nota inteira de 0 a 10 para cada critério, pelos descritores abaixo. Uma nota entre dois níveis vale quando o texto fica entre os dois descritores. Em "falta_para_10", diga o que falta para a nota 10 (vazio se já é 10).
   TANGENCIAMENTO (aderência ao recorte do tema): 10 = o recorte "${T.tema}" aparece literalmente na tese da introdução, é retomado em todos os parágrafos de desenvolvimento e na conclusão, e nenhum trecho trata só do assunto amplo sem voltar a ele; 8 = recorte na tese e na maior parte dos parágrafos, mas um parágrafo trata do assunto amplo sem ligação explícita; 6 = recorte presente, mas fora da tese ou restrito a um parágrafo; 2 = só o assunto amplo (tangenciamento); 0 = fuga ao tema.
   REPERTORIO (repertório e fatos): 10 = um repertório legitimado e produtivo na introdução e pelo menos um em cada parágrafo de desenvolvimento, incluindo dado com fonte nomeada, cada um provando exatamente a afirmação que sustenta, sem repertório de bolso; 8 = repertórios legitimados e pertinentes, mas um deles só ilustra ou não prova exatamente a afirmação; 6 = um único repertório legitimado e produtivo; 4 = repertório genérico, de bolso ou apenas pertinente; 2 = só senso comum; 0 = sem repertório.
@@ -943,6 +1001,12 @@ FORMATO (somente o JSON):
   "dados": [{"trecho": "...", "situacao": "confere|duvidoso|incorreto|nao_prova", "comentario": "uma frase"}],
   "repertorio_de_bolso": ["..."],
   "pontas_soltas": [{"trecho": "...", "problema": "uma frase"}],
+  "abrangencia": {
+    "paragrafos": [{"n": 1, "evidencia": "trecho copiado ou vazio", "tipo": "dado|fato|lei|orgao|nenhuma", "pertinente": true, "comentario": "uma frase"}],
+    "recorte_na_introducao": true,
+    "nao_prova": [{"trecho": "...", "motivo": "uma frase"}],
+    "vagos": [{"trecho": "...", "motivo": "uma frase"}]
+  },
   "criterios": {
     "tangenciamento": {"nota": 8, "motivo": "uma frase", "falta_para_10": "uma frase"},
     "repertorio": {"nota": 8, "motivo": "...", "falta_para_10": "..."},
@@ -1065,16 +1129,6 @@ FORMATO (somente o JSON):
     const crit = r.criterios && typeof r.criterios === "object" ? r.criterios : null;
     const nc = (k) => { const v = Number(crit && crit[k] && crit[k].nota); return Number.isFinite(v) ? Math.max(0, Math.min(10, v)) : null; };
     if (crit) {
-      const faltas = [];
-      if (ia.G < 10) faltas.push(["Gramática", `corrigir ${ia.n} erro${ia.n === 1 ? "" : "s"} (lista abaixo)`]);
-      for (const [k, rot] of [["tangenciamento", "Tangenciamento"], ["repertorio", "Abrangência · repertório"], ["desenvolvimento", "Abrangência · desenvolvimento"], ["coesao", "Coesão"], ["intervencao", "Intervenção"], ["norma", "Norma-padrão"]]) {
-        const v = nc(k);
-        if (v != null && v < 10 && str(crit[k].falta_para_10)) faltas.push([`${rot} (${v})`, str(crit[k].falta_para_10)]);
-      }
-      partes.push(el("div", { class: "bloco" }, el("h3", { text: "O que falta para 10" }),
-        faltas.length ? el("div", { class: "itens" }, ...faltas.map(([rot, txt]) => el("div", { class: "item warn" }, el("strong", { text: rot + ": " }), txt)))
-          : el("p", { class: "small", text: "Nada: o texto atende a todos os critérios da rubrica." })));
-
       // Régua do ENEM pela rubrica híbrida: Cn = 20 × nota; tangenciamento (≤ 2) limita C2, C3 e C5 a 40.
       const tang = nc("tangenciamento");
       const linhasC = [["norma", 1, "Norma-padrão"], ["repertorio", 2, "Repertório"], ["desenvolvimento", 3, "Desenvolvimento"], ["coesao", 4, "Coesão"], ["intervencao", 5, "Intervenção"]]
@@ -1164,7 +1218,7 @@ FORMATO (somente o JSON):
       origem: texto === MODELOS[tema] ? "modelo-005" : "proprio",
       caracteres: ultima.chars, palavras: ultima.nPalavras, paragrafos: ultima.pars.length, titulo: ultima.titulo,
       metricas: { nucleo: +ultima.nucleo.toFixed(3), temaLit: +ultima.temaLit.toFixed(3), pares: [ultima.paresAch, ultima.paresTotal] },
-      previsao: { G: p.G, A: p.A, T: p.T, online: p.online, faixaOnline: p.faixa, modelo: "v0.19" },
+      previsao: { G: p.G, A: p.A, Ab: p.Ab, T: p.T, online: p.online, faixaOnline: p.faixa, modelo: "rubrica v1" },
       ia: resumoIA(),
       criterio: criterios(),
       atualizadoEm: new Date().toISOString(),

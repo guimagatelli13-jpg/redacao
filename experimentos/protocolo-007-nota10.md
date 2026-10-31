@@ -47,4 +47,4 @@ Como ler o resultado:
 
 | Data | Tema | Texto | Nota Final | G | A | T | E | Nota online | Observações |
 |---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | |
+| 2026-10-31 | Consumo e consumismo | C3, com 3 erros de digitação | não aparece | 9,90 | 2,70 | 8,20 | 3 | 6,70 | refuta a rubrica v1 em A (previa 4,0) e T (previa 10,0); confirma M2a. Ver `avaliacoes/006-consumo-c3/` |

@@ -39,7 +39,8 @@ def carregar(caminho):
         linhas = list(csv.DictReader(f))
     for r in linhas:
         for k in ("gramatica", "abrangencia", "tangenciamento", "apont_erro", "nota_online", "nota_final", "palavras"):
-            r[k] = float(r[k])
+            # A Nota Final não aparece no simulador de treino; a célula vazia vira None.
+            r[k] = float(r[k]) if r[k] != "" else None
     return linhas
 
 
@@ -133,7 +134,8 @@ def main():
 
     print("== Regras candidatas para a 'Nota Final' ==")
     for nome, zera in REGRAS_NOTA_FINAL.items():
-        ok = all(math.isclose(0.0 if zera(r) else r["nota_online"], r["nota_final"], abs_tol=1e-9) for r in dados)
+        ok = all(math.isclose(0.0 if zera(r) else r["nota_online"], r["nota_final"], abs_tol=1e-9)
+                 for r in dados if r["nota_final"] is not None)
         print(f"  {'compatível ' if ok else 'não explica'}  {nome}")
     print()
 

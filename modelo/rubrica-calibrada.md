@@ -1,5 +1,11 @@
 # Rubrica calibrada v1: critérios com teto 10 que reproduzem as notas reais
 
+> **Status em 2026-10-31: refutada no primeiro teste.** O texto C3, escrito para tirar 10 por esta rubrica, recebeu
+> no simulador oficial A = 2,7 (previsto 4,0) e T = 8,2 (previsto 10,0). A Gramática e a nota online (fórmula M2a)
+> bateram. A rubrica continua útil como critério de qualidade, pelo método da professora, mas **não prevê a
+> plataforma**. Detalhes em `avaliacoes/006-consumo-c3/notas.md`.
+
+
 Retrato de 2026-10-30. Aplicação e conferência: `python3 ferramentas/rubrica_calibrada.py`.
 
 Objetivo: critérios de correção em que cada nota vai até 10 e que, aplicados por nós às cinco provas reais,

@@ -48,6 +48,7 @@ AVALIACOES = {
     "003": ("consumo", "avaliacoes/003-consumo-a/redacao.txt"),
     "004": ("consumo", "avaliacoes/004-consumo-b/redacao.txt"),
     "005": ("lixo", "avaliacoes/005-descarte-lixo-c/redacao.txt"),
+    "006": ("consumo", "experimentos/textos/C3-consumo-nota10.txt"),  # texto-base; o enviado tinha 3 erros de digitação
 }
 
 

@@ -19,6 +19,7 @@ Legenda de status das hipóteses:
 | 002 | Descarte correto do lixo (texto B) | 9,70 | 3,20 | 8,70 | 7,00 | 6,90 | 0,00 | avaliação externa | `relatorios/002-segunda-avaliacao.md` |
 | 003 | Consumo e consumismo (texto A) | 9,60 | 2,40 | 8,50 | 0,00 | 6,50 | 0,00 | avaliação externa | `relatorios/003-terceira-avaliacao.md` |
 | 004 | Consumo e consumismo (texto B) | 10,00 | 2,40 | 7,40 | 1,00 | 6,40 | 0,00 | avaliação externa | `relatorios/004-quarta-avaliacao.md` |
+| 006 | Consumo e consumismo (texto C3, série 007, 3 erros de digitação) | 9,90 | 2,70 | 8,20 | 3,00 | 6,70 | — (não aparece no simulador) | teste fora da amostra da rubrica calibrada v1 | `avaliacoes/006-consumo-c3/notas.md` |
 | 005 | Descarte correto do lixo (texto C) | 9,90 | 2,80 | 9,00 | 2,00 | 6,90 | 0,00 | avaliação externa; teste fora da amostra do modelo v0.18 | `relatorios/005-quinta-avaliacao.md` |
 
 ## 2. Dados de contexto informados depois da análise inicial
@@ -71,20 +72,20 @@ Legenda de status das hipóteses:
 | T-ori | T: maior = mais aderente | IF | ativa | X6, X7 |
 | T-tese | T sobe quando a tese nomeia o recorte | H | **enfraquecida** pela 004: recorte na introdução ("o limite entre ambos"), mas T = 7,4 | X6 |
 | T-lex | T acompanha a presença literal das palavras da frase do tema | H | **apoiada**: a fórmula do v0.18 (4,91 + 3,09·palavras do tema + 0,87·pares) previu 8,9 para a 005, que teve 9,0. Reajustada com 5 pontos: T = 4,94 + 2,96·palavras do tema + 1,05·pares (erro máximo 0,08; deixando um ponto de fora, 0,13). Teto aparente: 9,0 com o tema completo e todos os pares; não se sabe o que leva acima disso | L1 |
-| T-R1 | T = 10 − 3·(palavras do tema ausentes) − 0,8·(pares ausentes) − 0,25·(palavras do tema ausentes da introdução) − 1,05·(sem a frase do tema completa no último parágrafo) | H | **nova**: reproduz as 5 exatamente; o último termo nunca foi observado (H-T-conc) | M6 tem a frase no último parágrafo: previsão 10,0 |
+| T-R1 (**refutada** pela 006: previu 10,0, deu 8,2) | T = 10 − 3·(palavras do tema ausentes) − 0,8·(pares ausentes) − 0,25·(palavras do tema ausentes da introdução) − 1,05·(sem a frase do tema completa no último parágrafo) | H | **nova**: reproduz as 5 exatamente; o último termo nunca foi observado (H-T-conc) | M6 tem a frase no último parágrafo: previsão 10,0 |
 | T-prop | T acompanha a proporção do texto dedicada ao recorte | H | ativa | X4, X5, X7 |
 | H-A1 | A = cobertura das perguntas (0–10) | H | **enfraquecida** | X7 |
 | H-A1' | A = contagem de perguntas (0–4) | H | **enfraquecida** | — |
 | H-A2 | A = profundidade de desenvolvimento | H | **fortemente enfraquecida**: 003 (genérico) e 004 (mecanismos e três dimensões de consequências) tiveram 2,4 as duas | — |
 | H-A3 | A = fatos e repertório | H | **fortemente enfraquecida**: 004 (Bauman, CNC, ONU) e 003 (nada) tiveram 2,4 as duas; 002 (nada) superou 001 (1 fato); 005 (lei, Panorama, Freire) teve 2,8, abaixo da 002 | — |
 | H-A4 | A = extensão | H | **enfraquecida**: a 005, a mais longa (403 palavras), teve 2,8, abaixo da 001 e da 002; dentro do lixo, os textos mais curtos tiveram A maior (266 → 3,2; 281 → 3,0; 403 → 2,8), o que é pouco para concluir | controle de extensão no L1 |
-| H-A5 | A = gabarito de tópicos do tema, ou base fixa por tema | H | **reforçada**: as notas continuam agrupadas por tema (lixo 3,0/3,2/2,8; consumo 2,4/2,4), com variação de ±0,2 dentro do tema | mais temas; clima |
+| H-A5 | A = gabarito de tópicos do tema, ou base fixa por tema | H | **reforçada de novo**: o C3, escrito para cumprir todos os critérios, teve 2,7, perto das outras de consumo (2,4/2,4); lixo 3,0/3,2/2,8. Dentro do tema, a variação (±0,3) não acompanhou nenhuma característica medida | reteste do mesmo texto (X0) | mais temas; clima |
 | H-A9 | A acompanha a cobertura lexical do núcleo da proposta (frase do tema + perguntas) | — | **refutada** pela 005: a fórmula do v0.18 (0,60 + 3,89·núcleo) previu 4,2 para núcleo 0,93; observado 2,8, abaixo das 001 e 002, que tinham núcleo 0,60 e 0,67 | — |
-| H-A-esc | A exibida = 0,4 × nota bruta de 0 a 10 (em meios pontos); teto exibido 4,0 e nota online máxima 7,6 | H | **nova**: as cinco A são múltiplos de 0,2 (chance de ~1/32 por acaso) e A ÷ 0,4 = 7,5 / 8 / 6 / 6 / 7 | série 005: A > 4,0 refuta; décimo ímpar refuta |
-| A-R1 | nota bruta = 10 − 0,5 por parágrafo sem evidência concreta e pertinente − 1 se o recorte falta na introdução − 2 por dado ou argumento que não prova − 1 por dado vago − 1 por repertório de bolso (`modelo/rubrica-calibrada.md`) | H | **nova**: reproduz as 5 (7,5; 8; 6; 6; 7), mas três descontos foram ajustados a uma prova cada | previsões D2 4,0; C2 3,8; M6 3,8 |
+| H-A-esc | A exibida = 0,4 × nota bruta de 0 a 10 (em meios pontos); teto exibido 4,0 e nota online máxima 7,6 | — | **refutada** pela 006: A = 2,7, décimo ímpar (as cinco primeiras eram múltiplos de 0,2 por acaso) | série 005: A > 4,0 refuta; décimo ímpar refuta |
+| A-R1 (**refutada** pela 006: previu 4,0, deu 2,7) | nota bruta = 10 − 0,5 por parágrafo sem evidência concreta e pertinente − 1 se o recorte falta na introdução − 2 por dado ou argumento que não prova − 1 por dado vago − 1 por repertório de bolso (`modelo/rubrica-calibrada.md`) | H | **nova**: reproduz as 5 (7,5; 8; 6; 6; 7), mas três descontos foram ajustados a uma prova cada | previsões D2 4,0; C2 3,8; M6 3,8 |
 | H-A6 | A = diversidade de dimensões | H | **enfraquecida** | — |
 | H-A7 | A em níveis discretos | — | **enfraquecida**: A = 3,2 não é inteiro | — |
-| H-A8 | A instável | H | ativa | X0 |
+| H-A8 | A e T têm ruído (o mesmo texto pode receber notas diferentes) | H | ativa e agora central: explicaria a variação dentro do tema e os erros da rubrica | X0: reenviar um texto idêntico |
 | A-corr | a plataforma é mais exigente que a régua do ENEM na Abrangência (original: régua 6, observado 3,0): deslocamento de −3 ou razão de 0,5 | H | ativa | X8, X9 |
 
 ### Nota Final
@@ -114,6 +115,9 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | 2026-10-30 | avaliação 005 (fora da amostra) | v0.18: A = 0,60 + 3,89·0,93 = 4,2 | 2,8 | não | H-A9 refutada; o simulador passa a usar a base do tema para A |
 | 2026-10-30 | avaliação 005 (fora da amostra) | v0.18: T = 4,91 + 3,09·1,00 + 0,87·1,00 = 8,9 | 9,0 | sim (erro 0,1) | T-lex apoiada e reajustada |
 | 2026-10-30 | avaliação 005 (fora da amostra) | M2a com as notas parciais exibidas: 6,88 → 6,9 | 6,9 | sim | M2a: 5 de 5; faixa de wA estreita para 38,7–40,7% |
+| 2026-10-31 | avaliação 006 (C3, série 007) | rubrica v1: A 4,0 | 2,7 | não | A-R1 e H-A-esc refutadas |
+| 2026-10-31 | avaliação 006 (C3, série 007) | rubrica v1: T 10,0 (base do tema: 8,9) | 8,2 | não | T-R1 refutada; T-lex enfraquecida |
+| 2026-10-31 | avaliação 006 (C3, série 007) | M2a com as notas parciais exibidas: 6,68 → 6,7 | 6,7 | sim | M2a: 6 de 6 |
 
 ## 5. Questões em aberto
 
@@ -154,3 +158,4 @@ As previsões numéricas estão em `experimentos/protocolo.md`. Registre aqui ca
 | v0.22 | 2026-10-31 | simulador passa à rubrica calibrada v1: nota pelo critério (teto 10), previsão da plataforma com a Abrangência × 0,4, card "O que falta para 10" com cada desconto; a prévia sem IA reproduz A e T das 5 provas |
 | v0.23 | 2026-10-31 | validação deixando uma prova de fora (3 regras dependem de uma prova cada); marcação automática da Abrangência coincide com a manual em 8 textos; previsões para as 12 redações do histórico (`experimentos/protocolo-006-historico.md`) |
 | v0.24 | 2026-10-31 | série 007: D3, C3 e M7, escritos para nota 10 pela rubrica calibrada; previsões em `experimentos/protocolo-007-nota10.md` (A 4,0, T 10,0, nota online 7,6 se H-A-esc); viram os textos-modelo do simulador |
+| v0.25 | 2026-10-31 | avaliação 006 (C3 no simulador oficial): M2a acerta (6 de 6); a rubrica calibrada v1 erra A (previu 4,0, deu 2,7) e T (previu 10,0, deu 8,2); H-A-esc, A-R1 e T-R1 refutadas; H-A5 e H-A8 reforçadas; o simulador volta a prever a plataforma pela base do tema |

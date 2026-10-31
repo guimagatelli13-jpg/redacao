@@ -6,16 +6,16 @@ como confirmada, inferência forte ou hipótese exploratória.
 
 ## Estado atual
 
-- **5 avaliações** (2 temas). Instituição: Faculdades Pequeno Príncipe; plataforma: CRM Educacional. Regras documentadas: nota até 10;
+- **6 avaliações** (2 temas; a 006 no simulador de treino). Instituição: Faculdades Pequeno Príncipe; plataforma: CRM Educacional. Regras documentadas: nota até 10;
   classificação com 6,0 ou mais e nenhum critério zerado; 1.200 a 2.000 caracteres.
 - **Melhor candidato para a nota online:** `arred₀,₁(0,4·Gramática + 0,4·Abrangência + 0,2·Tangenciamento)`, que acertou
-  as três avaliações posteriores a ela. A média simples foi refutada; o peso da Abrangência está entre 38,7% e 40,7%.
+  as quatro avaliações posteriores a ela (6 de 6). A média simples foi refutada; o peso da Abrangência está entre 38,7% e 40,7%.
 - **Tangenciamento:** acompanha as palavras e os pares da frase do tema presentes no texto; o máximo observado é 9,0.
-- **Abrangência:** fica agrupada por tema (lixo 2,8 a 3,2; consumo 2,4) e não respondeu a fatos, repertório, tamanho
-  nem vocabulário da proposta. Por isso a maior nota online observada é 6,9 e o teto prático é por volta de 7,0.
-- **Rubrica calibrada v1** (`modelo/rubrica-calibrada.md`): critérios com teto 10 que reproduzem G, A, T e a nota
-  online das 5 provas. Pista principal: a Abrangência exibida parece ser 0,4 × uma nota de 0 a 10; se for, a nota online
-  da plataforma vai no máximo a 7,6. Previsões registradas para a série 005.
+- **Abrangência:** fica agrupada por tema (lixo 2,8 a 3,2; consumo 2,4 a 2,7) e não respondeu a fatos, repertório,
+  tamanho, vocabulário da proposta nem a um texto escrito para cumprir todos os critérios. Por isso a maior nota online observada é 6,9 e o teto prático é por volta de 7,0.
+- **Rubrica calibrada v1** (`modelo/rubrica-calibrada.md`): reproduzia as 5 primeiras provas, mas foi **refutada**
+  no primeiro teste (avaliação 006: o texto escrito para 10 recebeu A 2,7 e T 8,2). Fica como critério de qualidade,
+  não como previsão da plataforma.
 - **"Nota Final" e "Nota Final da Redação Online" são grandezas diferentes.** O 0,00 da primeira não sai das notas
   parciais.
 

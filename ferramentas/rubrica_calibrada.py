@@ -71,6 +71,16 @@ ANOTACOES = {
         "bolso": ["Paulo Freire"],
         "notas": "§3 só tem Paulo Freire (bolso)",
     },
+    # Primeiro teste fora da amostra (série 007): o texto C3 enviado com 3 erros de digitação. Previsto: A 4,0 e T 10,0.
+    "006": {
+        "E": 3, "S": 0,
+        "evidencia": ["Fundação Ellen MacArthur: uso das roupas caiu 36% em quinze anos",
+                      "Código de Defesa do Consumidor, artigo 49",
+                      "Monitor Global de Lixo Eletrônico da ONU: 62 milhões de toneladas em 2022",
+                      "Ministério da Educação; Secretaria Nacional do Consumidor"],
+        "recorte_intro": True, "nao_pertinente": [], "vago": [], "bolso": [],
+        "notas": "texto-base C3; os 3 erros de digitação do envio ainda não foram identificados",
+    },
 }
 
 # Textos ainda não avaliados: as previsões ficam registradas antes do resultado.
@@ -228,7 +238,7 @@ def main():
             acertos[k] += ok
             cel.append(f"{r[k]:.1f}/{o[k]:.1f}{'' if ok else ' ✗'}")
         print(f"{id_:<6}{cel[0]:>11}{r['Ab']:>9.1f}{cel[1]:>11}{cel[2]:>11}{cel[3]:>12}{r['criterio']:>10.1f}")
-    print("\nacertos exatos: " + ", ".join(f"{k} {v}/5" for k, v in acertos.items()))
+    print("\nacertos exatos: " + ", ".join(f"{k} {v}/{len(ANOTACOES)}" for k, v in acertos.items()))
 
     print("\nPrevisões para as séries 005 e 007 (registradas antes do envio)\n")
     print(f"{'texto':<6}{'G':>6}{'A bruta':>9}{'A':>6}{'T':>6}{'online':>8}{'critério':>10}  T: tema/pares/intro/conclusão")

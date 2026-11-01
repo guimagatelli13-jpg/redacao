@@ -102,8 +102,9 @@ def gerar(serie):
                   Paragraph(f"Tema: “{escape(frase)}”", TEMA)]
         story += [Paragraph(escape(p), CORPO) for p in pars]
         info = Table([
-            [Paragraph("Como enviar", NOTA_B), Paragraph("Copie só o texto, sem título, com uma linha em branco entre os "
-                                                          f"parágrafos: {chars} caracteres como a plataforma conta.", NOTA)],
+            [Paragraph("Como enviar", NOTA_B), Paragraph(f"{chars} caracteres como a plataforma conta, com uma linha em branco entre os parágrafos. "
+                                                          "Não copie deste PDF: a cópia pode trazer uma quebra de linha no fim de cada "
+                                                          "linha e estourar o limite. Copie do arquivo .txt ou do texto da conversa, sem título.", NOTA)],
             [Paragraph("Previsão registrada", NOTA_B), Paragraph(cfg["previsao"][tema], NOTA)],
             [Paragraph("Depois do envio", NOTA_B), Paragraph("Registre os seis campos no histórico do simulador "
                                                              "(“Registrar notas oficiais”).", NOTA)],

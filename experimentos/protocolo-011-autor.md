@@ -6,9 +6,9 @@ mais personalidade, mais perto do que faria um redator humano experiente. Os tex
 
 | Tema | Texto final | Caracteres | Elos | Repertório de abertura (retomado no fim) |
 |---|---|---|---|---|
-| Descarte correto do lixo | `experimentos/textos/D7-lixo-autor.txt` | 1.990 | 10 de 10 | "Lixo Extraordinário" (Vik Muniz, indicado ao Oscar em 2011) e o aterro de Gramacho, fechado em 2012 |
-| Consumo e consumismo | `experimentos/textos/C7-consumo-autor.txt` | 1.986 | 10 de 10 | o cartel Phoebus (Genebra, 1924), que fixou a vida das lâmpadas em cerca de mil horas |
-| Mudanças climáticas | `experimentos/textos/M11-clima-autor.txt` | 1.986 | 9 de 9 | o cavalo Caramelo, ilhado num telhado em Canoas (RS), em maio de 2024 |
+| Descarte correto do lixo | `experimentos/textos/D7-lixo-autor.txt` | 1.993 | 10 de 10 | "Lixo Extraordinário" (Vik Muniz, indicado ao Oscar em 2011) e o aterro de Gramacho, fechado em 2012 |
+| Consumo e consumismo | `experimentos/textos/C7-consumo-autor.txt` | 1.994 | 10 de 10 | o cartel Phoebus (Genebra, 1924), que fixou a vida das lâmpadas em cerca de mil horas |
+| Mudanças climáticas | `experimentos/textos/M11-clima-autor.txt` | 1.989 | 9 de 9 | o cavalo Caramelo, ilhado num telhado em Canoas (RS), em maio de 2024 |
 
 As versões intermediárias estão em `experimentos/textos/serie-011/`.
 
@@ -53,6 +53,7 @@ reparabilidade, OMM, World Weather Attribution, Petrópolis, Science 2021, SEEG)
 | v3 | No clima, "Caramelo" aparecia sem apresentação depois de um corte; "chuva" três vezes | "Batizado de Caramelo, o animal…"; "o próximo temporal" |
 | v4 e v5 | Lógica: no lixo, "falta conhecimento mais do que vontade" não tinha prova da vontade; no clima, "Atenuá-los" podia se referir a "decisões", e "nos dois casos… matou mais onde a moradia era frágil" generalizava ao RS o que está documentado em Petrópolis | Volta o dado de que quase todos valorizam a reciclagem; "diziam não separar"; "Atenuar esses efeitos"; "Lá [em Petrópolis]… matou sobretudo onde…" |
 | final | Margem de caracteres e repetições ("separar" 4 vezes, "casa", "família") | De 1.986 a 1.990 caracteres; variação vocabular |
+| ajuste de coesão (pedido do usuário) | A formação dos corretores do Inep olha a coesão de forma estrutural: duas aberturas de parágrafo dependiam só do sentido (lixo §2 e clima §3), e duas do consumo podiam retomar o §1 de forma mais explícita | "As implicações desse descarte indevido"; "Já para quem ainda vai nascer"; "esse limite"; "daquele cartel". Sem voltar ao conectivo em toda frase: cada parágrafo abre com uma ligação visível (conectivo ou retomada) |
 
 ## Previsões na plataforma (modelo v0.25), registradas antes do envio
 

@@ -1,6 +1,6 @@
 """Gera o PDF de uma série de redações, um tema por página.
 
-Uso (na raiz do repositório): python3 ferramentas/gerar_pdf_redacoes.py SERIE      (SERIE = 007, 008 ou 009)
+Uso (na raiz do repositório): python3 ferramentas/gerar_pdf_redacoes.py SERIE      (SERIE = 007, 008, 009 ou 010)
 """
 import sys
 from xml.sax.saxutils import escape
@@ -43,6 +43,15 @@ SERIES = {
             "lixo": "Plataforma: Gramática 10,0 · Abrangência 3,0 (2,8 a 3,2) · Tangenciamento 8,7 · nota online 6,9 (6,7 a 7,1). Autoavaliação ENEM: 1000.",
             "consumo": "Plataforma: Gramática 10,0 · Abrangência 2,5 (2,4 a 2,7) · Tangenciamento 8,6 · nota online 6,7 (6,6 a 6,9). Autoavaliação ENEM: 1000.",
             "clima": "Plataforma: Gramática 10,0 · Abrangência 2,8 (2,4 a 3,2) · Tangenciamento 8,7 · nota online 6,9 (6,6 a 7,1). Autoavaliação ENEM: 1000.",
+        },
+    },
+    "010": {
+        "titulo": "série 010 · escrita do zero pelos princípios de uma redação excelente",
+        "textos": [("lixo", "D6-lixo-excelente"), ("consumo", "C6-consumo-excelente"), ("clima", "M10-clima-excelente")],
+        "previsao": {
+            "lixo": "Tese: o brasileiro não ignora o problema, ignora o gesto. Plataforma (previsão): nota online 6,9 (6,7 a 7,1).",
+            "consumo": "Tese: o limite entre o necessário e o exagero é o uso, não a renúncia. Plataforma (previsão): nota online 6,7 (6,6 a 6,9).",
+            "clima": "Tese: os efeitos atingem primeiro quem menos os causou. Plataforma (previsão): nota online 6,9 (6,6 a 7,1).",
         },
     },
 }
@@ -105,4 +114,4 @@ def gerar(serie):
 
 
 if __name__ == "__main__":
-    gerar(sys.argv[1] if len(sys.argv) > 1 else "009")
+    gerar(sys.argv[1] if len(sys.argv) > 1 else "010")

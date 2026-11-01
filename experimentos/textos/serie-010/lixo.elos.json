@@ -1,0 +1,96 @@
+[
+ {
+  "elo": "o paradoxo (valorizar × não separar) abre o texto e fecha a conclusão",
+  "termo": "quase todos",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "tese: ensinar o gesto → cadeia do gesto não aprendido → proposta: aprender o gesto",
+  "termo": "gesto",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "§1 responde à pergunta 1",
+  "termo": "não descarta corretamente",
+  "paragrafos": [
+   1
+  ]
+ },
+ {
+  "elo": "§2 responde à pergunta 2",
+  "termo": "descarte indevido do lixo",
+  "paragrafos": [
+   2
+  ]
+ },
+ {
+  "elo": "§3 responde à pergunta 3 (e a tese a anuncia)",
+  "termo": "importância da educação e da conscientização",
+  "paragrafos": [
+   1,
+   3
+  ]
+ },
+ {
+  "elo": "§4 responde à pergunta 4",
+  "termo": "ampliar a conscientização",
+  "paragrafos": [
+   4
+  ]
+ },
+ {
+  "elo": "desconhecimento (§1) → desinformação fatal (§2)",
+  "termo": "desconhecimento|desinformação",
+  "paragrafos": [
+   1,
+   2
+  ]
+ },
+ {
+  "elo": "contraponto: punir (§3) → refutado pelo limite da casa",
+  "termo": "punir",
+  "paragrafos": [
+   3
+  ]
+ },
+ {
+  "elo": "a casa, onde o fiscal não entra (§3) → agentes que visitam as casas (§4)",
+  "termo": "casa",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "dengue (§2) → agentes no combate à dengue (§4)",
+  "termo": "dengue",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "a escola multiplica (§3) → currículo e alunos que levam o gesto às famílias (§4)",
+  "termo": "escola|currículo|alunos",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "coleta seletiva: desconhecida (§1) → obrigatória (§3) → ampliada (§4)",
+  "termo": "coleta seletiva",
+  "paragrafos": [
+   1,
+   3,
+   4
+  ]
+ }
+]

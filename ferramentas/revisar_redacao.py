@@ -75,7 +75,7 @@ def revisar(caminho, tema):
                      r"paralelamente|so assim|embora|ainda que|apesar|mesmo|tambem|afinal|quando|como|dai|enfim|por sua vez|"
                      r"o mesmo|a mesma|seu|sua|seus|suas|dele|dela|deles|delas|o primeiro|o segundo|no primeiro|no segundo|"
                      r"em ambos|antes|depois|mais de|trinta|decadas|aquele|aquela|aqueles|aquelas|na pratica|prova disso|em primeiro lugar|"
-                     r"primeiramente|por fim|nesse sentido|isso porque|ainda|para tanto|entre as|entre os|ele|ela|eles|elas|o restante|os demais)\b")
+                     r"primeiramente|por fim|nesse sentido|isso porque|ainda|para tanto|entre as|entre os|ele|ela|eles|elas|o restante|os demais|nisso|no extremo|no limite)\b")
     soltas = []
     for j, p in enumerate(pars):
         for k, f in enumerate(frases(p)):
@@ -117,6 +117,17 @@ def revisar(caminho, tema):
                                                r"contudo|entretanto|no entanto|ou seja|consequentemente|por fim)\b", lex.normalizar(texto)))
     rep_con = [(c, n) for c, n in conectivos.items() if n > 1]
     (falhas if rep_con else ok).append(f"conectivos repetidos no texto: {rep_con or 'nenhum'}")
+
+    # Clichês que um corretor exigente desconta, e presença de contraponto (concessão seguida de refutação).
+    CLICHES = [r"primeiro passo", r"so assim", r"nos dias de hoje", r"hoje em dia", r"nos dias atuais", r"desde os primordios",
+               r"de suma importancia", r"cada vez mais", r"mais do que nunca", r"faz-se necessario", r"e notorio", r"e inegavel",
+               r"e fundamental", r"e imprescindivel", r"nos ultimos anos", r"questao central", r"recaem sobre todos", r"via de regra"]
+    norm_txt = lex.normalizar(texto)
+    cliches = [c for c in CLICHES if re.search(r"\b" + c + r"\b", norm_txt)]
+    (falhas if cliches else ok).append(f"clichês: {cliches or 'nenhum'}")
+    contraponto = re.search(r"pode-se (alegar|objetar|argumentar|dizer)|argumenta-se|alguem (dira|diria|poderia)|e verdade que|"
+                            r"poder-se-ia|ha quem (diga|defenda|argumente)|objeta-se", norm_txt)
+    (ok if contraponto else falhas).append("contraponto presente" if contraponto else "sem contraponto (objeção reconhecida e refutada)")
     (falhas if rep_ab else ok).append(f"primeira palavra dos parágrafos: {aberturas}")
 
     return falhas, ok

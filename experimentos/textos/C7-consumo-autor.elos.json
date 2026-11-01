@@ -1,0 +1,83 @@
+[
+ {
+  "elo": "Genebra (1924) abre o texto e o fecha",
+  "termo": "Genebra",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "dois lados do balcão: anunciados (§1) → quem compra (§2) → quem vende (§3) → ações nos dois lados (§4)",
+  "termo": "dois lados|quem compra|quem vende",
+  "paragrafos": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "diferença entre consumo e consumismo (§1)",
+  "termo": "diferença entre consumo e consumismo",
+  "paragrafos": [
+   1
+  ]
+ },
+ {
+  "elo": "estabelecer limite entre o necessário e o exagero (§1) → o limite começa com uma pergunta (§2)",
+  "termo": "limite",
+  "paragrafos": [
+   1,
+   2
+  ]
+ },
+ {
+  "elo": "o uso como medida: definição (§1) → pergunta (§2) → tempo de uso (§4)",
+  "termo": "\\buso\\b|usad",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "cartel (§1) → lógica do cartel nos produtos que duram menos (§3)",
+  "termo": "cartel",
+  "paragrafos": [
+   1,
+   3
+  ]
+ },
+ {
+  "elo": "consequências do consumismo desenfreado (§3)",
+  "termo": "consumismo desenfreado",
+  "paragrafos": [
+   3
+  ]
+ },
+ {
+  "elo": "durar: produtos que duram menos (§3) → durar como argumento de venda (§4)",
+  "termo": "dura",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "contraponto: empregos (§3) → consertar também emprega → reparabilidade (§4)",
+  "termo": "consert|reparabilidade",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "pausa e propaganda: impulso (§2) → exercícios sobre propaganda (§4)",
+  "termo": "pausa|propaganda|desejo",
+  "paragrafos": [
+   2,
+   4
+  ]
+ }
+]

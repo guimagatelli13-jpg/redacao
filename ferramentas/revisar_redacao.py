@@ -1,6 +1,8 @@
 """Revisão automática de uma redação pelos critérios do método da professora e do que se sabe da plataforma.
 
-Uso: python3 ferramentas/revisar_redacao.py TEXTO.txt TEMA     (TEMA = lixo, consumo ou clima)
+Uso: python3 ferramentas/revisar_redacao.py TEXTO.txt TEMA [--humano]     (TEMA = lixo, consumo ou clima)
+
+--humano: para textos em voz de autor, não exige que cada parágrafo repita as palavras da pergunta.
 
 Cobre o que dá para medir: tamanho, uma pergunta por parágrafo, frase e palavras do tema, evidência por parágrafo,
 repertório de bolso, dado vago, endividamento (no consumo), gerúndio, frases longas, palavras repetidas e conectivos
@@ -58,8 +60,11 @@ def revisar(caminho, tema):
             qp = set(palavras_limpas(q))
             cob = len(qp & set(palavras_limpas(pars[j]))) / len(qp)
             faltam = sorted(qp - set(palavras_limpas(pars[j])))
-            (ok if cob >= 0.8 else falhas).append(
-                f"P{i + 1} no §{j + 1}: o parágrafo retoma {cob:.0%} das palavras da pergunta" + (f" (faltam {', '.join(faltam)})" if faltam else ""))
+            if HUMANO:
+                ok.append(f"P{i + 1} no §{j + 1}: {cob:.0%} das palavras da pergunta (modo humano: conferir à mão que o parágrafo responde)")
+            else:
+                (ok if cob >= 0.8 else falhas).append(
+                    f"P{i + 1} no §{j + 1}: o parágrafo retoma {cob:.0%} das palavras da pergunta" + (f" (faltam {', '.join(faltam)})" if faltam else ""))
 
     # O texto começa por um repertório (dado, fato, lei, obra), não pela pergunta da proposta.
     primeira = frases(pars[0])[0]
@@ -75,22 +80,28 @@ def revisar(caminho, tema):
                      r"paralelamente|so assim|embora|ainda que|apesar|mesmo|tambem|afinal|quando|como|dai|enfim|por sua vez|"
                      r"o mesmo|a mesma|seu|sua|seus|suas|dele|dela|deles|delas|o primeiro|o segundo|no primeiro|no segundo|"
                      r"em ambos|antes|depois|mais de|trinta|decadas|aquele|aquela|aqueles|aquelas|na pratica|prova disso|em primeiro lugar|"
-                     r"primeiramente|por fim|nesse sentido|isso porque|ainda|para tanto|entre as|entre os|ele|ela|eles|elas|o restante|os demais|nisso|no extremo|no limite)\b")
+                     r"primeiramente|por fim|nesse sentido|isso porque|ainda|para tanto|entre as|entre os|ele|ela|eles|elas|o restante|os demais|nisso|no extremo|no limite|entao|ocorre que|nos dois casos|na outra|do lado de)\b")
+    # Também conta como elo a retomada lexical: a frase começa (até a 10ª palavra) com uma palavra de conteúdo da
+    # frase anterior (comparando os 5 primeiros caracteres, para aceitar variações como "separar"/"separação").
+    def radicais(t):
+        return {w[:5] for w in palavras_limpas(t) if len(w) >= 5}
     soltas = []
+    anterior = ""
     for j, p in enumerate(pars):
         for k, f in enumerate(frases(p)):
-            if j == 0 and k == 0:
-                continue
-            inicio = " ".join(lex.normalizar(f).split()[:8])
-            if not ELO.search(inicio):
-                soltas.append(f"§{j + 1}, frase {k + 1}: “{' '.join(f.split()[:8])}…”")
+            if not (j == 0 and k == 0):
+                inicio = " ".join(lex.normalizar(f).split()[:8])
+                retoma = radicais(" ".join(f.split()[:10])) & radicais(anterior)
+                if not ELO.search(inicio) and not retoma:
+                    soltas.append(f"§{j + 1}, frase {k + 1}: “{' '.join(f.split()[:8])}…”")
+            anterior = f
     (falhas if soltas else ok).append(f"frases sem elo com a anterior no começo: {soltas or 'nenhuma'}")
 
     m = lex.medir(caminho, tema)
     T, feat = rc.tangenciamento(texto, tema)
     (ok if m["tema"] == 1 else falhas).append(f"palavras da frase do tema no texto: {m['tema']:.0%}")
     (ok if feat["intro"] == 1 else falhas).append(f"palavras da frase do tema na introdução: {feat['intro']:.0%}")
-    (ok if m["nucleo"] == 1 else falhas).append(f"núcleo (tema + perguntas): {m['nucleo']:.2f}" + (f"; faltam {m['ausentes']}" if m["ausentes"] else ""))
+    (ok if m["nucleo"] == 1 or HUMANO else falhas).append(f"núcleo (tema + perguntas): {m['nucleo']:.2f}" + (f"; faltam {m['ausentes']}" if m["ausentes"] else ""))
 
     a = rc.abrangencia_automatica(texto, tema)
     for i, e in enumerate(a["evidencia"]):
@@ -126,16 +137,20 @@ def revisar(caminho, tema):
     cliches = [c for c in CLICHES if re.search(r"\b" + c + r"\b", norm_txt)]
     (falhas if cliches else ok).append(f"clichês: {cliches or 'nenhum'}")
     contraponto = re.search(r"pode-se (alegar|objetar|argumentar|dizer)|argumenta-se|alguem (dira|diria|poderia)|e verdade que|"
-                            r"poder-se-ia|ha quem (diga|defenda|argumente)|objeta-se", norm_txt)
+                            r"poder-se-ia|ha quem (diga|defenda|argumente)|objeta-se|costuma-se (dizer|afirmar|argumentar)|"
+                            r"seria (comodo|facil|tentador)[^.]{0,20}(dizer|culpar|achar|supor)|dirao que|alguns dirao", norm_txt)
     (ok if contraponto else falhas).append("contraponto presente" if contraponto else "sem contraponto (objeção reconhecida e refutada)")
     (falhas if rep_ab else ok).append(f"primeira palavra dos parágrafos: {aberturas}")
 
     return falhas, ok
 
 
+HUMANO = "--humano" in sys.argv
+
 if __name__ == "__main__":
-    falhas, ok = revisar(sys.argv[1], sys.argv[2])
-    print(f"== {sys.argv[1]}")
+    args = [a for a in sys.argv[1:] if a != "--humano"]
+    falhas, ok = revisar(args[0], args[1])
+    print(f"== {args[0]}")
     print(f"FALHAS ({len(falhas)}):")
     for f in falhas: print("  ✕", f)
     print(f"OK ({len(ok)}):")

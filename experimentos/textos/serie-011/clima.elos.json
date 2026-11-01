@@ -1,0 +1,74 @@
+[
+ {
+  "elo": "Caramelo abre o texto e o fecha",
+  "termo": "Caramelo",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "tese: atingem primeiro quem mora onde a água sobe e quem ainda nem nasceu (§1) → desigualdade (§2) → quem ainda vai nascer (§3)",
+  "termo": "nasce|desigualdade",
+  "paragrafos": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "elo": "quem mora onde a água sobe (§1) → moradia frágil (§2) → famílias de áreas de risco (§4)",
+  "termo": "água|moradia|área",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "principais mudanças climáticas percebidas (§1)",
+  "termo": "principais mudanças climáticas percebidas",
+  "paragrafos": [
+   1
+  ]
+ },
+ {
+  "elo": "efeitos negativos (§1) → efeito mais grave (§2) → atenuar esses efeitos (§4)",
+  "termo": "efeito",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "Petrópolis e encosta (§2) → o próximo temporal não as encontre na encosta (§4)",
+  "termo": "encosta",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "a sociedade contribui para acelerar (§3)",
+  "termo": "contribuindo para acelerar",
+  "paragrafos": [
+   3
+  ]
+ },
+ {
+  "elo": "contraponto: problema global (§3) → desmatamento, decisão tomada aqui (§3) → fiscalização do desmatamento (§4)",
+  "termo": "desmatamento",
+  "paragrafos": [
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "duas pontas: quem já sofre (§4) e quem vai nascer (via emissões)",
+  "termo": "pontas|Na outra",
+  "paragrafos": [
+   4
+  ]
+ }
+]

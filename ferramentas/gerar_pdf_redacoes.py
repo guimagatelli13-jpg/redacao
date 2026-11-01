@@ -1,6 +1,6 @@
 """Gera o PDF de uma série de redações, um tema por página.
 
-Uso (na raiz do repositório): python3 ferramentas/gerar_pdf_redacoes.py SERIE      (SERIE = 007, 008, 009 ou 010)
+Uso (na raiz do repositório): python3 ferramentas/gerar_pdf_redacoes.py SERIE      (SERIE = 007 a 011)
 """
 import sys
 from xml.sax.saxutils import escape
@@ -52,6 +52,15 @@ SERIES = {
             "lixo": "Tese: o brasileiro não ignora o problema, ignora o gesto. Plataforma (previsão): nota online 6,9 (6,7 a 7,1).",
             "consumo": "Tese: o limite entre o necessário e o exagero é o uso, não a renúncia. Plataforma (previsão): nota online 6,7 (6,6 a 6,9).",
             "clima": "Tese: os efeitos atingem primeiro quem menos os causou. Plataforma (previsão): nota online 6,9 (6,6 a 7,1).",
+        },
+    },
+    "011": {
+        "titulo": "série 011 · voz de autor",
+        "textos": [("lixo", "D7-lixo-autor"), ("consumo", "C7-consumo-autor"), ("clima", "M11-clima-autor")],
+        "previsao": {
+            "lixo": "Abre com \u201cLixo Extraordinário\u201d e fecha com Gramacho. Plataforma (previsão): nota online 6,9 (6,7 a 7,1).",
+            "consumo": "Abre com o cartel Phoebus (1924) e fecha com ele. Plataforma (previsão): nota online 6,7 (6,6 a 6,9).",
+            "clima": "Abre com o cavalo Caramelo e fecha com ele. Plataforma (previsão): nota online 6,9 (6,6 a 7,1).",
         },
     },
 }
@@ -114,4 +123,4 @@ def gerar(serie):
 
 
 if __name__ == "__main__":
-    gerar(sys.argv[1] if len(sys.argv) > 1 else "010")
+    gerar(sys.argv[1] if len(sys.argv) > 1 else "011")

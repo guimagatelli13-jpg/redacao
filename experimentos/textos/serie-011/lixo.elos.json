@@ -1,0 +1,84 @@
+[
+ {
+  "elo": "Gramacho abre o texto e o fecha",
+  "termo": "Gramacho",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "separar no fim da linha (§1) → separar em casa, por hábito (§3) → a separação que ainda falta nas cozinhas (§4)",
+  "termo": "separ",
+  "paragrafos": [
+   1,
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "cozinha: onde a separação deveria acontecer (§1) → onde o fiscal não entra (§3) → onde a mudança chega (§4)",
+  "termo": "cozinha",
+  "paragrafos": [
+   1,
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "conhecimento que falta (§1) → hábito que se aprende (§3) → aprender na prática (§4)",
+  "termo": "conhecimento|aprend",
+  "paragrafos": [
+   1,
+   3,
+   4
+  ]
+ },
+ {
+  "elo": "tese: importância da educação e da conscientização (§1) → ampliar a conscientização (§4)",
+  "termo": "conscientização",
+  "paragrafos": [
+   1,
+   4
+  ]
+ },
+ {
+  "elo": "implicações do descarte indevido (§2)",
+  "termo": "implicações do descarte indevido",
+  "paragrafos": [
+   2
+  ]
+ },
+ {
+  "elo": "catadores: Gramacho (§1) → quem paga (§2) → cooperativas (§4)",
+  "termo": "catador",
+  "paragrafos": [
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "dengue (§2) → agentes de saúde no combate à dengue (§4)",
+  "termo": "dengue",
+  "paragrafos": [
+   2,
+   4
+  ]
+ },
+ {
+  "elo": "contraponto: multas (§3), refutado pelo limite da cozinha",
+  "termo": "multa",
+  "paragrafos": [
+   3
+  ]
+ },
+ {
+  "elo": "hábito (§3) → levar o hábito à família (§4)",
+  "termo": "hábito",
+  "paragrafos": [
+   3,
+   4
+  ]
+ }
+]
